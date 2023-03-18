@@ -92,6 +92,7 @@ namespace Restaurant_Manager
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
+                //Test
             }
             currentChildForm = childForm;
             //End
