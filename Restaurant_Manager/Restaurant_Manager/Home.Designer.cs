@@ -38,16 +38,19 @@ namespace Restaurant_Manager
             this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.panelIcon = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnInventory);
             this.panelMenu.Controls.Add(this.btnStatistic);
             this.panelMenu.Controls.Add(this.btnInvoice);
@@ -71,7 +74,7 @@ namespace Restaurant_Manager
             this.btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventory.IconSize = 32;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 347);
+            this.btnInventory.Location = new System.Drawing.Point(0, 359);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInventory.Size = new System.Drawing.Size(220, 60);
@@ -91,7 +94,7 @@ namespace Restaurant_Manager
             this.btnStatistic.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStatistic.IconSize = 32;
             this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.Location = new System.Drawing.Point(0, 287);
+            this.btnStatistic.Location = new System.Drawing.Point(0, 299);
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStatistic.Size = new System.Drawing.Size(220, 60);
@@ -111,7 +114,7 @@ namespace Restaurant_Manager
             this.btnInvoice.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInvoice.IconSize = 32;
             this.btnInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInvoice.Location = new System.Drawing.Point(0, 227);
+            this.btnInvoice.Location = new System.Drawing.Point(0, 239);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInvoice.Size = new System.Drawing.Size(220, 60);
@@ -131,7 +134,7 @@ namespace Restaurant_Manager
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 32;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 167);
+            this.btnMenu.Location = new System.Drawing.Point(0, 179);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMenu.Size = new System.Drawing.Size(220, 60);
@@ -151,7 +154,7 @@ namespace Restaurant_Manager
             this.btnStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStaff.IconSize = 32;
             this.btnStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaff.Location = new System.Drawing.Point(0, 107);
+            this.btnStaff.Location = new System.Drawing.Point(0, 119);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStaff.Size = new System.Drawing.Size(220, 60);
@@ -162,11 +165,12 @@ namespace Restaurant_Manager
             // 
             // panelIcon
             // 
+            this.panelIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panelIcon.Controls.Add(this.pictureBox1);
             this.panelIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelIcon.Location = new System.Drawing.Point(0, 0);
             this.panelIcon.Name = "panelIcon";
-            this.panelIcon.Size = new System.Drawing.Size(220, 107);
+            this.panelIcon.Size = new System.Drawing.Size(220, 119);
             this.panelIcon.TabIndex = 1;
             // 
             // pictureBox1
@@ -179,14 +183,37 @@ namespace Restaurant_Manager
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // panelTitleBar
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(220, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(962, 100);
-            this.panel1.TabIndex = 6;
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelTitleBar.Controls.Add(this.lbUser);
+            this.panelTitleBar.Controls.Add(this.label1);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(962, 100);
+            this.panelTitleBar.TabIndex = 6;
+            // 
+            // lbUser
+            // 
+            this.lbUser.AutoSize = true;
+            this.lbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbUser.Location = new System.Drawing.Point(778, 38);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(0, 31);
+            this.lbUser.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Snow;
+            this.label1.Location = new System.Drawing.Point(695, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hello,";
             // 
             // panelDesktop
             // 
@@ -202,7 +229,7 @@ namespace Restaurant_Manager
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1182, 753);
             this.Controls.Add(this.panelDesktop);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Home";
@@ -211,6 +238,8 @@ namespace Restaurant_Manager
             this.panelMenu.ResumeLayout(false);
             this.panelIcon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -224,7 +253,9 @@ namespace Restaurant_Manager
         private Panel panelIcon;
         private FontAwesome.Sharp.IconButton btnInventory;
         private PictureBox pictureBox1;
-        private Panel panel1;
+        private Panel panelTitleBar;
         private Panel panelDesktop;
+        private Label label1;
+        private Label lbUser;
     }
 }

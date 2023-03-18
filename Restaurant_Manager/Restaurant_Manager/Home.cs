@@ -20,9 +20,18 @@ namespace Restaurant_Manager
         public Home()
         {
             InitializeComponent();
+            //leftBorderBtn = new Panel();
+            //leftBorderBtn.Size = new Size(7, 60);
+            //panelMenu.Controls.Add(leftBorderBtn);
+        }
+
+        public Home(string value)
+        {
+            InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            lbUser.Text = value;
         }
 
         private struct RGBColors
@@ -43,7 +52,8 @@ namespace Restaurant_Manager
                 //Button
                 currentBtn = (IconButton)senderBtn;
                 //currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.BackColor = Color.LightSteelBlue;
+                currentBtn.BackColor = Color.FromArgb(51, 51, 76);
+                //currentBtn.BackColor = Color.MidnightBlue;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -54,6 +64,8 @@ namespace Restaurant_Manager
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
+
+                panelTitleBar.BackColor = color;
                 //Current Child Form Icon
                 //iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 //iconCurrentChildForm.IconColor = color;
@@ -64,7 +76,8 @@ namespace Restaurant_Manager
             if (currentBtn != null)
             {
                 //currentBtn.BackColor = Color.FromArgb(31, 30, 68);
-                currentBtn.BackColor = Color.LightSteelBlue;
+                //currentBtn.BackColor = Color.MidnightBlue;
+                currentBtn.BackColor = Color.FromArgb(51, 51, 76);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;

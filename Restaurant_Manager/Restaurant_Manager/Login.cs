@@ -56,7 +56,8 @@ namespace Restaurant_Manager
                 {
                     if(mAccount.acctype == 1)
                     {
-                        Home form = new Home();
+                        string data = mAccount.uname;
+                        Home form = new Home(data);
                         form.Show();
                         this.Hide();
                     } else if(mAccount.acctype == 2)
@@ -75,11 +76,22 @@ namespace Restaurant_Manager
             }
             else
                 {
-                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng!");
+                    MessageBox.Show("Username or password is incorrect!");
                 }
 
 
             clsDatabase.CloseConnection();
+        }
+
+        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbShowPass.Checked == true)
+            {
+                txtPasswd.PasswordChar = '\0';
+            } else
+            {
+                txtPasswd.PasswordChar = '*' ;
+            }
         }
     }
 }
