@@ -16,5 +16,16 @@ namespace Restaurant_Manager.Forms
         {
             InitializeComponent();
         }
+
+        private void FormProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

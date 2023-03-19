@@ -31,6 +31,7 @@ namespace Restaurant_Manager
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.btnInventory = new FontAwesome.Sharp.IconButton();
             this.btnStatistic = new FontAwesome.Sharp.IconButton();
             this.btnInvoice = new FontAwesome.Sharp.IconButton();
@@ -42,6 +43,7 @@ namespace Restaurant_Manager
             this.lbUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
             this.panelMenu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +53,7 @@ namespace Restaurant_Manager
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btnlogout);
             this.panelMenu.Controls.Add(this.btnInventory);
             this.panelMenu.Controls.Add(this.btnStatistic);
             this.panelMenu.Controls.Add(this.btnInvoice);
@@ -62,6 +65,19 @@ namespace Restaurant_Manager
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 753);
             this.panelMenu.TabIndex = 5;
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.Location = new System.Drawing.Point(3, 721);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(211, 29);
+            this.btnlogout.TabIndex = 0;
+            this.btnlogout.Text = "Log out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // btnInventory
             // 
@@ -159,7 +175,7 @@ namespace Restaurant_Manager
             this.btnStaff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStaff.Size = new System.Drawing.Size(220, 60);
             this.btnStaff.TabIndex = 2;
-            this.btnStaff.Text = "Product";
+            this.btnStaff.Text = "Staff";
             this.btnStaff.UseVisualStyleBackColor = true;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
@@ -217,11 +233,24 @@ namespace Restaurant_Manager
             // 
             // panelDesktop
             // 
+            this.panelDesktop.BackColor = System.Drawing.Color.Silver;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(220, 100);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(962, 653);
             this.panelDesktop.TabIndex = 7;
+            // 
+            // iconSplitButton1
+            // 
+            this.iconSplitButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconSplitButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconSplitButton1.IconColor = System.Drawing.Color.Black;
+            this.iconSplitButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSplitButton1.IconSize = 48;
+            this.iconSplitButton1.Name = "iconSplitButton1";
+            this.iconSplitButton1.Rotation = 0D;
+            this.iconSplitButton1.Size = new System.Drawing.Size(23, 23);
+            this.iconSplitButton1.Text = "iconSplitButton1";
             // 
             // Home
             // 
@@ -257,5 +286,41 @@ namespace Restaurant_Manager
         private Panel panelDesktop;
         private Label label1;
         private Label lbUser;
+        private Button btnlogout;
+        private Panel panel3;
+        private Label label4;
+        private Panel panel2;
+        private Label label3;
+        private Panel panel1;
+        private Label label2;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private FontAwesome.Sharp.IconSplitButton iconSplitButton1;
+        private Button button5;
+        private TextBox textBox7;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private TextBox textBox6;
+        private ListBox listBox1;
+        private Label label14;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private ComboBox comboBox1;
+        private TextBox textBox3;
+        private DateTimePicker dateTimePicker1;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn staff_id;
+        private DataGridViewTextBoxColumn staffName;
+        private DataGridViewTextBoxColumn postName;
     }
 }
