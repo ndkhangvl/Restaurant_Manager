@@ -37,7 +37,7 @@ namespace Restaurant_Manager
         private void btLogin_Click(object sender, EventArgs e)
         {
             clsDatabase.OpenConnection();
-            SqlCommand cmd = new SqlCommand("Select * from account where uname=@uname and passwd=@passwd", clsDatabase.conn);
+            SqlCommand cmd = new SqlCommand("Select * from accounts where uname=@uname and passwd=@passwd", clsDatabase.conn);
             cmd.Parameters.AddWithValue("@uname", txtUname.Text);
             cmd.Parameters.AddWithValue("@passwd", txtPasswd.Text);
             SqlDataReader result = cmd.ExecuteReader();

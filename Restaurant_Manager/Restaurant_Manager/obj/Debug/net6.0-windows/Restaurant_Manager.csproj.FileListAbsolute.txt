@@ -28,7 +28,6 @@ E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manage
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInvoice.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormMenu.resources
-E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormProduct.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStatistic.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInventory.resources
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.exe
@@ -64,3 +63,4 @@ D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStaff.resources

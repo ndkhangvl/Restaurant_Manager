@@ -109,7 +109,7 @@ namespace Restaurant_Manager
         private void btnStaff_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormProduct());
+            OpenChildForm(new FormStaff());
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

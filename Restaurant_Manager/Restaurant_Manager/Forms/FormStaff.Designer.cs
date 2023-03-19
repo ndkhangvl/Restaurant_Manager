@@ -1,6 +1,6 @@
 ﻿namespace Restaurant_Manager.Forms
 {
-    partial class FormProduct
+    partial class FormStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.staff_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btSaveStaff = new System.Windows.Forms.Button();
+            this.dtStaffInfo = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btDelStaff = new System.Windows.Forms.Button();
+            this.btUpdateStaff = new System.Windows.Forms.Button();
+            this.btAddStaff = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTotalSal = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBonus = new System.Windows.Forms.TextBox();
+            this.txtState = new System.Windows.Forms.TextBox();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.dtBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -66,21 +66,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.btCreateStaff = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -88,25 +84,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.btSaveStaff);
+            this.panel1.Controls.Add(this.dtStaffInfo);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btDelStaff);
+            this.panel1.Controls.Add(this.btUpdateStaff);
+            this.panel1.Controls.Add(this.btAddStaff);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.txtTotalSal);
             this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtBonus);
+            this.panel1.Controls.Add(this.txtState);
+            this.panel1.Controls.Add(this.cbPosition);
+            this.panel1.Controls.Add(this.txtPhone);
+            this.panel1.Controls.Add(this.dtBirthDay);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -122,40 +117,27 @@
             this.panel1.Size = new System.Drawing.Size(580, 651);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // btSaveStaff
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.staff_id,
-            this.staffName,
-            this.postName});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 380);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(404, 255);
-            this.dataGridView1.TabIndex = 26;
+            this.btSaveStaff.BackColor = System.Drawing.Color.Chartreuse;
+            this.btSaveStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btSaveStaff.Location = new System.Drawing.Point(211, 301);
+            this.btSaveStaff.Name = "btSaveStaff";
+            this.btSaveStaff.Size = new System.Drawing.Size(94, 29);
+            this.btSaveStaff.TabIndex = 29;
+            this.btSaveStaff.Text = "Save";
+            this.btSaveStaff.UseVisualStyleBackColor = false;
+            this.btSaveStaff.Click += new System.EventHandler(this.btSaveStaff_Click);
             // 
-            // staff_id
+            // dtStaffInfo
             // 
-            this.staff_id.HeaderText = "ID";
-            this.staff_id.MinimumWidth = 6;
-            this.staff_id.Name = "staff_id";
-            this.staff_id.Width = 125;
-            // 
-            // staffName
-            // 
-            this.staffName.HeaderText = "Name";
-            this.staffName.MinimumWidth = 6;
-            this.staffName.Name = "staffName";
-            this.staffName.Width = 150;
-            // 
-            // postName
-            // 
-            this.postName.HeaderText = "Position";
-            this.postName.MinimumWidth = 6;
-            this.postName.Name = "postName";
-            this.postName.Width = 125;
+            this.dtStaffInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtStaffInfo.Location = new System.Drawing.Point(11, 380);
+            this.dtStaffInfo.Name = "dtStaffInfo";
+            this.dtStaffInfo.RowHeadersWidth = 51;
+            this.dtStaffInfo.RowTemplate.Height = 29;
+            this.dtStaffInfo.Size = new System.Drawing.Size(547, 255);
+            this.dtStaffInfo.TabIndex = 26;
             // 
             // button5
             // 
@@ -173,38 +155,39 @@
             this.textBox7.Size = new System.Drawing.Size(447, 27);
             this.textBox7.TabIndex = 24;
             // 
-            // button4
+            // btDelStaff
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(311, 301);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btDelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btDelStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btDelStaff.Location = new System.Drawing.Point(411, 301);
+            this.btDelStaff.Name = "btDelStaff";
+            this.btDelStaff.Size = new System.Drawing.Size(94, 29);
+            this.btDelStaff.TabIndex = 23;
+            this.btDelStaff.Text = "Delete";
+            this.btDelStaff.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btUpdateStaff
             // 
-            this.button3.BackColor = System.Drawing.Color.Chartreuse;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(211, 301);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Update";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btUpdateStaff.BackColor = System.Drawing.Color.Chartreuse;
+            this.btUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btUpdateStaff.Location = new System.Drawing.Point(311, 301);
+            this.btUpdateStaff.Name = "btUpdateStaff";
+            this.btUpdateStaff.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateStaff.TabIndex = 22;
+            this.btUpdateStaff.Text = "Update";
+            this.btUpdateStaff.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btAddStaff
             // 
-            this.button2.BackColor = System.Drawing.Color.Chartreuse;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(111, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btAddStaff.BackColor = System.Drawing.Color.Chartreuse;
+            this.btAddStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btAddStaff.Location = new System.Drawing.Point(111, 301);
+            this.btAddStaff.Name = "btAddStaff";
+            this.btAddStaff.Size = new System.Drawing.Size(94, 29);
+            this.btAddStaff.TabIndex = 21;
+            this.btAddStaff.Text = "Add";
+            this.btAddStaff.UseVisualStyleBackColor = false;
+            this.btAddStaff.Click += new System.EventHandler(this.btAddStaff_Click);
             // 
             // button1
             // 
@@ -217,12 +200,12 @@
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txtTotalSal
             // 
-            this.textBox6.Location = new System.Drawing.Point(385, 246);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 27);
-            this.textBox6.TabIndex = 19;
+            this.txtTotalSal.Location = new System.Drawing.Point(385, 246);
+            this.txtTotalSal.Name = "txtTotalSal";
+            this.txtTotalSal.Size = new System.Drawing.Size(173, 27);
+            this.txtTotalSal.TabIndex = 19;
             // 
             // listBox1
             // 
@@ -249,55 +232,55 @@
             this.label14.TabIndex = 17;
             this.label14.Text = "%";
             // 
-            // textBox5
+            // txtBonus
             // 
-            this.textBox5.Location = new System.Drawing.Point(382, 192);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(56, 27);
-            this.textBox5.TabIndex = 15;
+            this.txtBonus.Location = new System.Drawing.Point(382, 192);
+            this.txtBonus.Name = "txtBonus";
+            this.txtBonus.Size = new System.Drawing.Size(56, 27);
+            this.txtBonus.TabIndex = 15;
             // 
-            // textBox4
+            // txtState
             // 
-            this.textBox4.Location = new System.Drawing.Point(382, 137);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 27);
-            this.textBox4.TabIndex = 14;
+            this.txtState.Location = new System.Drawing.Point(382, 137);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(176, 27);
+            this.txtState.TabIndex = 14;
             // 
-            // comboBox1
+            // cbPosition
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(382, 90);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 28);
-            this.comboBox1.TabIndex = 13;
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(382, 90);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(176, 28);
+            this.cbPosition.TabIndex = 13;
             // 
-            // textBox3
+            // txtPhone
             // 
-            this.textBox3.Location = new System.Drawing.Point(88, 246);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 27);
-            this.textBox3.TabIndex = 12;
+            this.txtPhone.Location = new System.Drawing.Point(88, 246);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(146, 27);
+            this.txtPhone.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // dtBirthDay
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(88, 194);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(146, 27);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtBirthDay.Location = new System.Drawing.Point(88, 194);
+            this.dtBirthDay.Name = "dtBirthDay";
+            this.dtBirthDay.Size = new System.Drawing.Size(146, 27);
+            this.dtBirthDay.TabIndex = 11;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 27);
-            this.textBox2.TabIndex = 10;
+            this.txtName.Location = new System.Drawing.Point(88, 137);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(146, 27);
+            this.txtName.TabIndex = 10;
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 27);
-            this.textBox1.TabIndex = 9;
+            this.txtID.Location = new System.Drawing.Point(88, 90);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(146, 27);
+            this.txtID.TabIndex = 9;
             // 
             // label12
             // 
@@ -405,6 +388,28 @@
             this.panel2.Size = new System.Drawing.Size(363, 307);
             this.panel2.TabIndex = 2;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Chartreuse;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button7.Location = new System.Drawing.Point(218, 229);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 29);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Update";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DarkGray;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button6.Location = new System.Drawing.Point(66, 229);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 29);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Add";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // textBox9
             // 
             this.textBox9.Location = new System.Drawing.Point(80, 155);
@@ -467,85 +472,33 @@
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.button9);
-            this.panel3.Controls.Add(this.button8);
+            this.panel3.Controls.Add(this.btCreateStaff);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(598, 318);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(363, 336);
             this.panel3.TabIndex = 3;
             // 
-            // label4
+            // textBox12
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(122, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 38);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Account";
+            this.textBox12.Location = new System.Drawing.Point(131, 179);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(217, 27);
+            this.textBox12.TabIndex = 8;
             // 
-            // button6
+            // textBox11
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkGray;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(66, 229);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 29);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = false;
+            this.textBox11.Location = new System.Drawing.Point(132, 125);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(216, 27);
+            this.textBox11.TabIndex = 7;
             // 
-            // button7
+            // textBox10
             // 
-            this.button7.BackColor = System.Drawing.Color.Chartreuse;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(218, 229);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Update";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Chartreuse;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(131, 227);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(111, 37);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "Create";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Silver;
-            this.button9.Location = new System.Drawing.Point(219, 291);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(129, 29);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "List account";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(17, 81);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 20);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Staff ID:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(15, 128);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(91, 20);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "User Name:";
+            this.textBox10.Location = new System.Drawing.Point(131, 78);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(126, 27);
+            this.textBox10.TabIndex = 6;
             // 
             // label17
             // 
@@ -557,46 +510,58 @@
             this.label17.TabIndex = 5;
             this.label17.Text = "Password:";
             // 
-            // textBox10
+            // label16
             // 
-            this.textBox10.Location = new System.Drawing.Point(131, 78);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(126, 27);
-            this.textBox10.TabIndex = 6;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(15, 128);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 20);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "User Name:";
             // 
-            // textBox11
+            // label15
             // 
-            this.textBox11.Location = new System.Drawing.Point(132, 125);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(216, 27);
-            this.textBox11.TabIndex = 7;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(17, 81);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 20);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Staff ID:";
             // 
-            // textBox12
+            // button9
             // 
-            this.textBox12.Location = new System.Drawing.Point(131, 179);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(217, 27);
-            this.textBox12.TabIndex = 8;
+            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.Location = new System.Drawing.Point(219, 291);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(129, 29);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "List account";
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // btCreateStaff
             // 
-            this.button10.Location = new System.Drawing.Point(455, 443);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(94, 29);
-            this.button10.TabIndex = 27;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btCreateStaff.BackColor = System.Drawing.Color.Chartreuse;
+            this.btCreateStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btCreateStaff.Location = new System.Drawing.Point(131, 227);
+            this.btCreateStaff.Name = "btCreateStaff";
+            this.btCreateStaff.Size = new System.Drawing.Size(111, 37);
+            this.btCreateStaff.TabIndex = 1;
+            this.btCreateStaff.Text = "Create";
+            this.btCreateStaff.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // label4
             // 
-            this.button11.Location = new System.Drawing.Point(455, 499);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(94, 29);
-            this.button11.TabIndex = 28;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(122, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(125, 38);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Account";
             // 
-            // FormProduct
+            // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -604,12 +569,12 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "FormProduct";
+            this.Name = "FormStaff";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormProduct_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -621,26 +586,23 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn staff_id;
-        private DataGridViewTextBoxColumn staffName;
-        private DataGridViewTextBoxColumn postName;
+        private DataGridView dtStaffInfo;
         private Button button5;
         private TextBox textBox7;
-        private Button button4;
-        private Button button3;
-        private Button button2;
+        private Button btDelStaff;
+        private Button btUpdateStaff;
+        private Button btAddStaff;
         private Button button1;
-        private TextBox textBox6;
+        private TextBox txtTotalSal;
         private ListBox listBox1;
         private Label label14;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtBonus;
+        private TextBox txtState;
+        private ComboBox cbPosition;
+        private TextBox txtPhone;
+        private DateTimePicker dtBirthDay;
+        private TextBox txtName;
+        private TextBox txtID;
         private Label label12;
         private Label label11;
         private Label label10;
@@ -659,8 +621,6 @@
         private Label label13;
         private Label label1;
         private TextBox textBox9;
-        private Button button11;
-        private Button button10;
         private Button button7;
         private Button button6;
         private TextBox textBox12;
@@ -670,6 +630,7 @@
         private Label label16;
         private Label label15;
         private Button button9;
-        private Button button8;
+        private Button btCreateStaff;
+        private Button btSaveStaff;
     }
 }
