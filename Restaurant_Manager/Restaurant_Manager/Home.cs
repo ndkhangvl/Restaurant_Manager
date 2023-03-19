@@ -135,6 +135,15 @@ namespace Restaurant_Manager
             ActivateButton(sender, RGBColors.color5);
             OpenChildForm(new FormInventory());
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+                this.Close();
+            Login loginForm = new Login();
+            loginForm.Show();
+
+        }
+
     }
 
     }
