@@ -58,23 +58,13 @@ namespace Restaurant_Manager.Forms
 
         private void grvInvoice_SelectionChanged(object sender, EventArgs e)
         {
-            // Kiểm tra xem có hàng nào được chọn không
-            
-                // Lấy hàng được chọn   
-                //DataGridViewRow selectedRow = this.grvInvoice.SelectedRows[0];
-
-                // Lấy giá trị của cột "table_id" trong hàng được chọn
-               //string ID_frmInvoice = (string)selectedRow.Cells["IDfrmInvoice"].Value;
-
-                // Tạo câu truy vấn để lấy dữ liệu của bàn có table_id tương ứng
-                //string query = "SELECT * FROM invoice WHERE ID_frmInvoice = @invoice_id";
+       
                 foreach(DataGridViewRow row in this.grvInvoice.SelectedRows)
                 {
                     try
                     {
                         clsDatabase.OpenConnection();
-                        //SqlCommand command = new SqlCommand(query, clsDatabase.conn);
-                        //command.Parameters.AddWithValue("@invoice_id", ID_frmInvoice);
+                    
                         SqlDataAdapter da = new SqlDataAdapter("SELECT dn.dishName,id.Quantity from dish_menu dn join invoice_detail id on dn.dish_id = id.dish_id WHERE invoice_id = " + row.Cells[0].Value, clsDatabase.conn); ;
                         DataTable datatb = new DataTable();
                         da.Fill(datatb);
@@ -96,6 +86,8 @@ namespace Restaurant_Manager.Forms
                         txtInvoiceTotal.Text = dr["invoiceTotal"].ToString();
                         txtInvoiceTable.Text = dr["tableName"].ToString();
                         txtInvoiceState.Text = dr["invoiceState"].ToString();
+                        
+
                         }
 
                         
