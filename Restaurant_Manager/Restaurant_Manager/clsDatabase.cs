@@ -14,7 +14,11 @@ namespace Restaurant_Manager
         {
             try
             {
+<<<<<<< HEAD
+                conn = new SqlConnection("Server=HNGHIA;Database=ResManager;uid=sa;pwd=sa2008");
+=======
                 conn = new SqlConnection("Server=HXPDONG;Database=ResManager;integrated security=true");
+>>>>>>> 16d12173520ae1e7011231f6341d21ea3643398f
                 conn.Open();
             }
             catch (Exception ex) { return false; }

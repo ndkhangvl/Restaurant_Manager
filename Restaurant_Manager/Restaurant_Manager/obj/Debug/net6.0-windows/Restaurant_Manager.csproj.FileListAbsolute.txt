@@ -64,6 +64,41 @@ D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
 D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStaff.resources
+<<<<<<< HEAD
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.exe
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.deps.json
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.runtimeconfig.json
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.pdb
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.AssemblyReference.cache
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Admin.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInventory.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInvoice.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormMenu.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStaff.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStatistic.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Home.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Login.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Properties.Resources.resources
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.GenerateResource.cache
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.GeneratedMSBuildEditorConfig.editorconfig
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.AssemblyInfoInputs.cache
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.AssemblyInfo.cs
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.CoreCompileInputs.cache
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.CopyComplete
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\refint\Restaurant_Manager.dll
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
+D:\HocTap\Nam4\HK2\NET\Project\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
+=======
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.exe
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.deps.json
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.runtimeconfig.json
@@ -97,3 +132,4 @@ D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
 D:\CTU_Project\NET\GroupProject\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
+>>>>>>> 16d12173520ae1e7011231f6341d21ea3643398f

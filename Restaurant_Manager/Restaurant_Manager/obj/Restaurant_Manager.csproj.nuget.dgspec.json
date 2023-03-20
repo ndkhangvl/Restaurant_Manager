@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CTU_Project\\NET\\GroupProject\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {}
+    "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {}
   },
   "projects": {
-    "D:\\CTU_Project\\NET\\GroupProject\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {
+    "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CTU_Project\\NET\\GroupProject\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+        "projectUniqueName": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
         "projectName": "Restaurant_Manager",
-        "projectPath": "D:\\CTU_Project\\NET\\GroupProject\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\CTU_Project\\NET\\GroupProject\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
+        "projectPath": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
