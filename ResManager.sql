@@ -70,4 +70,3 @@ create table accounts(
 
 insert into accounts(uname,passwd,acctype) values ('ndkhang','ndkhang',1);
 select * from accounts;
-

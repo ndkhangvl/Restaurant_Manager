@@ -498,23 +498,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DLCH\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+      "projectUniqueName": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
       "projectName": "Restaurant_Manager",
-      "projectPath": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
-      "packagesPath": "C:\\Users\\DLCH\\.nuget\\packages\\",
-      "outputPath": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
+      "projectPath": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\DLCH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -573,5 +573,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\HocTap\\Nam4\\HK2\\NET\\Project\\Restaurant_Manager\\Restaurant_Manager\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
