@@ -37,6 +37,7 @@ namespace Restaurant_Manager
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
+            //rgb(255, 82, 82)
             public static Color color2 = Color.FromArgb(249, 118, 176);
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95, 77, 221);
@@ -106,6 +107,15 @@ namespace Restaurant_Manager
             //lblTitleChildForm.Text = childForm.Text;
         }
 
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            panelTitleBar.BackColor = Color.FromArgb(51, 51, 76);
+
+        }
+        //Events
+        
         private void btnStaff_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -144,6 +154,25 @@ namespace Restaurant_Manager
 
         }
 
+        private void btHomeClick_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            Reset();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbTime.Text = DateTime.Now.ToLongTimeString();
+            lbDate.Text = DateTime.Now.ToLongDateString();
+        }
     }
 
     }

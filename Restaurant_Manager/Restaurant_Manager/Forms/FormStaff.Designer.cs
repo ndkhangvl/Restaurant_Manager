@@ -75,6 +75,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.btCreateStaff = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,6 +85,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.btSaveStaff);
             this.panel1.Controls.Add(this.dtStaffInfo);
             this.panel1.Controls.Add(this.button5);
@@ -561,6 +563,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Account";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(446, 35);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 24);
+            this.checkBox1.TabIndex = 30;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -631,5 +643,6 @@
         private Button button9;
         private Button btCreateStaff;
         private Button btSaveStaff;
+        private CheckBox checkBox1;
     }
 }
