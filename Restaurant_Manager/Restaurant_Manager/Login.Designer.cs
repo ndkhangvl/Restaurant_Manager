@@ -39,9 +39,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbShowPass = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,36 +49,38 @@
             // txtUname
             // 
             this.txtUname.BackColor = System.Drawing.SystemColors.Window;
-            this.txtUname.Location = new System.Drawing.Point(374, 133);
-            this.txtUname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUname.Location = new System.Drawing.Point(468, 166);
+            this.txtUname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUname.Name = "txtUname";
-            this.txtUname.Size = new System.Drawing.Size(274, 27);
+            this.txtUname.Size = new System.Drawing.Size(342, 31);
             this.txtUname.TabIndex = 1;
             // 
             // txtPasswd
             // 
-            this.txtPasswd.Location = new System.Drawing.Point(374, 185);
-            this.txtPasswd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPasswd.Location = new System.Drawing.Point(468, 231);
+            this.txtPasswd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPasswd.Name = "txtPasswd";
             this.txtPasswd.PasswordChar = '*';
-            this.txtPasswd.Size = new System.Drawing.Size(274, 27);
+            this.txtPasswd.Size = new System.Drawing.Size(342, 31);
             this.txtPasswd.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(271, 140);
+            this.label2.Location = new System.Drawing.Point(339, 175);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.Size = new System.Drawing.Size(91, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(271, 192);
+            this.label3.Location = new System.Drawing.Point(339, 240);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password";
             // 
@@ -87,10 +89,10 @@
             this.btLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btLogin.Location = new System.Drawing.Point(294, 274);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btLogin.Location = new System.Drawing.Point(368, 342);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(100, 40);
+            this.btLogin.Size = new System.Drawing.Size(125, 50);
             this.btLogin.TabIndex = 5;
             this.btLogin.Text = "Login";
             this.btLogin.UseVisualStyleBackColor = false;
@@ -101,10 +103,10 @@
             this.btClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btClear.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btClear.Location = new System.Drawing.Point(428, 274);
-            this.btClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btClear.Location = new System.Drawing.Point(535, 342);
+            this.btClear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btClear.Name = "btClear";
-            this.btClear.Size = new System.Drawing.Size(100, 40);
+            this.btClear.Size = new System.Drawing.Size(125, 50);
             this.btClear.TabIndex = 6;
             this.btClear.Text = "Clear";
             this.btClear.UseVisualStyleBackColor = false;
@@ -115,10 +117,10 @@
             this.btExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btExit.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btExit.Location = new System.Drawing.Point(560, 274);
-            this.btExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btExit.Location = new System.Drawing.Point(700, 342);
+            this.btExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(100, 40);
+            this.btExit.Size = new System.Drawing.Size(125, 50);
             this.btExit.TabIndex = 7;
             this.btExit.Text = "Exit";
             this.btExit.UseVisualStyleBackColor = false;
@@ -127,10 +129,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(428, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(535, 16);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(181, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -138,9 +140,10 @@
             // cbShowPass
             // 
             this.cbShowPass.AutoSize = true;
-            this.cbShowPass.Location = new System.Drawing.Point(374, 219);
+            this.cbShowPass.Location = new System.Drawing.Point(468, 274);
+            this.cbShowPass.Margin = new System.Windows.Forms.Padding(4);
             this.cbShowPass.Name = "cbShowPass";
-            this.cbShowPass.Size = new System.Drawing.Size(132, 24);
+            this.cbShowPass.Size = new System.Drawing.Size(162, 29);
             this.cbShowPass.TabIndex = 9;
             this.cbShowPass.Text = "Show Password";
             this.cbShowPass.UseVisualStyleBackColor = true;
@@ -153,48 +156,53 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 352);
+            this.panel1.Size = new System.Drawing.Size(314, 440);
             this.panel1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(15, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Restaurant M.S";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font(".VnArial", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(67, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Version 1.0";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(39, 321);
+            this.label5.Location = new System.Drawing.Point(49, 401);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 22);
+            this.label5.Size = new System.Drawing.Size(208, 27);
             this.label5.TabIndex = 2;
             this.label5.Text = "Power by ĐNKKCH";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font(".VnArial", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(84, 151);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Version 1.0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(19, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 45);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Restaurant M.S";
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AcceptButton = this.btLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 353);
+            this.ClientSize = new System.Drawing.Size(852, 441);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbShowPass);
             this.Controls.Add(this.pictureBox1);
@@ -205,6 +213,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPasswd);
             this.Controls.Add(this.txtUname);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -10,6 +10,18 @@ namespace Restaurant_Manager
         public Login()
         {
             InitializeComponent();
+         
+        }
+        private void txtPasswd_Keydown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+
+                btLogin.PerformClick();
+            }
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,5 +105,7 @@ namespace Restaurant_Manager
                 txtPasswd.PasswordChar = '*' ;
             }
         }
+
+      
     }
 }

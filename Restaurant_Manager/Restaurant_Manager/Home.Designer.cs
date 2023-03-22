@@ -37,6 +37,7 @@ namespace Restaurant_Manager
             this.btnInventory = new FontAwesome.Sharp.IconButton();
             this.btnStatistic = new FontAwesome.Sharp.IconButton();
             this.btnInvoice = new FontAwesome.Sharp.IconButton();
+            this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.panelIcon = new System.Windows.Forms.Panel();
@@ -64,23 +65,27 @@ namespace Restaurant_Manager
             this.panelMenu.Controls.Add(this.btnInventory);
             this.panelMenu.Controls.Add(this.btnStatistic);
             this.panelMenu.Controls.Add(this.btnInvoice);
+            this.panelMenu.Controls.Add(this.btnOrder);
             this.panelMenu.Controls.Add(this.btnMenu);
             this.panelMenu.Controls.Add(this.btnStaff);
             this.panelMenu.Controls.Add(this.panelIcon);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 753);
+            this.panelMenu.Size = new System.Drawing.Size(275, 941);
             this.panelMenu.TabIndex = 5;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnlogout
             // 
             this.btnlogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Location = new System.Drawing.Point(3, 721);
+            this.btnlogout.Location = new System.Drawing.Point(4, 901);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(211, 29);
+            this.btnlogout.Size = new System.Drawing.Size(264, 36);
             this.btnlogout.TabIndex = 0;
             this.btnlogout.Text = "Log out";
             this.btnlogout.UseVisualStyleBackColor = false;
@@ -97,11 +102,12 @@ namespace Restaurant_Manager
             this.btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventory.IconSize = 32;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 395);
+            this.btnInventory.Location = new System.Drawing.Point(0, 569);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnInventory.Size = new System.Drawing.Size(220, 60);
-            this.btnInventory.TabIndex = 6;
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnInventory.Size = new System.Drawing.Size(275, 75);
+            this.btnInventory.TabIndex = 7;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
@@ -117,11 +123,12 @@ namespace Restaurant_Manager
             this.btnStatistic.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStatistic.IconSize = 32;
             this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistic.Location = new System.Drawing.Point(0, 335);
+            this.btnStatistic.Location = new System.Drawing.Point(0, 494);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(4);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStatistic.Size = new System.Drawing.Size(220, 60);
-            this.btnStatistic.TabIndex = 5;
+            this.btnStatistic.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnStatistic.Size = new System.Drawing.Size(275, 75);
+            this.btnStatistic.TabIndex = 6;
             this.btnStatistic.Text = "Statistic";
             this.btnStatistic.UseVisualStyleBackColor = true;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
@@ -137,14 +144,36 @@ namespace Restaurant_Manager
             this.btnInvoice.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInvoice.IconSize = 32;
             this.btnInvoice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInvoice.Location = new System.Drawing.Point(0, 275);
+            this.btnInvoice.Location = new System.Drawing.Point(0, 419);
+            this.btnInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnInvoice.Size = new System.Drawing.Size(220, 60);
-            this.btnInvoice.TabIndex = 4;
+            this.btnInvoice.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnInvoice.Size = new System.Drawing.Size(275, 75);
+            this.btnInvoice.TabIndex = 5;
             this.btnInvoice.Text = "Invoice";
             this.btnInvoice.UseVisualStyleBackColor = true;
             this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnOrder.IconChar = FontAwesome.Sharp.IconChar.CartPlus;
+            this.btnOrder.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOrder.IconSize = 32;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(0, 344);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnOrder.Size = new System.Drawing.Size(275, 75);
+            this.btnOrder.TabIndex = 4;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnMenu
             // 
@@ -157,10 +186,11 @@ namespace Restaurant_Manager
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 32;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 215);
+            this.btnMenu.Location = new System.Drawing.Point(0, 269);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(220, 60);
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(275, 75);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "Menu/Table";
             this.btnMenu.UseVisualStyleBackColor = true;
@@ -177,10 +207,11 @@ namespace Restaurant_Manager
             this.btnStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStaff.IconSize = 32;
             this.btnStaff.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStaff.Location = new System.Drawing.Point(0, 155);
+            this.btnStaff.Location = new System.Drawing.Point(0, 194);
+            this.btnStaff.Margin = new System.Windows.Forms.Padding(4);
             this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnStaff.Size = new System.Drawing.Size(220, 60);
+            this.btnStaff.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnStaff.Size = new System.Drawing.Size(275, 75);
             this.btnStaff.TabIndex = 2;
             this.btnStaff.Text = "Staff";
             this.btnStaff.UseVisualStyleBackColor = true;
@@ -192,16 +223,18 @@ namespace Restaurant_Manager
             this.panelIcon.Controls.Add(this.btHomeClick);
             this.panelIcon.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelIcon.Location = new System.Drawing.Point(0, 0);
+            this.panelIcon.Margin = new System.Windows.Forms.Padding(4);
             this.panelIcon.Name = "panelIcon";
-            this.panelIcon.Size = new System.Drawing.Size(220, 155);
+            this.panelIcon.Size = new System.Drawing.Size(275, 194);
             this.panelIcon.TabIndex = 1;
             // 
             // btHomeClick
             // 
             this.btHomeClick.Image = ((System.Drawing.Image)(resources.GetObject("btHomeClick.Image")));
-            this.btHomeClick.Location = new System.Drawing.Point(3, 3);
+            this.btHomeClick.Location = new System.Drawing.Point(4, 4);
+            this.btHomeClick.Margin = new System.Windows.Forms.Padding(4);
             this.btHomeClick.Name = "btHomeClick";
-            this.btHomeClick.Size = new System.Drawing.Size(211, 146);
+            this.btHomeClick.Size = new System.Drawing.Size(264, 182);
             this.btHomeClick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btHomeClick.TabIndex = 0;
             this.btHomeClick.TabStop = false;
@@ -213,9 +246,10 @@ namespace Restaurant_Manager
             this.panelTitleBar.Controls.Add(this.lbUser);
             this.panelTitleBar.Controls.Add(this.label1);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(275, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(962, 100);
+            this.panelTitleBar.Size = new System.Drawing.Size(1203, 125);
             this.panelTitleBar.TabIndex = 6;
             // 
             // lbUser
@@ -223,9 +257,10 @@ namespace Restaurant_Manager
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbUser.Location = new System.Drawing.Point(778, 38);
+            this.lbUser.Location = new System.Drawing.Point(972, 48);
+            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(0, 31);
+            this.lbUser.Size = new System.Drawing.Size(0, 38);
             this.lbUser.TabIndex = 1;
             // 
             // label1
@@ -233,9 +268,10 @@ namespace Restaurant_Manager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(695, 33);
+            this.label1.Location = new System.Drawing.Point(869, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 38);
+            this.label1.Size = new System.Drawing.Size(102, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hello,";
             // 
@@ -246,9 +282,10 @@ namespace Restaurant_Manager
             this.panelDesktop.Controls.Add(this.lbTime);
             this.panelDesktop.Controls.Add(this.lbTitleHome);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 100);
+            this.panelDesktop.Location = new System.Drawing.Point(275, 125);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(962, 653);
+            this.panelDesktop.Size = new System.Drawing.Size(1203, 816);
             this.panelDesktop.TabIndex = 7;
             // 
             // lbDate
@@ -256,9 +293,10 @@ namespace Restaurant_Manager
             this.lbDate.AutoSize = true;
             this.lbDate.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbDate.ForeColor = System.Drawing.Color.MediumPurple;
-            this.lbDate.Location = new System.Drawing.Point(400, 410);
+            this.lbDate.Location = new System.Drawing.Point(500, 512);
+            this.lbDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDate.Name = "lbDate";
-            this.lbDate.Size = new System.Drawing.Size(274, 31);
+            this.lbDate.Size = new System.Drawing.Size(339, 38);
             this.lbDate.TabIndex = 2;
             this.lbDate.Text = "Tuesday, March 21, 2023";
             // 
@@ -267,9 +305,10 @@ namespace Restaurant_Manager
             this.lbTime.AutoSize = true;
             this.lbTime.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbTime.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbTime.Location = new System.Drawing.Point(430, 355);
+            this.lbTime.Location = new System.Drawing.Point(538, 444);
+            this.lbTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(233, 46);
+            this.lbTime.Size = new System.Drawing.Size(275, 54);
             this.lbTime.TabIndex = 1;
             this.lbTime.Text = "XX:XX:XX PM";
             // 
@@ -278,9 +317,10 @@ namespace Restaurant_Manager
             this.lbTitleHome.AutoSize = true;
             this.lbTitleHome.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbTitleHome.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lbTitleHome.Location = new System.Drawing.Point(335, 284);
+            this.lbTitleHome.Location = new System.Drawing.Point(419, 355);
+            this.lbTitleHome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitleHome.Name = "lbTitleHome";
-            this.lbTitleHome.Size = new System.Drawing.Size(437, 59);
+            this.lbTitleHome.Size = new System.Drawing.Size(526, 70);
             this.lbTitleHome.TabIndex = 0;
             this.lbTitleHome.Text = "KDKNCH Restaurant";
             // 
@@ -302,13 +342,13 @@ namespace Restaurant_Manager
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.ClientSize = new System.Drawing.Size(1478, 941);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
@@ -375,5 +415,6 @@ namespace Restaurant_Manager
         private DataGridViewTextBoxColumn postName;
         private Label lbTitleHome;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnOrder;
     }
 }

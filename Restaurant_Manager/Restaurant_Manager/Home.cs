@@ -127,9 +127,16 @@ namespace Restaurant_Manager
             ActivateButton(sender, RGBColors.color2);
             OpenChildForm(new FormMenu());
         }
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+            ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new FormOrder());
+        }
 
         private void btnInvoice_Click(object sender, EventArgs e)
         {
+
             ActivateButton(sender, RGBColors.color3);
             OpenChildForm(new FormInvoice());
         }
@@ -166,12 +173,21 @@ namespace Restaurant_Manager
         private void Home_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(w, h);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
