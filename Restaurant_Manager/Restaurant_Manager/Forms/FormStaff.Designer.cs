@@ -32,7 +32,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.Uname = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btSaveStaff = new System.Windows.Forms.Button();
             this.btDelStaff = new System.Windows.Forms.Button();
             this.btUpdateStaff = new System.Windows.Forms.Button();
@@ -57,7 +56,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btSearchStaff = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dtStaffInfo = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -83,7 +82,6 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.Uname);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.btSaveStaff);
             this.panel1.Controls.Add(this.btDelStaff);
             this.panel1.Controls.Add(this.btUpdateStaff);
@@ -143,16 +141,6 @@
             this.Uname.Size = new System.Drawing.Size(75, 20);
             this.Uname.TabIndex = 31;
             this.Uname.Text = "Username";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(446, 35);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 24);
-            this.checkBox1.TabIndex = 30;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btSaveStaff
             // 
@@ -383,18 +371,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Staff Information";
             // 
-            // button5
+            // btSearchStaff
             // 
-            this.button5.Location = new System.Drawing.Point(443, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 29);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btSearchStaff.Location = new System.Drawing.Point(443, 7);
+            this.btSearchStaff.Name = "btSearchStaff";
+            this.btSearchStaff.Size = new System.Drawing.Size(75, 29);
+            this.btSearchStaff.TabIndex = 25;
+            this.btSearchStaff.Text = "Search";
+            this.btSearchStaff.UseVisualStyleBackColor = true;
+            this.btSearchStaff.Click += new System.EventHandler(this.btSearchStaff_Click);
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(9, 7);
+            this.textBox7.Location = new System.Drawing.Point(3, 9);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(429, 27);
             this.textBox7.TabIndex = 24;
@@ -402,7 +391,7 @@
             // dtStaffInfo
             // 
             this.dtStaffInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtStaffInfo.Location = new System.Drawing.Point(9, 53);
+            this.dtStaffInfo.Location = new System.Drawing.Point(3, 42);
             this.dtStaffInfo.Name = "dtStaffInfo";
             this.dtStaffInfo.RowHeadersWidth = 51;
             this.dtStaffInfo.RowTemplate.Height = 29;
@@ -509,7 +498,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dtStaffInfo);
             this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.btSearchStaff);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(595, 307);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
@@ -545,7 +534,7 @@
 
         private Panel panel1;
         private DataGridView dtStaffInfo;
-        private Button button5;
+        private Button btSearchStaff;
         private TextBox textBox7;
         private Button btDelStaff;
         private Button btUpdateStaff;
@@ -580,7 +569,6 @@
         private Button button7;
         private Button button6;
         private Button btSaveStaff;
-        private CheckBox checkBox1;
         private Panel panel3;
         private Label label4;
         private Label label15;

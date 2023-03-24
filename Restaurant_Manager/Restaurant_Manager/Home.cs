@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Restaurant_Manager.Forms;
@@ -26,20 +27,21 @@ namespace Restaurant_Manager
             //panelMenu.Controls.Add(leftBorderBtn);
         }
 
-        public Home(string value)
+        public Home(string value,int value_acctype)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             lbUser.Text = value;
+            if(value_acctype != 1)
+            {
+                btnStaff.Visible = false;
+                btnStatistic.Visible = false;
+                btnInventory.Visible = false;
+            }
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
 
         private struct RGBColors

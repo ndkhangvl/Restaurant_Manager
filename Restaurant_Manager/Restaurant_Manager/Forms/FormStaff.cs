@@ -124,5 +124,12 @@ namespace Restaurant_Manager.Forms
         {
 
         }
+
+        private void btSearchStaff_Click(object sender, EventArgs e)
+        {
+            string strCmd = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";
+            clsDatabase.OpenConnection();
+            SqlCommand conn = new SqlCommand(strCmd, clsDatabase.conn);
+        }
     }
 }

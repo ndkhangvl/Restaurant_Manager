@@ -69,13 +69,17 @@ namespace Restaurant_Manager
                     if(mAccount.acctype == 1)
                     {
                         string data = mAccount.uname;
-                        Home form = new Home(data);
+                        int data_acctype = mAccount.acctype;
+                        Home form = new Home(data,data_acctype);
                         form.Show();
                         this.Hide();
                     } else if(mAccount.acctype == 2)
                     {
-                        Admin form = new Admin();
+                        string data = mAccount.uname;
+                        int data_acctype = mAccount.acctype;
+                        Home form = new Home(data, data_acctype);
                         form.Show();
+                        this.Hide();
                     } else
                     {
                         MessageBox.Show("Please try again");
