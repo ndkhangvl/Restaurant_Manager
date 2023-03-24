@@ -1,6 +1,5 @@
 # Restaurant_Manager
-Restaurant Manager
-This is a simple restaurant management system built with C# and Windows Forms. It allows restaurant managers to create and manage orders, view sales reports, and manage menu items.
+**Restaurant Manager** this is a team project done by 6 main members. Building restaurant management application in C# language (Windows Form). It allows to manage employees, manage menus, manage payments, invoices,.... Friendly project interface that is easy to use for everyone.
 
 ## Requirements
 To run this application, you will need install:
