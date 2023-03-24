@@ -26,3 +26,39 @@ D:\Hoc\TKBNam4\HK2\chieuthu7\New folder (2)\Restaurant_Manager\Restaurant_Manage
 D:\Hoc\TKBNam4\HK2\chieuthu7\New folder (2)\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.dll
 D:\Hoc\TKBNam4\HK2\chieuthu7\New folder (2)\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\refint\Restaurant_Manager.dll
 D:\Hoc\TKBNam4\HK2\chieuthu7\New folder (2)\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.exe
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.deps.json
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.runtimeconfig.json
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\Restaurant_Manager.pdb
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.AssemblyReference.cache
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Admin.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInventory.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInvoice.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormMenu.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormOrder.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStaff.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStatistic.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Home.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Login.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Properties.Resources.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.GenerateResource.cache
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.GeneratedMSBuildEditorConfig.editorconfig
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.AssemblyInfoInputs.cache
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.AssemblyInfo.cs
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.CoreCompileInputs.cache
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.CopyComplete
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\refint\Restaurant_Manager.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.PopupListDishDeleted.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.PopupListTable.resources

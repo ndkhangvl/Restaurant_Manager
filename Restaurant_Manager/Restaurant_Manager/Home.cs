@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -32,7 +33,14 @@ namespace Restaurant_Manager
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             lbUser.Text = value;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
 
         private struct RGBColors
         {
@@ -89,14 +97,12 @@ namespace Restaurant_Manager
 
         private void OpenChildForm(Form childForm)
         {
-            //open only form
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
-                //Test
             }
             currentChildForm = childForm;
-            //End
+            //Toplevel set Form inside form Parent
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -173,10 +179,10 @@ namespace Restaurant_Manager
         private void Home_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            int w = Screen.PrimaryScreen.Bounds.Width;
+/*            int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);
+            this.Size = new Size(w, h);*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -189,6 +195,7 @@ namespace Restaurant_Manager
         {
 
         }
+
     }
 
     }

@@ -41,6 +41,9 @@
             this.cboCate = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnClearDish = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUptDish = new System.Windows.Forms.Button();
             this.btnNewDish = new System.Windows.Forms.Button();
             this.cboDishCate = new System.Windows.Forms.ComboBox();
             this.txtDishUnit = new System.Windows.Forms.TextBox();
@@ -59,7 +62,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnTableList = new System.Windows.Forms.Button();
-            this.btnUptDish = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewDishMenu)).BeginInit();
@@ -82,12 +84,15 @@
             // 
             // btnNewCate
             // 
-            this.btnNewCate.Location = new System.Drawing.Point(142, 89);
+            this.btnNewCate.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnNewCate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNewCate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNewCate.Location = new System.Drawing.Point(164, 89);
             this.btnNewCate.Name = "btnNewCate";
             this.btnNewCate.Size = new System.Drawing.Size(111, 33);
             this.btnNewCate.TabIndex = 2;
-            this.btnNewCate.Text = "New";
-            this.btnNewCate.UseVisualStyleBackColor = true;
+            this.btnNewCate.Text = "Save";
+            this.btnNewCate.UseVisualStyleBackColor = false;
             this.btnNewCate.Click += new System.EventHandler(this.btnNewCate_Click);
             // 
             // txtNewCat
@@ -120,7 +125,7 @@
             // 
             // btnDishDeleted
             // 
-            this.btnDishDeleted.Location = new System.Drawing.Point(23, 372);
+            this.btnDishDeleted.Location = new System.Drawing.Point(9, 372);
             this.btnDishDeleted.Name = "btnDishDeleted";
             this.btnDishDeleted.Size = new System.Drawing.Size(94, 29);
             this.btnDishDeleted.TabIndex = 5;
@@ -176,7 +181,7 @@
             // cboCate
             // 
             this.cboCate.FormattingEnabled = true;
-            this.cboCate.Location = new System.Drawing.Point(252, 28);
+            this.cboCate.Location = new System.Drawing.Point(164, 28);
             this.cboCate.Name = "cboCate";
             this.cboCate.Size = new System.Drawing.Size(151, 28);
             this.cboCate.TabIndex = 2;
@@ -187,13 +192,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "New Category";
+            this.label2.Text = "Choose Category";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Controls.Add(this.btnClearDish);
+            this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnUptDish);
             this.panel3.Controls.Add(this.btnNewDish);
             this.panel3.Controls.Add(this.cboDishCate);
@@ -211,14 +218,56 @@
             this.panel3.Size = new System.Drawing.Size(492, 444);
             this.panel3.TabIndex = 2;
             // 
+            // btnClearDish
+            // 
+            this.btnClearDish.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnClearDish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClearDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClearDish.Location = new System.Drawing.Point(367, 171);
+            this.btnClearDish.Name = "btnClearDish";
+            this.btnClearDish.Size = new System.Drawing.Size(94, 29);
+            this.btnClearDish.TabIndex = 9;
+            this.btnClearDish.Text = "Clear";
+            this.btnClearDish.UseVisualStyleBackColor = false;
+            this.btnClearDish.Click += new System.EventHandler(this.btnClearDish_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDelete.Location = new System.Drawing.Point(150, 215);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 29);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUptDish
+            // 
+            this.btnUptDish.BackColor = System.Drawing.Color.Gold;
+            this.btnUptDish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUptDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUptDish.Location = new System.Drawing.Point(25, 215);
+            this.btnUptDish.Name = "btnUptDish";
+            this.btnUptDish.Size = new System.Drawing.Size(94, 29);
+            this.btnUptDish.TabIndex = 7;
+            this.btnUptDish.Text = "Update";
+            this.btnUptDish.UseVisualStyleBackColor = false;
+            this.btnUptDish.Click += new System.EventHandler(this.btnUptDish_Click);
+            // 
             // btnNewDish
             // 
-            this.btnNewDish.Location = new System.Drawing.Point(367, 171);
+            this.btnNewDish.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnNewDish.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNewDish.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNewDish.Location = new System.Drawing.Point(367, 215);
             this.btnNewDish.Name = "btnNewDish";
             this.btnNewDish.Size = new System.Drawing.Size(94, 29);
             this.btnNewDish.TabIndex = 6;
-            this.btnNewDish.Text = "New";
-            this.btnNewDish.UseVisualStyleBackColor = true;
+            this.btnNewDish.Text = "Save";
+            this.btnNewDish.UseVisualStyleBackColor = false;
             this.btnNewDish.Click += new System.EventHandler(this.btnNewDish_Click);
             // 
             // cboDishCate
@@ -258,6 +307,7 @@
             this.txtDishId.ReadOnly = true;
             this.txtDishId.Size = new System.Drawing.Size(125, 27);
             this.txtDishId.TabIndex = 1;
+            this.txtDishId.TextChanged += new System.EventHandler(this.txtDishId_TextChanged);
             // 
             // label9
             // 
@@ -320,12 +370,15 @@
             // 
             // btnNewTable
             // 
+            this.btnNewTable.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnNewTable.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNewTable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnNewTable.Location = new System.Drawing.Point(367, 22);
             this.btnNewTable.Name = "btnNewTable";
             this.btnNewTable.Size = new System.Drawing.Size(94, 29);
             this.btnNewTable.TabIndex = 5;
-            this.btnNewTable.Text = "New";
-            this.btnNewTable.UseVisualStyleBackColor = true;
+            this.btnNewTable.Text = "Save";
+            this.btnNewTable.UseVisualStyleBackColor = false;
             this.btnNewTable.Click += new System.EventHandler(this.btnNewTable_Click);
             // 
             // spnSeats
@@ -362,27 +415,17 @@
             // 
             // btnTableList
             // 
-            this.btnTableList.Location = new System.Drawing.Point(383, 79);
+            this.btnTableList.Location = new System.Drawing.Point(367, 67);
             this.btnTableList.Name = "btnTableList";
             this.btnTableList.Size = new System.Drawing.Size(94, 29);
             this.btnTableList.TabIndex = 0;
             this.btnTableList.Text = "List Table";
             this.btnTableList.UseVisualStyleBackColor = true;
-            // 
-            // btnUptDish
-            // 
-            this.btnUptDish.Location = new System.Drawing.Point(367, 228);
-            this.btnUptDish.Name = "btnUptDish";
-            this.btnUptDish.Size = new System.Drawing.Size(94, 29);
-            this.btnUptDish.TabIndex = 7;
-            this.btnUptDish.Text = "Update";
-            this.btnUptDish.UseVisualStyleBackColor = true;
-            this.btnUptDish.Click += new System.EventHandler(this.btnUptDish_Click);
+            this.btnTableList.Click += new System.EventHandler(this.btnTableList_Click);
             // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(944, 606);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -439,5 +482,7 @@
         private TextBox txtDishUnit;
         private Button btnNewDish;
         private Button btnUptDish;
+        private Button btnDelete;
+        private Button btnClearDish;
     }
 }

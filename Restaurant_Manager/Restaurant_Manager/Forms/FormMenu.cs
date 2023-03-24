@@ -25,10 +25,16 @@ namespace Restaurant_Manager.Forms
             cboCate.SelectedIndexChanged -= cboCate_SelectedIndexChanged;
             cboDishCate.SelectedIndexChanged -= cboDishCate_SelectedIndexChanged;
             setCboCategory();
+            setCboDishCate();
             cboCate.SelectedIndex = -1;
             cboDishCate.SelectedIndex = -1;
             cboCate.SelectedIndexChanged += cboCate_SelectedIndexChanged;
             cboDishCate.SelectedIndexChanged += cboDishCate_SelectedIndexChanged;
+
+            txtDishId.Text = "";
+            btnDelete.Enabled = false;
+            btnUptDish.Enabled = false;
+            btnNewDish.Enabled = true;
         }
 
         void setCboCategory()
@@ -43,13 +49,30 @@ namespace Restaurant_Manager.Forms
                 cboCate.DataSource = dt;
                 cboCate.ValueMember = "cate_id";
                 cboCate.DisplayMember = "cateName";
-                cboDishCate.DataSource = dt;
-                cboDishCate.ValueMember = "cate_id";
-                cboDishCate.DisplayMember = "cateName";
+                
                 clsDatabase.CloseConnection();
             }catch (Exception ex)
             {
                 MessageBox.Show("Error setCate: " + ex.Message);
+            }
+        }
+        void setCboDishCate()
+        {
+            try
+            {
+                clsDatabase.OpenConnection();
+                SqlDataAdapter da = new SqlDataAdapter("Select * from list_category()", clsDatabase.conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "dsCate");
+                DataTable dt = ds.Tables["dsCate"];
+                cboDishCate.DataSource = dt;
+                cboDishCate.ValueMember = "cate_id";
+                cboDishCate.DisplayMember = "cateName";
+           
+                clsDatabase.CloseConnection();
+            }catch (Exception ex)
+            {
+
             }
         }
         private void btnNewCate_Click(object sender, EventArgs e)
@@ -110,7 +133,16 @@ namespace Restaurant_Manager.Forms
 
         private void btnDishDeleted_Click(object sender, EventArgs e)
         {
-
+            PopupListDishDeleted popListDel = new PopupListDishDeleted();
+            popListDel.ShowDialog();
+            clsDatabase.OpenConnection();
+            SqlDataAdapter da = new SqlDataAdapter(
+                    "select * from dish_list_by_cate(" + idCate + ");"
+                    , clsDatabase.conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "dsDishMenu");
+            grdViewDishMenu.DataSource = ds.Tables["dsDishMenu"];
+            clsDatabase.CloseConnection();
         }
 
         private void btnNewTable_Click(object sender, EventArgs e)
@@ -293,6 +325,70 @@ namespace Restaurant_Manager.Forms
                     MessageBox.Show("Error updateDish: " + ex.Message);
                 }
             }
+        }
+
+        private void btnClearDish_Click(object sender, EventArgs e)
+        {
+            txtDishId.Clear();
+            txtDishName.Clear();
+            txtDishPrice.Clear();
+            txtDishUnit.Clear();
+            cboDishCate.SelectedIndex = -1;
+        }
+
+        private void txtDishId_TextChanged(object sender, EventArgs e)
+        {
+            if(txtDishId.Text == "")
+            {
+                btnUptDish.Enabled = false;
+                btnDelete.Enabled = false;
+                btnNewDish.Enabled = true;
+            } 
+            else
+            {
+                btnUptDish.Enabled = true;
+                btnDelete.Enabled = true;
+                btnNewDish.Enabled = false;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clsDatabase.OpenConnection();
+                SqlCommand com = new SqlCommand(
+                    "execute dish_delete @dishid;",
+                    clsDatabase.conn);
+                SqlParameter p1 = new SqlParameter("@dishid", SqlDbType.Int);
+                p1.Value = txtDishId.Text;
+                com.Parameters.Add(p1);
+                com.ExecuteNonQuery();
+
+                txtDishId.Clear();
+                txtDishName.Clear();
+                txtDishPrice.Clear();
+                txtDishUnit.Clear();
+                cboDishCate.SelectedIndex = -1;
+                cboCate.SelectedIndex = Convert.ToInt32(idDishCate)-1;
+                SqlDataAdapter da = new SqlDataAdapter(
+                                        "select * from dish_list_by_cate(" + idDishCate + ");"
+                                        , clsDatabase.conn);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "dsDishMenu");
+                grdViewDishMenu.DataSource = ds.Tables["dsDishMenu"];
+
+                clsDatabase.CloseConnection();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnTableList_Click(object sender, EventArgs e)
+        {
+            PopupListTable popListTab = new PopupListTable();
+            popListTab.ShowDialog();
         }
     }
 }
