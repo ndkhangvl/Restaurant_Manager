@@ -110,6 +110,9 @@ namespace Restaurant_Manager
             }
         }
 
-      
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

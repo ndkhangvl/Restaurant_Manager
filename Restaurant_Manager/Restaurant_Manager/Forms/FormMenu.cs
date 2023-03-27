@@ -22,6 +22,9 @@ namespace Restaurant_Manager.Forms
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
+           
+   
+
             cboCate.SelectedIndexChanged -= cboCate_SelectedIndexChanged;
             cboDishCate.SelectedIndexChanged -= cboDishCate_SelectedIndexChanged;
             setCboCategory();
@@ -389,6 +392,16 @@ namespace Restaurant_Manager.Forms
         {
             PopupListTable popListTab = new PopupListTable();
             popListTab.ShowDialog();
+        }
+
+        private void btnNewCate_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

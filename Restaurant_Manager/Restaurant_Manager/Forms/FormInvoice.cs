@@ -183,6 +183,9 @@ namespace Restaurant_Manager.Forms
         {
         }
 
+        private void txtInvoiceTable_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

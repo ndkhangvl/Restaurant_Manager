@@ -181,10 +181,10 @@ namespace Restaurant_Manager
         private void Home_Load(object sender, EventArgs e)
         {
             timer1.Start();
-/*            int w = Screen.PrimaryScreen.Bounds.Width;
+           int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
-            this.Size = new Size(w, h);*/
+            this.Size = new Size(w, h);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
