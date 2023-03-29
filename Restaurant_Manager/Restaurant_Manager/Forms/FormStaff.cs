@@ -151,5 +151,18 @@ namespace Restaurant_Manager.Forms
             clsDatabase.OpenConnection();
             SqlCommand conn = new SqlCommand(strCmd, clsDatabase.conn);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(w/2, h);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
