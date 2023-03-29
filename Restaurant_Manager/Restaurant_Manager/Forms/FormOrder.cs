@@ -199,7 +199,11 @@ namespace Restaurant_Manager.Forms
                 SqlParameter p1 = new SqlParameter("@table_id", System.Data.SqlDbType.Int);
                 p1.Value = cboTable.SelectedValue;
                 SqlParameter p2 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
+<<<<<<< HEAD
                 p2.Value = Login.mAccount.accountid;
+=======
+                p2.Value = Login.mAccount.accID;
+>>>>>>> 328fe0f88dc5343892dc7d3c897fe89f609800d5
                 conn.Parameters.Add(p1);
                 conn.Parameters.Add(p2);
                 conn.ExecuteNonQuery();
