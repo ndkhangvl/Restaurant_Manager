@@ -39,7 +39,6 @@ E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manage
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.AssemblyReference.cache
-E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Admin.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInventory.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInvoice.resources
 E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormMenu.resources

@@ -70,14 +70,16 @@ namespace Restaurant_Manager
                     {
                         string data = mAccount.uname;
                         int data_acctype = mAccount.acctype;
-                        Home form = new Home(data,data_acctype);
+                        int data_accid = mAccount.accountid;
+                        Home form = new Home(data,data_acctype,data_accid);
                         form.Show();
                         this.Hide();
                     } else if(mAccount.acctype == 2)
                     {
                         string data = mAccount.uname;
                         int data_acctype = mAccount.acctype;
-                        Home form = new Home(data, data_acctype);
+                        int data_accid = mAccount.accountid;
+                        Home form = new Home(data, data_acctype,data_accid);
                         form.Show();
                         this.Hide();
                     } else

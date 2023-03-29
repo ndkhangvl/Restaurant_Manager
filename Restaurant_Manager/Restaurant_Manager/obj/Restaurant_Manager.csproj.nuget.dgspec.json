@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Hoc\\TKBNam4\\HK2\\chieuthu7\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {}
+    "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {}
   },
   "projects": {
-    "D:\\Hoc\\TKBNam4\\HK2\\chieuthu7\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {
+    "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Hoc\\TKBNam4\\HK2\\chieuthu7\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+        "projectUniqueName": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
         "projectName": "Restaurant_Manager",
-        "projectPath": "D:\\Hoc\\TKBNam4\\HK2\\chieuthu7\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Hoc\\TKBNam4\\HK2\\chieuthu7\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
+        "projectPath": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager.csproj",
+        "packagesPath": "C:\\Users\\DLCH\\.nuget\\packages\\",
+        "outputPath": "E:\\CanThoUniversity\\HK2_2022-2023\\.NET\\BTTH\\Restaurant_Manager\\Restaurant_Manager\\Restaurant_Manager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Hoc\\Visual Studio\\Tools\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DLCH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -73,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

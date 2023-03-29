@@ -77,24 +77,37 @@ namespace Restaurant_Manager.Forms
         {
             try
             {
-                string strInsert = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";
+                //string strInsert = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";
+                string strInsert = "EXEC staff_new @staffName,@DoB,@staffPhone,@idPosition @staffState,@uname,@passwd,@acctype";
                 clsDatabase.OpenConnection();
                 SqlCommand conn = new SqlCommand(strInsert, clsDatabase.conn);
-
-                SqlParameter p1 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
-                p1.Value = CodeNo;
-                SqlParameter p2 = new SqlParameter("@staffName", System.Data.SqlDbType.VarChar);
-                p2.Value = txtName.Text;
-                SqlParameter p3 = new SqlParameter("@DoB", System.Data.SqlDbType.DateTime);
-                p3.Value = dtBirthDay.Value;
+                /*                SqlParameter p1 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
+                                p1.Value = CodeNo;*/
+                SqlParameter p1 = new SqlParameter("@staffName", System.Data.SqlDbType.VarChar);
+                p1.Value = txtName.Text;
+                SqlParameter p2 = new SqlParameter("@DoB", System.Data.SqlDbType.DateTime);
+                p2.Value = dtBirthDay.Value;
                 /* SqlParameter p4 = new SqlParameter("@staffPhone", System.Data.SqlDbType.Int);
                  p4.Value = Convert.ToInt32(txtSoGio.Text);*/
-                SqlParameter p4 = new SqlParameter("@staffPhone", System.Data.SqlDbType.VarChar);
-                p4.Value = txtPhone.Text;
-                SqlParameter p5 = new SqlParameter("@idPosition", System.Data.SqlDbType.Int);
-                p5.Value = cbPosition.SelectedValue;
-                SqlParameter p6 = new SqlParameter("@staffState", System.Data.SqlDbType.Int);
-                p6.Value = Convert.ToInt32(txtState.Text);
+                SqlParameter p3 = new SqlParameter("@staffPhone", System.Data.SqlDbType.VarChar);
+                p3.Value = txtPhone.Text;
+                SqlParameter p4 = new SqlParameter("@idPosition", System.Data.SqlDbType.Int);
+                p4.Value = cbPosition.SelectedValue;
+                SqlParameter p5 = new SqlParameter("@staffState", System.Data.SqlDbType.Int);
+                p5.Value = Convert.ToInt32(txtState.Text);
+                SqlParameter p6 = new SqlParameter("@uname", System.Data.SqlDbType.NVarChar);
+                p6.Value = txtUname.Text;
+                if(txtPasswd.Text == txtConfirm.Text)
+                {
+                    SqlParameter p7 = new SqlParameter("@passwd", System.Data.SqlDbType.NVarChar);
+                    p7.Value = txtConfirm.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Error Password!");
+                }
+                SqlParameter p8 = new SqlParameter("@acctype", System.Data.SqlDbType.Int);
+                p8.Value = Convert.ToInt32(txtState.Text);
 
                 conn.Parameters.Add(p1);
                 conn.Parameters.Add(p2);
@@ -125,6 +138,13 @@ namespace Restaurant_Manager.Forms
 
         }
 
+        private void FormStaff_Load(object sender, EventArgs e)
+        {
+            int w = Screen.PrimaryScreen.Bounds.Width;
+            int h = Screen.PrimaryScreen.Bounds.Height;
+            this.Location = new Point(0, 0);
+            this.Size = new Size(w, h);
+        }
         private void btSearchStaff_Click(object sender, EventArgs e)
         {
             string strCmd = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";

@@ -27,13 +27,13 @@ namespace Restaurant_Manager
             //panelMenu.Controls.Add(leftBorderBtn);
         }
 
-        public Home(string value,int value_acctype)
+        public Home(string value,int value_acctype, int value_accid)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
-            lbUser.Text = value;
+            lbUser.Text = value + value_accid;
             if(value_acctype != 1)
             {
                 btnStaff.Visible = false;
@@ -181,7 +181,7 @@ namespace Restaurant_Manager
         private void Home_Load(object sender, EventArgs e)
         {
             timer1.Start();
-           int w = Screen.PrimaryScreen.Bounds.Width;
+            int w = Screen.PrimaryScreen.Bounds.Width;
             int h = Screen.PrimaryScreen.Bounds.Height;
             this.Location = new Point(0, 0);
             this.Size = new Size(w, h);
@@ -192,6 +192,7 @@ namespace Restaurant_Manager
             lbTime.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToLongDateString();
         }
+
 
         private void panelMenu_Paint(object sender, PaintEventArgs e)
         {

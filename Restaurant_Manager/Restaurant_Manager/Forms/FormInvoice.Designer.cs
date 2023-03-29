@@ -136,7 +136,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(372, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 45);
+            this.label2.Size = new System.Drawing.Size(95, 38);
             this.label2.TabIndex = 59;
             this.label2.Text = "Detail";
             // 
@@ -146,7 +146,7 @@
             this.txtInvoiceState.Location = new System.Drawing.Point(471, 203);
             this.txtInvoiceState.Name = "txtInvoiceState";
             this.txtInvoiceState.ReadOnly = true;
-            this.txtInvoiceState.Size = new System.Drawing.Size(170, 35);
+            this.txtInvoiceState.Size = new System.Drawing.Size(170, 30);
             this.txtInvoiceState.TabIndex = 58;
             this.txtInvoiceState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -156,7 +156,7 @@
             this.txtInvoiceTable.Location = new System.Drawing.Point(471, 74);
             this.txtInvoiceTable.Name = "txtInvoiceTable";
             this.txtInvoiceTable.ReadOnly = true;
-            this.txtInvoiceTable.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceTable.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceTable.TabIndex = 57;
             this.txtInvoiceTable.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -165,7 +165,7 @@
             this.txtInvoiceTotal.Location = new System.Drawing.Point(188, 258);
             this.txtInvoiceTotal.Name = "txtInvoiceTotal";
             this.txtInvoiceTotal.ReadOnly = true;
-            this.txtInvoiceTotal.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceTotal.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceTotal.TabIndex = 56;
             // 
             // txtInvoiceUpDate
@@ -173,7 +173,7 @@
             this.txtInvoiceUpDate.Location = new System.Drawing.Point(188, 207);
             this.txtInvoiceUpDate.Name = "txtInvoiceUpDate";
             this.txtInvoiceUpDate.ReadOnly = true;
-            this.txtInvoiceUpDate.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceUpDate.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceUpDate.TabIndex = 55;
             // 
             // txtInvoiceDate
@@ -181,7 +181,7 @@
             this.txtInvoiceDate.Location = new System.Drawing.Point(188, 158);
             this.txtInvoiceDate.Name = "txtInvoiceDate";
             this.txtInvoiceDate.ReadOnly = true;
-            this.txtInvoiceDate.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceDate.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceDate.TabIndex = 54;
             // 
             // txtInvoiceStaff
@@ -189,7 +189,7 @@
             this.txtInvoiceStaff.Location = new System.Drawing.Point(188, 113);
             this.txtInvoiceStaff.Name = "txtInvoiceStaff";
             this.txtInvoiceStaff.ReadOnly = true;
-            this.txtInvoiceStaff.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceStaff.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceStaff.TabIndex = 53;
             // 
             // txtInvoiceID
@@ -197,7 +197,7 @@
             this.txtInvoiceID.Location = new System.Drawing.Point(188, 70);
             this.txtInvoiceID.Name = "txtInvoiceID";
             this.txtInvoiceID.ReadOnly = true;
-            this.txtInvoiceID.Size = new System.Drawing.Size(170, 31);
+            this.txtInvoiceID.Size = new System.Drawing.Size(170, 27);
             this.txtInvoiceID.TabIndex = 52;
             // 
             // label9
@@ -206,7 +206,7 @@
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.Location = new System.Drawing.Point(407, 210);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 25);
+            this.label9.Size = new System.Drawing.Size(49, 20);
             this.label9.TabIndex = 51;
             this.label9.Text = "State:";
             // 
@@ -216,7 +216,7 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(407, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 25);
+            this.label8.Size = new System.Drawing.Size(50, 20);
             this.label8.TabIndex = 50;
             this.label8.Text = "Table:";
             // 
@@ -226,7 +226,7 @@
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(71, 265);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 25);
+            this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 49;
             this.label7.Text = "Total:";
             // 
@@ -236,7 +236,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(71, 214);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 25);
+            this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 48;
             this.label6.Text = "Date Update:";
             // 
@@ -246,7 +246,7 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(71, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 25);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 47;
             this.label5.Text = "Date:";
             // 
@@ -256,7 +256,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(71, 120);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 46;
             this.label4.Text = "Staff:";
             // 
@@ -266,7 +266,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(71, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 25);
+            this.label3.Size = new System.Drawing.Size(83, 20);
             this.label3.TabIndex = 45;
             this.label3.Text = "Invoice ID:";
             // 
@@ -337,7 +337,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(214, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 45);
+            this.label1.Size = new System.Drawing.Size(111, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Invoice";
             // 
@@ -359,6 +359,7 @@
             this.grvInvoice.RowTemplate.Height = 29;
             this.grvInvoice.Size = new System.Drawing.Size(622, 795);
             this.grvInvoice.TabIndex = 0;
+            this.grvInvoice.SelectionChanged += new System.EventHandler(this.grvInvoice_SelectionChanged);
             // 
             // IDfrmInvoice
             // 
