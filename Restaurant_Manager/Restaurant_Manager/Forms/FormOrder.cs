@@ -19,6 +19,7 @@ namespace Restaurant_Manager.Forms
     {
         int IDmenu;
         object maMenu;
+        int invTotal = 0;
         
         public FormOrder()
         {
@@ -32,6 +33,8 @@ namespace Restaurant_Manager.Forms
             btnPaid.Enabled = false;
             btnUpdate.Enabled = false;
             changetable.Enabled = false;
+
+            cboDiscount.SelectedIndex = 0;
         }
 
         void setTbale()
@@ -112,11 +115,6 @@ namespace Restaurant_Manager.Forms
                 }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void grdInvoice_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Kiểm tra nếu đang format cột "PaymentStatus" và giá trị của ô đó là "Unpaid"
@@ -138,7 +136,7 @@ namespace Restaurant_Manager.Forms
             try
             {
                 clsDatabase.OpenConnection();
-                SqlDataAdapter da = new SqlDataAdapter("select dish_id, dishName, price from dish_menu where cate_id  = " + cboCategory.SelectedValue, clsDatabase.conn);
+                SqlDataAdapter da = new SqlDataAdapter("select dish_id, dishName, price from dish_menu where dishState=1 and cate_id  = " + cboCategory.SelectedValue, clsDatabase.conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "dsMenu");
                 DataTable dt = ds.Tables["dsMenu"];
@@ -189,6 +187,7 @@ namespace Restaurant_Manager.Forms
 
         private void btnNewTable_Click(object sender, EventArgs e)
         {
+            cboDiscount.SelectedIndex = 0;
             try
             {
                 //string strInsert = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";
@@ -199,11 +198,9 @@ namespace Restaurant_Manager.Forms
                 SqlParameter p1 = new SqlParameter("@table_id", System.Data.SqlDbType.Int);
                 p1.Value = cboTable.SelectedValue;
                 SqlParameter p2 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
-<<<<<<< HEAD
-                p2.Value = Login.mAccount.accountid;
-=======
+
                 p2.Value = Login.mAccount.accID;
->>>>>>> 328fe0f88dc5343892dc7d3c897fe89f609800d5
+
                 conn.Parameters.Add(p1);
                 conn.Parameters.Add(p2);
                 conn.ExecuteNonQuery();
@@ -236,6 +233,7 @@ namespace Restaurant_Manager.Forms
         {
             foreach (DataGridViewRow row in this.grdInvoice.SelectedRows)
             {
+                cboDiscount.SelectedIndex = 0;
                 try
                 {
                     clsDatabase.OpenConnection();
@@ -272,8 +270,13 @@ namespace Restaurant_Manager.Forms
                             txtState_Detail.BackColor = Color.Silver;
                            // Đặt màu xanh cho nền
                         }
+                        resetField();
+                        invTotal = Convert.ToInt32(dr["invoiceTotal"]);
                         clsDatabase.CloseConnection();
+                        
+                        
                     }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -297,7 +300,7 @@ namespace Restaurant_Manager.Forms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            cboDiscount.SelectedIndex = 0;
             try
             {
                 clsDatabase.OpenConnection();
@@ -344,7 +347,8 @@ namespace Restaurant_Manager.Forms
                     {
                         txtState_Detail.Text = "Paid";
                         txtState_Detail.BackColor = Color.Silver; // Đặt màu xanh cho nền
-                    } 
+                    }
+                    invTotal = Convert.ToInt32(dr["invoiceTotal"]);
                 }
                 resetField();
                 
@@ -381,10 +385,11 @@ namespace Restaurant_Manager.Forms
 
         private void btnPaid_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 clsDatabase.OpenConnection();
-                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text, clsDatabase.conn);
+                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text + ", " + cboDiscount.SelectedItem, clsDatabase.conn);
                 com.ExecuteNonQuery();
                 setTbale();
                 dataInvoice();
@@ -421,6 +426,7 @@ namespace Restaurant_Manager.Forms
 
                 clsDatabase.CloseConnection();
                 MessageBox.Show("Thành Công");
+                cboDiscount.SelectedIndex = 0;
             }
             catch(System.Exception ex)
             {
@@ -450,16 +456,19 @@ namespace Restaurant_Manager.Forms
                         
                     }
                     clsDatabase.CloseConnection();
+                    
                 }
                 catch (Exception ex)
                 {
 
                 }
+                quan_menu.Value = Convert.ToDecimal(row.Cells["Column5"].Value?.ToString());
             }
         }
 
         private void changetable_Click(object sender, EventArgs e)
         {
+            cboDiscount.SelectedIndex = 0;
             object newtab = cboTable.SelectedValue;
             try
             {
@@ -518,6 +527,7 @@ namespace Restaurant_Manager.Forms
                 }
 
                 clsDatabase.CloseConnection();
+               
             }
             catch (System.Exception ex)
             {
@@ -528,6 +538,18 @@ namespace Restaurant_Manager.Forms
         private void txtID_Detail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboDiscount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboDiscount.SelectedIndex == -1)
+            {
+                return;
+            }
+            else
+            {
+                txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(cboDiscount.SelectedItem) / 100);
+            }
         }
     }
 }

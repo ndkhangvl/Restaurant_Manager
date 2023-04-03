@@ -74,7 +74,6 @@ namespace Restaurant_Manager
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(219, 717);
             this.panelMenu.TabIndex = 5;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnlogout
             // 
@@ -247,7 +246,7 @@ namespace Restaurant_Manager
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbUser.Location = new System.Drawing.Point(939, 37);
+            this.lbUser.Location = new System.Drawing.Point(1489, 37);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(0, 31);
             this.lbUser.TabIndex = 1;
@@ -257,7 +256,7 @@ namespace Restaurant_Manager
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(859, 33);
+            this.label1.Location = new System.Drawing.Point(1399, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 38);
             this.label1.TabIndex = 0;

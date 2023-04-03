@@ -33,6 +33,7 @@ namespace Restaurant_Manager
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
+            //lbUser.Location = new Point(1599, 573);
             lbUser.Text = value + value_accid;
             if(value_acctype != 1)
             {
@@ -127,7 +128,7 @@ namespace Restaurant_Manager
         private void btnStaff_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            OpenChildForm(new FormStaff());
+            OpenChildForm(new FrStaff());
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -194,10 +195,8 @@ namespace Restaurant_Manager
         }
 
 
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
+     
 
-        }
 
     }
 

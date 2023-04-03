@@ -107,9 +107,10 @@
             this.ClientSize = new System.Drawing.Size(577, 450);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.gridViewTableList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PopupListTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PopupListTable";
+            this.Text = "Tables List";
             this.Load += new System.EventHandler(this.PopupListTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTableList)).EndInit();
             this.ResumeLayout(false);

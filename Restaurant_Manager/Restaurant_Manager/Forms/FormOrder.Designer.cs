@@ -60,6 +60,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cboDiscount = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtTotal_Detail = new System.Windows.Forms.TextBox();
             this.txtState_Detail = new System.Windows.Forms.TextBox();
             this.txtTable_Detail = new System.Windows.Forms.TextBox();
@@ -68,6 +70,11 @@
             this.txtStaff_Detail = new System.Windows.Forms.TextBox();
             this.txtID_Detail = new System.Windows.Forms.TextBox();
             this.grdDetail = new System.Windows.Forms.DataGridView();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPaid = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -77,11 +84,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdInvoice)).BeginInit();
             this.panel2.SuspendLayout();
@@ -138,7 +141,6 @@
             this.grdInvoice.RowTemplate.Height = 29;
             this.grdInvoice.Size = new System.Drawing.Size(320, 555);
             this.grdInvoice.TabIndex = 2;
-            this.grdInvoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.grdInvoice.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grdInvoice_CellFormatting);
             this.grdInvoice.SelectionChanged += new System.EventHandler(this.grdInvoice_SelectionChanged);
             // 
@@ -234,6 +236,11 @@
             // quan_menu
             // 
             this.quan_menu.Location = new System.Drawing.Point(83, 230);
+            this.quan_menu.Maximum = new decimal(new int[] {
+            900,
+            0,
+            0,
+            0});
             this.quan_menu.Name = "quan_menu";
             this.quan_menu.Size = new System.Drawing.Size(150, 27);
             this.quan_menu.TabIndex = 21;
@@ -409,6 +416,9 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.cboDiscount);
+            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.txtTotal_Detail);
             this.panel3.Controls.Add(this.txtState_Detail);
             this.panel3.Controls.Add(this.txtTable_Detail);
@@ -430,6 +440,37 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(573, 729);
             this.panel3.TabIndex = 2;
+            // 
+            // cboDiscount
+            // 
+            this.cboDiscount.FormattingEnabled = true;
+            this.cboDiscount.Items.AddRange(new object[] {
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50"});
+            this.cboDiscount.Location = new System.Drawing.Point(479, 211);
+            this.cboDiscount.Name = "cboDiscount";
+            this.cboDiscount.Size = new System.Drawing.Size(71, 28);
+            this.cboDiscount.TabIndex = 33;
+            this.cboDiscount.SelectedIndexChanged += new System.EventHandler(this.cboDiscount_SelectedIndexChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(338, 263);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(42, 20);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "VND";
             // 
             // txtTotal_Detail
             // 
@@ -512,6 +553,46 @@
             this.grdDetail.Size = new System.Drawing.Size(573, 401);
             this.grdDetail.TabIndex = 24;
             this.grdDetail.SelectionChanged += new System.EventHandler(this.grdDetail_SelectionChanged);
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "dish_id";
+            this.Column6.HeaderText = "ID";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "dishName";
+            this.Column4.HeaderText = "Dish Name";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Quantity";
+            this.Column5.HeaderText = "Quantity";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "price";
+            this.Column7.HeaderText = "Price";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "total";
+            this.Column8.HeaderText = "Total";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // btnPaid
             // 
@@ -603,45 +684,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Detail";
             // 
-            // Column6
+            // label20
             // 
-            this.Column6.DataPropertyName = "dish_id";
-            this.Column6.HeaderText = "ID";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "dishName";
-            this.Column4.HeaderText = "Dish Name";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Quantity";
-            this.Column5.HeaderText = "Quantity";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "price";
-            this.Column7.HeaderText = "Price";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "total";
-            this.Column8.HeaderText = "Total";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(369, 214);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(104, 20);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Discount (%):";
             // 
             // FormOrder
             // 
@@ -726,5 +777,8 @@
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private Label label19;
+        private ComboBox cboDiscount;
+        private Label label20;
     }
 }

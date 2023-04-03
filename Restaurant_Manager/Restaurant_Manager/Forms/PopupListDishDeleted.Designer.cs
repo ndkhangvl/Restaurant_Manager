@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.grdViewDishDeleted = new System.Windows.Forms.DataGridView();
-            this.btnRestore = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.isSelected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +36,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRestore = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdViewDishDeleted)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,26 +60,6 @@
             this.grdViewDishDeleted.RowTemplate.Height = 29;
             this.grdViewDishDeleted.Size = new System.Drawing.Size(889, 355);
             this.grdViewDishDeleted.TabIndex = 0;
-            // 
-            // btnRestore
-            // 
-            this.btnRestore.Location = new System.Drawing.Point(340, 384);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(94, 29);
-            this.btnRestore.TabIndex = 1;
-            this.btnRestore.Text = "Restore";
-            this.btnRestore.UseVisualStyleBackColor = true;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(485, 384);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 29);
-            this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // isSelected
             // 
@@ -142,6 +122,26 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
+            // btnRestore
+            // 
+            this.btnRestore.Location = new System.Drawing.Point(340, 384);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(94, 29);
+            this.btnRestore.TabIndex = 1;
+            this.btnRestore.Text = "Restore";
+            this.btnRestore.UseVisualStyleBackColor = true;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(485, 384);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 29);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // PopupListDishDeleted
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -150,9 +150,10 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.grdViewDishDeleted);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PopupListDishDeleted";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PopupListDishDeleted";
+            this.Text = "Dishes Deleted";
             this.Load += new System.EventHandler(this.PopupListDishDeleted_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdViewDishDeleted)).EndInit();
             this.ResumeLayout(false);

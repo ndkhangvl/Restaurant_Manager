@@ -22,9 +22,6 @@ namespace Restaurant_Manager.Forms
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
-           
-   
-
             cboCate.SelectedIndexChanged -= cboCate_SelectedIndexChanged;
             cboDishCate.SelectedIndexChanged -= cboDishCate_SelectedIndexChanged;
             setCboCategory();
@@ -52,9 +49,10 @@ namespace Restaurant_Manager.Forms
                 cboCate.DataSource = dt;
                 cboCate.ValueMember = "cate_id";
                 cboCate.DisplayMember = "cateName";
-                
+
                 clsDatabase.CloseConnection();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error setCate: " + ex.Message);
             }
@@ -71,9 +69,10 @@ namespace Restaurant_Manager.Forms
                 cboDishCate.DataSource = dt;
                 cboDishCate.ValueMember = "cate_id";
                 cboDishCate.DisplayMember = "cateName";
-           
+
                 clsDatabase.CloseConnection();
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
@@ -97,6 +96,7 @@ namespace Restaurant_Manager.Forms
                     cboCate.SelectedIndexChanged -= cboCate_SelectedIndexChanged;
                     cboDishCate.SelectedIndexChanged -= cboDishCate_SelectedIndexChanged;
                     setCboCategory();
+                    setCboDishCate();
                     cboCate.SelectedIndex = -1;
                     cboDishCate.SelectedIndex = -1;
                     cboCate.SelectedIndexChanged += cboCate_SelectedIndexChanged;
@@ -169,7 +169,8 @@ namespace Restaurant_Manager.Forms
                     clsDatabase.CloseConnection();
                     txtTableName.Clear();
                     spnSeats.Value = spnSeats.Minimum;
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error addTable: " + ex.Message);
                 }
@@ -238,7 +239,8 @@ namespace Restaurant_Manager.Forms
                                 }
                             }
                             else MessageBox.Show("Please enter dish unit");
-                        } else MessageBox.Show("Price must be number");
+                        }
+                        else MessageBox.Show("Price must be number");
                     }
                     else MessageBox.Show("Please enter dish price");
                 }
@@ -271,13 +273,13 @@ namespace Restaurant_Manager.Forms
                 txtDishName.Text = row.Cells[1].Value.ToString();
                 txtDishPrice.Text = row.Cells[2].Value.ToString();
                 txtDishUnit.Text = row.Cells[3].Value.ToString();
-                cboDishCate.SelectedIndex = Convert.ToInt32(row.Cells[5].Value.ToString()) -1;
+                cboDishCate.SelectedIndex = Convert.ToInt32(row.Cells[5].Value.ToString()) - 1;
             }
         }
 
         private void btnUptDish_Click(object sender, EventArgs e)
         {
-            if(txtDishId.Text != "")
+            if (txtDishId.Text != "")
             {
                 try
                 {
@@ -323,7 +325,8 @@ namespace Restaurant_Manager.Forms
                     cboDishCate.SelectedIndexChanged += cboDishCate_SelectedIndexChanged;
 
                     clsDatabase.CloseConnection();
-                }catch (Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error updateDish: " + ex.Message);
                 }
@@ -341,12 +344,12 @@ namespace Restaurant_Manager.Forms
 
         private void txtDishId_TextChanged(object sender, EventArgs e)
         {
-            if(txtDishId.Text == "")
+            if (txtDishId.Text == "")
             {
                 btnUptDish.Enabled = false;
                 btnDelete.Enabled = false;
                 btnNewDish.Enabled = true;
-            } 
+            }
             else
             {
                 btnUptDish.Enabled = true;
@@ -373,7 +376,7 @@ namespace Restaurant_Manager.Forms
                 txtDishPrice.Clear();
                 txtDishUnit.Clear();
                 cboDishCate.SelectedIndex = -1;
-                cboCate.SelectedIndex = Convert.ToInt32(idDishCate)-1;
+                cboCate.SelectedIndex = Convert.ToInt32(idDishCate) - 1;
                 SqlDataAdapter da = new SqlDataAdapter(
                                         "select * from dish_list_by_cate(" + idDishCate + ");"
                                         , clsDatabase.conn);
@@ -382,7 +385,8 @@ namespace Restaurant_Manager.Forms
                 grdViewDishMenu.DataSource = ds.Tables["dsDishMenu"];
 
                 clsDatabase.CloseConnection();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -392,16 +396,6 @@ namespace Restaurant_Manager.Forms
         {
             PopupListTable popListTab = new PopupListTable();
             popListTab.ShowDialog();
-        }
-
-        private void btnNewCate_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
