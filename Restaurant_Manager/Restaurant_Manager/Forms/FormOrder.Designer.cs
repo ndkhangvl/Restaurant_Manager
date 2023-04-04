@@ -102,16 +102,18 @@
             this.panel1.Controls.Add(this.cboTable);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(15, 8);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(320, 729);
+            this.panel1.Size = new System.Drawing.Size(400, 911);
             this.panel1.TabIndex = 0;
             // 
             // changetable
             // 
-            this.changetable.Location = new System.Drawing.Point(3, 136);
+            this.changetable.Location = new System.Drawing.Point(4, 170);
+            this.changetable.Margin = new System.Windows.Forms.Padding(4);
             this.changetable.Name = "changetable";
-            this.changetable.Size = new System.Drawing.Size(109, 29);
+            this.changetable.Size = new System.Drawing.Size(136, 36);
             this.changetable.TabIndex = 4;
             this.changetable.Text = "Change Table";
             this.changetable.UseVisualStyleBackColor = true;
@@ -119,9 +121,10 @@
             // 
             // btnNewTable
             // 
-            this.btnNewTable.Location = new System.Drawing.Point(166, 116);
+            this.btnNewTable.Location = new System.Drawing.Point(208, 145);
+            this.btnNewTable.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewTable.Name = "btnNewTable";
-            this.btnNewTable.Size = new System.Drawing.Size(151, 29);
+            this.btnNewTable.Size = new System.Drawing.Size(189, 36);
             this.btnNewTable.TabIndex = 3;
             this.btnNewTable.Text = "New";
             this.btnNewTable.UseVisualStyleBackColor = true;
@@ -130,16 +133,18 @@
             // grdInvoice
             // 
             this.grdInvoice.AllowUserToAddRows = false;
+            this.grdInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.table,
             this.state});
-            this.grdInvoice.Location = new System.Drawing.Point(0, 171);
+            this.grdInvoice.Location = new System.Drawing.Point(0, 214);
+            this.grdInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.grdInvoice.Name = "grdInvoice";
             this.grdInvoice.RowHeadersWidth = 51;
             this.grdInvoice.RowTemplate.Height = 29;
-            this.grdInvoice.Size = new System.Drawing.Size(320, 555);
+            this.grdInvoice.Size = new System.Drawing.Size(400, 657);
             this.grdInvoice.TabIndex = 2;
             this.grdInvoice.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grdInvoice_CellFormatting);
             this.grdInvoice.SelectionChanged += new System.EventHandler(this.grdInvoice_SelectionChanged);
@@ -150,7 +155,6 @@
             this.id.HeaderText = "ID";
             this.id.MinimumWidth = 6;
             this.id.Name = "id";
-            this.id.Width = 50;
             // 
             // table
             // 
@@ -158,7 +162,6 @@
             this.table.HeaderText = "Table";
             this.table.MinimumWidth = 6;
             this.table.Name = "table";
-            this.table.Width = 125;
             // 
             // state
             // 
@@ -166,14 +169,14 @@
             this.state.HeaderText = "State";
             this.state.MinimumWidth = 6;
             this.state.Name = "state";
-            this.state.Width = 125;
             // 
             // cboTable
             // 
             this.cboTable.FormattingEnabled = true;
-            this.cboTable.Location = new System.Drawing.Point(166, 78);
+            this.cboTable.Location = new System.Drawing.Point(208, 98);
+            this.cboTable.Margin = new System.Windows.Forms.Padding(4);
             this.cboTable.Name = "cboTable";
-            this.cboTable.Size = new System.Drawing.Size(151, 28);
+            this.cboTable.Size = new System.Drawing.Size(188, 33);
             this.cboTable.TabIndex = 1;
             this.cboTable.SelectedIndexChanged += new System.EventHandler(this.cboTable_SelectedIndexChanged);
             // 
@@ -181,9 +184,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(12, 77);
+            this.label4.Location = new System.Drawing.Point(15, 96);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(62, 25);
             this.label4.TabIndex = 0;
             this.label4.Text = "Table:";
             // 
@@ -191,9 +195,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(104, 12);
+            this.label1.Location = new System.Drawing.Point(130, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 38);
+            this.label1.Size = new System.Drawing.Size(131, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Invoice";
             // 
@@ -216,18 +221,20 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(335, 12);
+            this.panel2.Location = new System.Drawing.Point(419, 3);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 729);
+            this.panel2.Size = new System.Drawing.Size(581, 911);
             this.panel2.TabIndex = 1;
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Chartreuse;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(295, 260);
+            this.btnUpdate.Location = new System.Drawing.Point(369, 325);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(122, 53);
+            this.btnUpdate.Size = new System.Drawing.Size(152, 66);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -241,16 +248,19 @@
             0,
             0,
             0});
+            this.quan_menu.Location = new System.Drawing.Point(104, 288);
+            this.quan_menu.Margin = new System.Windows.Forms.Padding(4);
             this.quan_menu.Name = "quan_menu";
-            this.quan_menu.Size = new System.Drawing.Size(150, 27);
+            this.quan_menu.Size = new System.Drawing.Size(188, 31);
             this.quan_menu.TabIndex = 21;
             // 
             // unit_menu
             // 
-            this.unit_menu.Location = new System.Drawing.Point(233, 171);
+            this.unit_menu.Location = new System.Drawing.Point(291, 214);
+            this.unit_menu.Margin = new System.Windows.Forms.Padding(4);
             this.unit_menu.Name = "unit_menu";
             this.unit_menu.ReadOnly = true;
-            this.unit_menu.Size = new System.Drawing.Size(52, 27);
+            this.unit_menu.Size = new System.Drawing.Size(64, 31);
             this.unit_menu.TabIndex = 20;
             // 
             // grdMenu
@@ -261,11 +271,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.grdMenu.Location = new System.Drawing.Point(0, 363);
+            this.grdMenu.Location = new System.Drawing.Point(0, 422);
+            this.grdMenu.Margin = new System.Windows.Forms.Padding(4);
             this.grdMenu.Name = "grdMenu";
             this.grdMenu.RowHeadersWidth = 51;
             this.grdMenu.RowTemplate.Height = 29;
-            this.grdMenu.Size = new System.Drawing.Size(465, 363);
+            this.grdMenu.Size = new System.Drawing.Size(581, 454);
             this.grdMenu.TabIndex = 19;
             this.grdMenu.SelectionChanged += new System.EventHandler(this.grdMenu_SelectionChanged);
             // 
@@ -297,60 +308,67 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(3, 305);
+            this.label11.Location = new System.Drawing.Point(4, 381);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 20);
+            this.label11.Size = new System.Drawing.Size(95, 25);
             this.label11.TabIndex = 18;
             this.label11.Text = "Category:";
             // 
             // cboCategory
             // 
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(82, 297);
+            this.cboCategory.Location = new System.Drawing.Point(102, 371);
+            this.cboCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(111, 28);
+            this.cboCategory.Size = new System.Drawing.Size(138, 33);
             this.cboCategory.TabIndex = 17;
             this.cboCategory.SelectedIndexChanged += new System.EventHandler(this.cboCategory_SelectedIndexChanged);
             // 
             // price_menu
             // 
-            this.price_menu.Location = new System.Drawing.Point(82, 171);
+            this.price_menu.Location = new System.Drawing.Point(102, 214);
+            this.price_menu.Margin = new System.Windows.Forms.Padding(4);
             this.price_menu.Name = "price_menu";
             this.price_menu.ReadOnly = true;
-            this.price_menu.Size = new System.Drawing.Size(125, 27);
+            this.price_menu.Size = new System.Drawing.Size(155, 31);
             this.price_menu.TabIndex = 10;
             // 
             // name_menu
             // 
-            this.name_menu.Location = new System.Drawing.Point(82, 113);
+            this.name_menu.Location = new System.Drawing.Point(102, 141);
+            this.name_menu.Margin = new System.Windows.Forms.Padding(4);
             this.name_menu.Name = "name_menu";
             this.name_menu.ReadOnly = true;
-            this.name_menu.Size = new System.Drawing.Size(370, 27);
+            this.name_menu.Size = new System.Drawing.Size(462, 31);
             this.name_menu.TabIndex = 9;
             // 
             // category_menu
             // 
-            this.category_menu.Location = new System.Drawing.Point(321, 67);
+            this.category_menu.Location = new System.Drawing.Point(401, 84);
+            this.category_menu.Margin = new System.Windows.Forms.Padding(4);
             this.category_menu.Name = "category_menu";
             this.category_menu.ReadOnly = true;
-            this.category_menu.Size = new System.Drawing.Size(131, 27);
+            this.category_menu.Size = new System.Drawing.Size(163, 31);
             this.category_menu.TabIndex = 8;
             // 
             // ID_menu
             // 
-            this.ID_menu.Location = new System.Drawing.Point(82, 70);
+            this.ID_menu.Location = new System.Drawing.Point(102, 88);
+            this.ID_menu.Margin = new System.Windows.Forms.Padding(4);
             this.ID_menu.Name = "ID_menu";
             this.ID_menu.ReadOnly = true;
-            this.ID_menu.Size = new System.Drawing.Size(92, 27);
+            this.ID_menu.Size = new System.Drawing.Size(114, 31);
             this.ID_menu.TabIndex = 7;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(213, 174);
+            this.label10.Location = new System.Drawing.Point(266, 218);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 20);
+            this.label10.Size = new System.Drawing.Size(20, 25);
             this.label10.TabIndex = 6;
             this.label10.Text = "/";
             // 
@@ -358,9 +376,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(3, 232);
+            this.label9.Location = new System.Drawing.Point(4, 290);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 20);
+            this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 5;
             this.label9.Text = "Quantity:";
             // 
@@ -368,9 +387,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(3, 171);
+            this.label8.Location = new System.Drawing.Point(4, 214);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 20);
+            this.label8.Size = new System.Drawing.Size(59, 25);
             this.label8.TabIndex = 4;
             this.label8.Text = "Price:";
             // 
@@ -378,9 +398,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(3, 120);
+            this.label7.Location = new System.Drawing.Point(4, 150);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 20);
+            this.label7.Size = new System.Drawing.Size(67, 25);
             this.label7.TabIndex = 3;
             this.label7.Text = "Name:";
             // 
@@ -388,9 +409,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(233, 70);
+            this.label6.Location = new System.Drawing.Point(291, 88);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 20);
+            this.label6.Size = new System.Drawing.Size(95, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "Category:";
             // 
@@ -398,9 +420,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(3, 73);
+            this.label5.Location = new System.Drawing.Point(4, 91);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 20);
+            this.label5.Size = new System.Drawing.Size(36, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "ID:";
             // 
@@ -408,9 +431,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(180, 15);
+            this.label2.Location = new System.Drawing.Point(225, 19);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 38);
+            this.label2.Size = new System.Drawing.Size(110, 45);
             this.label2.TabIndex = 0;
             this.label2.Text = "Menu";
             // 
@@ -419,6 +443,9 @@
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.cboDiscount);
             this.panel3.Controls.Add(this.label19);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.txtTotal_Detail);
             this.panel3.Controls.Add(this.txtState_Detail);
             this.panel3.Controls.Add(this.txtTable_Detail);
@@ -436,9 +463,10 @@
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(806, 12);
+            this.panel3.Location = new System.Drawing.Point(1005, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(573, 729);
+            this.panel3.Size = new System.Drawing.Size(716, 911);
             this.panel3.TabIndex = 2;
             // 
             // cboDiscount
@@ -474,59 +502,66 @@
             // 
             // txtTotal_Detail
             // 
-            this.txtTotal_Detail.Location = new System.Drawing.Point(158, 260);
+            this.txtTotal_Detail.Location = new System.Drawing.Point(179, 323);
+            this.txtTotal_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal_Detail.Name = "txtTotal_Detail";
             this.txtTotal_Detail.ReadOnly = true;
-            this.txtTotal_Detail.Size = new System.Drawing.Size(174, 27);
+            this.txtTotal_Detail.Size = new System.Drawing.Size(216, 31);
             this.txtTotal_Detail.TabIndex = 31;
             // 
             // txtState_Detail
             // 
-            this.txtState_Detail.Location = new System.Drawing.Point(425, 161);
+            this.txtState_Detail.Location = new System.Drawing.Point(512, 199);
+            this.txtState_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtState_Detail.Name = "txtState_Detail";
             this.txtState_Detail.ReadOnly = true;
-            this.txtState_Detail.Size = new System.Drawing.Size(125, 27);
+            this.txtState_Detail.Size = new System.Drawing.Size(155, 31);
             this.txtState_Detail.TabIndex = 30;
             this.txtState_Detail.TextChanged += new System.EventHandler(this.txtState_Detail_TextChanged);
             // 
             // txtTable_Detail
             // 
-            this.txtTable_Detail.Location = new System.Drawing.Point(425, 74);
+            this.txtTable_Detail.Location = new System.Drawing.Point(512, 90);
+            this.txtTable_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtTable_Detail.Name = "txtTable_Detail";
             this.txtTable_Detail.ReadOnly = true;
-            this.txtTable_Detail.Size = new System.Drawing.Size(125, 27);
+            this.txtTable_Detail.Size = new System.Drawing.Size(155, 31);
             this.txtTable_Detail.TabIndex = 29;
             // 
             // txtDateUpdate_Detail
             // 
-            this.txtDateUpdate_Detail.Location = new System.Drawing.Point(158, 211);
+            this.txtDateUpdate_Detail.Location = new System.Drawing.Point(179, 262);
+            this.txtDateUpdate_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtDateUpdate_Detail.Name = "txtDateUpdate_Detail";
             this.txtDateUpdate_Detail.ReadOnly = true;
-            this.txtDateUpdate_Detail.Size = new System.Drawing.Size(174, 27);
+            this.txtDateUpdate_Detail.Size = new System.Drawing.Size(216, 31);
             this.txtDateUpdate_Detail.TabIndex = 28;
             // 
             // txtDate_Detail
             // 
-            this.txtDate_Detail.Location = new System.Drawing.Point(158, 165);
+            this.txtDate_Detail.Location = new System.Drawing.Point(179, 204);
+            this.txtDate_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate_Detail.Name = "txtDate_Detail";
             this.txtDate_Detail.ReadOnly = true;
-            this.txtDate_Detail.Size = new System.Drawing.Size(174, 27);
+            this.txtDate_Detail.Size = new System.Drawing.Size(216, 31);
             this.txtDate_Detail.TabIndex = 27;
             // 
             // txtStaff_Detail
             // 
-            this.txtStaff_Detail.Location = new System.Drawing.Point(158, 122);
+            this.txtStaff_Detail.Location = new System.Drawing.Point(179, 150);
+            this.txtStaff_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtStaff_Detail.Name = "txtStaff_Detail";
             this.txtStaff_Detail.ReadOnly = true;
-            this.txtStaff_Detail.Size = new System.Drawing.Size(174, 27);
+            this.txtStaff_Detail.Size = new System.Drawing.Size(216, 31);
             this.txtStaff_Detail.TabIndex = 26;
             // 
             // txtID_Detail
             // 
-            this.txtID_Detail.Location = new System.Drawing.Point(158, 78);
+            this.txtID_Detail.Location = new System.Drawing.Point(179, 96);
+            this.txtID_Detail.Margin = new System.Windows.Forms.Padding(4);
             this.txtID_Detail.Name = "txtID_Detail";
             this.txtID_Detail.ReadOnly = true;
-            this.txtID_Detail.Size = new System.Drawing.Size(77, 27);
+            this.txtID_Detail.Size = new System.Drawing.Size(95, 31);
             this.txtID_Detail.TabIndex = 25;
             this.txtID_Detail.TextChanged += new System.EventHandler(this.txtID_Detail_TextChanged);
             // 
@@ -534,8 +569,7 @@
             // 
             this.grdDetail.AllowUserToAddRows = false;
             this.grdDetail.AllowUserToDeleteRows = false;
-            this.grdDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.grdDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -545,12 +579,13 @@
             this.Column5,
             this.Column7,
             this.Column8});
-            this.grdDetail.Location = new System.Drawing.Point(0, 325);
+            this.grdDetail.Location = new System.Drawing.Point(0, 419);
+            this.grdDetail.Margin = new System.Windows.Forms.Padding(4);
             this.grdDetail.Name = "grdDetail";
             this.grdDetail.ReadOnly = true;
             this.grdDetail.RowHeadersWidth = 51;
             this.grdDetail.RowTemplate.Height = 29;
-            this.grdDetail.Size = new System.Drawing.Size(573, 401);
+            this.grdDetail.Size = new System.Drawing.Size(716, 488);
             this.grdDetail.TabIndex = 24;
             this.grdDetail.SelectionChanged += new System.EventHandler(this.grdDetail_SelectionChanged);
             // 
@@ -694,11 +729,110 @@
             this.label20.TabIndex = 34;
             this.label20.Text = "Discount (%):";
             // 
+            // btnPaid
+            // 
+            this.btnPaid.Location = new System.Drawing.Point(512, 327);
+            this.btnPaid.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPaid.Name = "btnPaid";
+            this.btnPaid.Size = new System.Drawing.Size(118, 36);
+            this.btnPaid.TabIndex = 23;
+            this.btnPaid.Text = "Paid";
+            this.btnPaid.UseVisualStyleBackColor = true;
+            this.btnPaid.Click += new System.EventHandler(this.btnPaid_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(35, 154);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 25);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "Staff:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(442, 203);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(61, 25);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "State:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(35, 266);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(124, 25);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "Date Update:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(442, 94);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(62, 25);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Table:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(35, 327);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(59, 25);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Total:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(35, 208);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 25);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Date:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(35, 99);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Invoice ID:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(277, 17);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 45);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Detail";
+            // 
             // FormOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.ClientSize = new System.Drawing.Size(1728, 944);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

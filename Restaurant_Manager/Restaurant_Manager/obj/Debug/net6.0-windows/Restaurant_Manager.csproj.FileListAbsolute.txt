@@ -73,7 +73,6 @@ D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Ma
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.csproj.AssemblyReference.cache
-D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Admin.resources
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInventory.resources
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormInvoice.resources
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormMenu.resources
@@ -96,4 +95,4 @@ D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Ma
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.pdb
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.genruntimeconfig.cache
 D:\Hoc\TKBNam4\HK2\chieuthu7\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\ref\Restaurant_Manager.dll
-E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FrStaff.resources
+E:\CanThoUniversity\HK2_2022-2023\.NET\BTTH\Restaurant_Manager\Restaurant_Manager\Restaurant_Manager\obj\Debug\net6.0-windows\Restaurant_Manager.Forms.FormStaff.resources
