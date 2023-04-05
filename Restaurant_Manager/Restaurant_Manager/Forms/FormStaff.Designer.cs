@@ -44,7 +44,6 @@
             this.btAddStaff = new System.Windows.Forms.Button();
             this.btRefresh = new System.Windows.Forms.Button();
             this.txtTotalSal = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtBonus = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
@@ -65,9 +64,17 @@
             this.btSearchStaff = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dtStaffInfo = new System.Windows.Forms.DataGridView();
+            this.staffid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stDoB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stState = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stposName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btClearPos = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btUpdatePos = new System.Windows.Forms.Button();
+            this.btEditPos = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -101,7 +108,6 @@
             this.panel1.Controls.Add(this.btAddStaff);
             this.panel1.Controls.Add(this.btRefresh);
             this.panel1.Controls.Add(this.txtTotalSal);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.txtBonus);
             this.panel1.Controls.Add(this.txtState);
@@ -222,7 +228,7 @@
             // 
             this.btDelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btDelStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btDelStaff.Location = new System.Drawing.Point(469, 520);
+            this.btDelStaff.Location = new System.Drawing.Point(483, 520);
             this.btDelStaff.Name = "btDelStaff";
             this.btDelStaff.Size = new System.Drawing.Size(94, 29);
             this.btDelStaff.TabIndex = 23;
@@ -233,12 +239,13 @@
             // 
             this.btUpdateStaff.BackColor = System.Drawing.Color.Chartreuse;
             this.btUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateStaff.Location = new System.Drawing.Point(354, 520);
+            this.btUpdateStaff.Location = new System.Drawing.Point(369, 520);
             this.btUpdateStaff.Name = "btUpdateStaff";
             this.btUpdateStaff.Size = new System.Drawing.Size(94, 29);
             this.btUpdateStaff.TabIndex = 22;
             this.btUpdateStaff.Text = "Update";
             this.btUpdateStaff.UseVisualStyleBackColor = false;
+            this.btUpdateStaff.Click += new System.EventHandler(this.btUpdateStaff_Click);
             // 
             // btAddStaff
             // 
@@ -262,7 +269,7 @@
             this.btRefresh.TabIndex = 20;
             this.btRefresh.Text = "Refresh";
             this.btRefresh.UseVisualStyleBackColor = false;
-            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click_1);
+            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
             // 
             // txtTotalSal
             // 
@@ -271,21 +278,6 @@
             this.txtTotalSal.ReadOnly = true;
             this.txtTotalSal.Size = new System.Drawing.Size(173, 27);
             this.txtTotalSal.TabIndex = 19;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Items.AddRange(new object[] {
-            "0",
-            "5",
-            "10",
-            "15",
-            "20"});
-            this.listBox1.Location = new System.Drawing.Point(524, 231);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(71, 24);
-            this.listBox1.TabIndex = 18;
             // 
             // label14
             // 
@@ -440,7 +432,7 @@
             // 
             // btSearchStaff
             // 
-            this.btSearchStaff.Location = new System.Drawing.Point(904, 7);
+            this.btSearchStaff.Location = new System.Drawing.Point(825, 8);
             this.btSearchStaff.Name = "btSearchStaff";
             this.btSearchStaff.Size = new System.Drawing.Size(75, 29);
             this.btSearchStaff.TabIndex = 25;
@@ -452,26 +444,79 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(3, 9);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(895, 27);
+            this.txtSearch.Size = new System.Drawing.Size(816, 27);
             this.txtSearch.TabIndex = 24;
             // 
             // dtStaffInfo
             // 
             this.dtStaffInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtStaffInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtStaffInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.staffid,
+            this.stName,
+            this.stDoB,
+            this.stPhone,
+            this.stState,
+            this.stposName});
             this.dtStaffInfo.Location = new System.Drawing.Point(3, 42);
             this.dtStaffInfo.Name = "dtStaffInfo";
             this.dtStaffInfo.RowHeadersWidth = 51;
             this.dtStaffInfo.RowTemplate.Height = 29;
-            this.dtStaffInfo.Size = new System.Drawing.Size(1112, 582);
+            this.dtStaffInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtStaffInfo.Size = new System.Drawing.Size(1025, 582);
             this.dtStaffInfo.TabIndex = 26;
+            this.dtStaffInfo.SelectionChanged += new System.EventHandler(this.dtStaffInfo_SelectionChanged);
+            // 
+            // staffid
+            // 
+            this.staffid.DataPropertyName = "staff_id";
+            this.staffid.HeaderText = "ID Staff";
+            this.staffid.MinimumWidth = 6;
+            this.staffid.Name = "staffid";
+            // 
+            // stName
+            // 
+            this.stName.DataPropertyName = "staffName";
+            this.stName.HeaderText = "Name";
+            this.stName.MinimumWidth = 6;
+            this.stName.Name = "stName";
+            // 
+            // stDoB
+            // 
+            this.stDoB.DataPropertyName = "DoB";
+            this.stDoB.HeaderText = "Birthday";
+            this.stDoB.MinimumWidth = 6;
+            this.stDoB.Name = "stDoB";
+            // 
+            // stPhone
+            // 
+            this.stPhone.DataPropertyName = "staffPhone";
+            this.stPhone.HeaderText = "Phone Number";
+            this.stPhone.MinimumWidth = 6;
+            this.stPhone.Name = "stPhone";
+            // 
+            // stState
+            // 
+            this.stState.DataPropertyName = "staffState";
+            this.stState.HeaderText = "State";
+            this.stState.MinimumWidth = 6;
+            this.stState.Name = "stState";
+            // 
+            // stposName
+            // 
+            this.stposName.DataPropertyName = "posName";
+            this.stposName.HeaderText = "Position";
+            this.stposName.MinimumWidth = 6;
+            this.stposName.Name = "stposName";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btClearPos);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btUpdatePos);
+            this.panel2.Controls.Add(this.btEditPos);
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.textBox8);
             this.panel2.Controls.Add(this.comboBox2);
@@ -485,38 +530,56 @@
             this.panel2.Size = new System.Drawing.Size(1120, 307);
             this.panel2.TabIndex = 2;
             // 
-            // button7
+            // btClearPos
             // 
-            this.button7.BackColor = System.Drawing.Color.Chartreuse;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(375, 229);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Update";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btClearPos.BackColor = System.Drawing.Color.Chartreuse;
+            this.btClearPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btClearPos.Location = new System.Drawing.Point(279, 225);
+            this.btClearPos.Name = "btClearPos";
+            this.btClearPos.Size = new System.Drawing.Size(94, 29);
+            this.btClearPos.TabIndex = 9;
+            this.btClearPos.Text = "Clear";
+            this.btClearPos.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // panel4
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkGray;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(131, 229);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 29);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Add";
-            this.button6.UseVisualStyleBackColor = false;
+            this.panel4.Location = new System.Drawing.Point(422, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(349, 307);
+            this.panel4.TabIndex = 8;
+            // 
+            // btUpdatePos
+            // 
+            this.btUpdatePos.BackColor = System.Drawing.Color.Chartreuse;
+            this.btUpdatePos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btUpdatePos.Location = new System.Drawing.Point(149, 225);
+            this.btUpdatePos.Name = "btUpdatePos";
+            this.btUpdatePos.Size = new System.Drawing.Size(94, 29);
+            this.btUpdatePos.TabIndex = 7;
+            this.btUpdatePos.Text = "Update";
+            this.btUpdatePos.UseVisualStyleBackColor = false;
+            // 
+            // btEditPos
+            // 
+            this.btEditPos.BackColor = System.Drawing.Color.DarkGray;
+            this.btEditPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btEditPos.Location = new System.Drawing.Point(30, 225);
+            this.btEditPos.Name = "btEditPos";
+            this.btEditPos.Size = new System.Drawing.Size(94, 29);
+            this.btEditPos.TabIndex = 6;
+            this.btEditPos.Text = "Edit";
+            this.btEditPos.UseVisualStyleBackColor = false;
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(170, 151);
+            this.textBox9.Location = new System.Drawing.Point(131, 151);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(268, 27);
             this.textBox9.TabIndex = 5;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(340, 91);
+            this.textBox8.Location = new System.Drawing.Point(279, 91);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(98, 27);
             this.textBox8.TabIndex = 4;
@@ -524,17 +587,16 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(170, 91);
+            this.comboBox2.Location = new System.Drawing.Point(131, 91);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(98, 28);
             this.comboBox2.TabIndex = 3;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(58, 96);
+            this.label13.Location = new System.Drawing.Point(22, 99);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 20);
             this.label13.TabIndex = 2;
@@ -544,7 +606,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(58, 157);
+            this.label1.Location = new System.Drawing.Point(22, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 20);
             this.label1.TabIndex = 1;
@@ -554,7 +616,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(223, 11);
+            this.label3.Location = new System.Drawing.Point(149, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 38);
             this.label3.TabIndex = 0;
@@ -577,7 +639,7 @@
             // 
             // btShowAllStaff
             // 
-            this.btShowAllStaff.Location = new System.Drawing.Point(985, 8);
+            this.btShowAllStaff.Location = new System.Drawing.Point(906, 7);
             this.btShowAllStaff.Name = "btShowAllStaff";
             this.btShowAllStaff.Size = new System.Drawing.Size(122, 29);
             this.btShowAllStaff.TabIndex = 27;
@@ -620,7 +682,6 @@
         private Button btAddStaff;
         private Button btRefresh;
         private TextBox txtTotalSal;
-        private ListBox listBox1;
         private Label label14;
         private TextBox txtBonus;
         private TextBox txtState;
@@ -645,8 +706,8 @@
         private Label label13;
         private Label label1;
         private TextBox textBox9;
-        private Button button7;
-        private Button button6;
+        private Button btUpdatePos;
+        private Button btEditPos;
         private Button btSaveStaff;
         private Panel panel3;
         private Label label4;
@@ -659,5 +720,13 @@
         private Label label16;
         private TextBox txtGetAccType;
         private Button btShowAllStaff;
+        private DataGridViewTextBoxColumn staffid;
+        private DataGridViewTextBoxColumn stName;
+        private DataGridViewTextBoxColumn stDoB;
+        private DataGridViewTextBoxColumn stPhone;
+        private DataGridViewTextBoxColumn stState;
+        private DataGridViewTextBoxColumn stposName;
+        private Button btClearPos;
+        private Panel panel4;
     }
 }

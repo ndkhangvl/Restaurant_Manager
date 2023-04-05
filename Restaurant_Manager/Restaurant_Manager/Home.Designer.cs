@@ -33,6 +33,7 @@ namespace Restaurant_Manager
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btChangePass = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.btnInventory = new FontAwesome.Sharp.IconButton();
             this.btnStatistic = new FontAwesome.Sharp.IconButton();
@@ -61,6 +62,7 @@ namespace Restaurant_Manager
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.btChangePass);
             this.panelMenu.Controls.Add(this.btnlogout);
             this.panelMenu.Controls.Add(this.btnInventory);
             this.panelMenu.Controls.Add(this.btnStatistic);
@@ -74,6 +76,20 @@ namespace Restaurant_Manager
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(219, 717);
             this.panelMenu.TabIndex = 5;
+            // 
+            // btChangePass
+            // 
+            this.btChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btChangePass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChangePass.ForeColor = System.Drawing.Color.White;
+            this.btChangePass.Location = new System.Drawing.Point(0, 641);
+            this.btChangePass.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.btChangePass.Name = "btChangePass";
+            this.btChangePass.Size = new System.Drawing.Size(219, 29);
+            this.btChangePass.TabIndex = 8;
+            this.btChangePass.Text = "Change Password";
+            this.btChangePass.UseVisualStyleBackColor = false;
+            this.btChangePass.Click += new System.EventHandler(this.btChangePass_Click);
             // 
             // btnlogout
             // 
@@ -400,5 +416,6 @@ namespace Restaurant_Manager
         private Label lbTitleHome;
         private System.Windows.Forms.Timer timer1;
         private FontAwesome.Sharp.IconButton btnOrder;
+        private Button btChangePass;
     }
 }

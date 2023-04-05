@@ -27,14 +27,14 @@ namespace Restaurant_Manager
             //panelMenu.Controls.Add(leftBorderBtn);
         }
 
-        public Home(string value,int value_acctype, int value_accid)
+        public Home(string value,int value_acctype)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             //lbUser.Location = new Point(1599, 573);
-            lbUser.Text = value + value_accid;
+            lbUser.Text = value;
             if(value_acctype != 1)
             {
                 btnStaff.Visible = false;
@@ -164,7 +164,7 @@ namespace Restaurant_Manager
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
-                this.Close();
+            this.Close();
             Login loginForm = new Login();
             loginForm.Show();
 
@@ -194,10 +194,13 @@ namespace Restaurant_Manager
             lbDate.Text = DateTime.Now.ToLongDateString();
         }
 
-
-     
-
-
+        private void btChangePass_Click(object sender, EventArgs e)
+        {
+            string data = lbUser.Text;
+            PopupChangePass popupForm = new PopupChangePass(data);
+            //popupForm.Data = lbUser.Text;
+            popupForm.ShowDialog();
+        }
     }
 
     }
