@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtGetAccType = new System.Windows.Forms.TextBox();
             this.cbAccType = new System.Windows.Forms.ComboBox();
@@ -449,8 +452,21 @@
             // 
             // dtStaffInfo
             // 
+            this.dtStaffInfo.AllowUserToAddRows = false;
+            this.dtStaffInfo.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtStaffInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtStaffInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtStaffInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtStaffInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtStaffInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtStaffInfo.ColumnHeadersHeight = 50;
             this.dtStaffInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.staffid,
             this.stName,
@@ -458,10 +474,21 @@
             this.stPhone,
             this.stState,
             this.stposName});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtStaffInfo.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtStaffInfo.Location = new System.Drawing.Point(3, 42);
             this.dtStaffInfo.Name = "dtStaffInfo";
-            this.dtStaffInfo.RowHeadersWidth = 51;
-            this.dtStaffInfo.RowTemplate.Height = 29;
+            this.dtStaffInfo.ReadOnly = true;
+            this.dtStaffInfo.RowHeadersVisible = false;
+            this.dtStaffInfo.RowHeadersWidth = 50;
+            this.dtStaffInfo.RowTemplate.DividerHeight = 3;
+            this.dtStaffInfo.RowTemplate.Height = 45;
             this.dtStaffInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtStaffInfo.Size = new System.Drawing.Size(1025, 582);
             this.dtStaffInfo.TabIndex = 26;
@@ -473,6 +500,7 @@
             this.staffid.HeaderText = "ID Staff";
             this.staffid.MinimumWidth = 6;
             this.staffid.Name = "staffid";
+            this.staffid.ReadOnly = true;
             // 
             // stName
             // 
@@ -480,6 +508,7 @@
             this.stName.HeaderText = "Name";
             this.stName.MinimumWidth = 6;
             this.stName.Name = "stName";
+            this.stName.ReadOnly = true;
             // 
             // stDoB
             // 
@@ -487,6 +516,7 @@
             this.stDoB.HeaderText = "Birthday";
             this.stDoB.MinimumWidth = 6;
             this.stDoB.Name = "stDoB";
+            this.stDoB.ReadOnly = true;
             // 
             // stPhone
             // 
@@ -494,6 +524,7 @@
             this.stPhone.HeaderText = "Phone Number";
             this.stPhone.MinimumWidth = 6;
             this.stPhone.Name = "stPhone";
+            this.stPhone.ReadOnly = true;
             // 
             // stState
             // 
@@ -501,6 +532,7 @@
             this.stState.HeaderText = "State";
             this.stState.MinimumWidth = 6;
             this.stState.Name = "stState";
+            this.stState.ReadOnly = true;
             // 
             // stposName
             // 
@@ -508,6 +540,7 @@
             this.stposName.HeaderText = "Position";
             this.stposName.MinimumWidth = 6;
             this.stposName.Name = "stposName";
+            this.stposName.ReadOnly = true;
             // 
             // panel2
             // 

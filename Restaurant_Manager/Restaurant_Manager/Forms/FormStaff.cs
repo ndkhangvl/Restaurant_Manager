@@ -8,8 +8,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using FontAwesome.Sharp;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using System.Windows.Media;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Restaurant_Manager.Forms
 {
@@ -23,6 +26,7 @@ namespace Restaurant_Manager.Forms
             dtInfoStaff();
             txtGetAccType.Visible = false;
             btSaveStaff.Enabled= false;
+            dtStaffInfo.ClearSelection();
         }
 
         void dtInfoStaff()
@@ -211,7 +215,7 @@ namespace Restaurant_Manager.Forms
                 }
                 catch (Exception ex)
                 {
-
+                    dtStaffInfo.ClearSelection();
                 }
             }
         }
