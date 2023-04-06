@@ -80,7 +80,6 @@
             this.btEditPos = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -237,6 +236,7 @@
             this.btDelStaff.TabIndex = 23;
             this.btDelStaff.Text = "Delete";
             this.btDelStaff.UseVisualStyleBackColor = false;
+            this.btDelStaff.Click += new System.EventHandler(this.btDelStaff_Click);
             // 
             // btUpdateStaff
             // 
@@ -296,6 +296,7 @@
             // 
             this.txtBonus.Location = new System.Drawing.Point(419, 231);
             this.txtBonus.Name = "txtBonus";
+            this.txtBonus.ReadOnly = true;
             this.txtBonus.Size = new System.Drawing.Size(57, 27);
             this.txtBonus.TabIndex = 15;
             // 
@@ -437,7 +438,7 @@
             // 
             this.btSearchStaff.Location = new System.Drawing.Point(825, 8);
             this.btSearchStaff.Name = "btSearchStaff";
-            this.btSearchStaff.Size = new System.Drawing.Size(75, 29);
+            this.btSearchStaff.Size = new System.Drawing.Size(114, 29);
             this.btSearchStaff.TabIndex = 25;
             this.btSearchStaff.Text = "Search";
             this.btSearchStaff.UseVisualStyleBackColor = true;
@@ -490,7 +491,7 @@
             this.dtStaffInfo.RowTemplate.DividerHeight = 3;
             this.dtStaffInfo.RowTemplate.Height = 45;
             this.dtStaffInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtStaffInfo.Size = new System.Drawing.Size(1025, 582);
+            this.dtStaffInfo.Size = new System.Drawing.Size(1064, 582);
             this.dtStaffInfo.TabIndex = 26;
             this.dtStaffInfo.SelectionChanged += new System.EventHandler(this.dtStaffInfo_SelectionChanged);
             // 
@@ -552,7 +553,6 @@
             this.panel2.Controls.Add(this.btEditPos);
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
@@ -612,24 +612,16 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(279, 91);
+            this.textBox8.Location = new System.Drawing.Point(131, 94);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(98, 27);
             this.textBox8.TabIndex = 4;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(131, 91);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(98, 28);
-            this.comboBox2.TabIndex = 3;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(22, 99);
+            this.label13.Location = new System.Drawing.Point(22, 94);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(102, 20);
             this.label13.TabIndex = 2;
@@ -672,7 +664,7 @@
             // 
             // btShowAllStaff
             // 
-            this.btShowAllStaff.Location = new System.Drawing.Point(906, 7);
+            this.btShowAllStaff.Location = new System.Drawing.Point(945, 8);
             this.btShowAllStaff.Name = "btShowAllStaff";
             this.btShowAllStaff.Size = new System.Drawing.Size(122, 29);
             this.btShowAllStaff.TabIndex = 27;
@@ -735,7 +727,6 @@
         private Panel panel2;
         private Label label3;
         private TextBox textBox8;
-        private ComboBox comboBox2;
         private Label label13;
         private Label label1;
         private TextBox textBox9;

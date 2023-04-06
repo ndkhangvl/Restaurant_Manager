@@ -41,7 +41,7 @@ namespace Restaurant_Manager
                 btnStatistic.Visible = false;
                 btnInventory.Visible = false;
             }
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
 
@@ -91,7 +91,7 @@ namespace Restaurant_Manager
                 //currentBtn.BackColor = Color.MidnightBlue;
                 currentBtn.BackColor = Color.FromArgb(51, 51, 76);
                 currentBtn.ForeColor = Color.Gainsboro;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;

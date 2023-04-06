@@ -31,7 +31,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelDetail = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceState = new System.Windows.Forms.TextBox();
             this.txtInvoiceTable = new System.Windows.Forms.TextBox();
@@ -58,7 +58,7 @@
             this.colum2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoice)).BeginInit();
@@ -94,7 +94,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panelDetail);
             this.panel2.Controls.Add(this.grvInvoiceDetail);
             this.panel2.Location = new System.Drawing.Point(632, 5);
             this.panel2.Name = "panel2";
@@ -102,30 +102,30 @@
             this.panel2.Size = new System.Drawing.Size(1083, 876);
             this.panel2.TabIndex = 5;
             // 
-            // panel4
+            // panelDetail
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.AutoSize = true;
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.txtInvoiceState);
-            this.panel4.Controls.Add(this.txtInvoiceTable);
-            this.panel4.Controls.Add(this.txtInvoiceTotal);
-            this.panel4.Controls.Add(this.txtInvoiceUpDate);
-            this.panel4.Controls.Add(this.txtInvoiceDate);
-            this.panel4.Controls.Add(this.txtInvoiceStaff);
-            this.panel4.Controls.Add(this.txtInvoiceID);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(105, 8);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(886, 323);
-            this.panel4.TabIndex = 16;
+            this.panelDetail.AutoSize = true;
+            this.panelDetail.Controls.Add(this.label2);
+            this.panelDetail.Controls.Add(this.txtInvoiceState);
+            this.panelDetail.Controls.Add(this.txtInvoiceTable);
+            this.panelDetail.Controls.Add(this.txtInvoiceTotal);
+            this.panelDetail.Controls.Add(this.txtInvoiceUpDate);
+            this.panelDetail.Controls.Add(this.txtInvoiceDate);
+            this.panelDetail.Controls.Add(this.txtInvoiceStaff);
+            this.panelDetail.Controls.Add(this.txtInvoiceID);
+            this.panelDetail.Controls.Add(this.label9);
+            this.panelDetail.Controls.Add(this.label8);
+            this.panelDetail.Controls.Add(this.label7);
+            this.panelDetail.Controls.Add(this.label6);
+            this.panelDetail.Controls.Add(this.label5);
+            this.panelDetail.Controls.Add(this.label4);
+            this.panelDetail.Controls.Add(this.label3);
+            this.panelDetail.Location = new System.Drawing.Point(105, 8);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(886, 323);
+            this.panelDetail.TabIndex = 16;
             // 
             // label2
             // 
@@ -389,8 +389,8 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelDetail.ResumeLayout(false);
+            this.panelDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -415,7 +415,7 @@
         private DataGridView grvInvoice;
         private DataGridViewTextBoxColumn IDfrmInvoice;
         private DataGridViewTextBoxColumn colum2;
-        private Panel panel4;
+        private Panel panelDetail;
         private Label label2;
         private TextBox txtInvoiceState;
         private TextBox txtInvoiceTable;

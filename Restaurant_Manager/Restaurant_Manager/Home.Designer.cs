@@ -122,6 +122,8 @@ namespace Restaurant_Manager
             this.btnInventory.Size = new System.Drawing.Size(219, 60);
             this.btnInventory.TabIndex = 7;
             this.btnInventory.Text = "Inventory";
+            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
@@ -142,6 +144,8 @@ namespace Restaurant_Manager
             this.btnStatistic.Size = new System.Drawing.Size(219, 60);
             this.btnStatistic.TabIndex = 6;
             this.btnStatistic.Text = "Statistic";
+            this.btnStatistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStatistic.UseVisualStyleBackColor = true;
             this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
@@ -162,6 +166,8 @@ namespace Restaurant_Manager
             this.btnInvoice.Size = new System.Drawing.Size(219, 60);
             this.btnInvoice.TabIndex = 5;
             this.btnInvoice.Text = "Invoice";
+            this.btnInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInvoice.UseVisualStyleBackColor = true;
             this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
             // 
@@ -182,6 +188,8 @@ namespace Restaurant_Manager
             this.btnOrder.Size = new System.Drawing.Size(219, 60);
             this.btnOrder.TabIndex = 4;
             this.btnOrder.Text = "Order";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
@@ -202,6 +210,8 @@ namespace Restaurant_Manager
             this.btnMenu.Size = new System.Drawing.Size(219, 60);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "Menu/Table";
+            this.btnMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
@@ -222,6 +232,8 @@ namespace Restaurant_Manager
             this.btnStaff.Size = new System.Drawing.Size(219, 60);
             this.btnStaff.TabIndex = 2;
             this.btnStaff.Text = "Staff";
+            this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStaff.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnStaff.UseVisualStyleBackColor = true;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 

@@ -33,8 +33,8 @@ namespace Restaurant_Manager.Forms
             btnPaid.Enabled = false;
             btnUpdate.Enabled = false;
             changetable.Enabled = false;
-
-            cboDiscount.SelectedIndex = 0;
+            numUpDownDiscount.Value = 0;
+            //cboDiscount.SelectedIndex = 0;
         }
 
         void setTbale()
@@ -63,7 +63,7 @@ namespace Restaurant_Manager.Forms
             try
             {
                 clsDatabase.OpenConnection();
-                SqlDataAdapter da = new SqlDataAdapter("select invoice.invoice_id, tableName, case invoiceState when 0 then 'Unpaid' when 1 then 'Paid' end as state from invoice INNER JOIN tables on tables.table_id = invoice.table_id order by invoice_id desc", clsDatabase.conn);
+                SqlDataAdapter da = new SqlDataAdapter("select invoice.invoice_id, tableName, case invoiceState when 0 then 'Unpaid' when 1 then 'Paid' end as state from invoice INNER JOIN tables on tables.table_id = invoice.table_id where invoiceState=0 order by invoice_id desc", clsDatabase.conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 grdInvoice.DataSource = dt;
@@ -187,7 +187,8 @@ namespace Restaurant_Manager.Forms
 
         private void btnNewTable_Click(object sender, EventArgs e)
         {
-            cboDiscount.SelectedIndex = 0;
+            //cboDiscount.SelectedIndex = 0;
+            numUpDownDiscount.Value = 0;
             try
             {
                 //string strInsert = "Insert into Staff(staff_id,staffName,DoB,staffPhone,idPosition,staffState) values(@staff_id, @staffName, @DoB, @staffPhone,@idPosition, @staffState)";
@@ -198,7 +199,9 @@ namespace Restaurant_Manager.Forms
                 SqlParameter p1 = new SqlParameter("@table_id", System.Data.SqlDbType.Int);
                 p1.Value = cboTable.SelectedValue;
                 SqlParameter p2 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
+
                 p2.Value = Login.mAccount.accID;
+
                 conn.Parameters.Add(p1);
                 conn.Parameters.Add(p2);
                 conn.ExecuteNonQuery();
@@ -218,7 +221,7 @@ namespace Restaurant_Manager.Forms
                 }
                 
 
-                MessageBox.Show("Insert successfully!");
+                //MessageBox.Show("Insert successfully!");
                 
             }
             catch (Exception ex)
@@ -231,7 +234,8 @@ namespace Restaurant_Manager.Forms
         {
             foreach (DataGridViewRow row in this.grdInvoice.SelectedRows)
             {
-                cboDiscount.SelectedIndex = 0;
+                //cboDiscount.SelectedIndex = 0;
+                numUpDownDiscount.Value = 0;
                 try
                 {
                     clsDatabase.OpenConnection();
@@ -298,7 +302,8 @@ namespace Restaurant_Manager.Forms
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            cboDiscount.SelectedIndex = 0;
+            //cboDiscount.SelectedIndex = 0;
+            numUpDownDiscount.Value = 0;
             try
             {
                 clsDatabase.OpenConnection();
@@ -351,7 +356,7 @@ namespace Restaurant_Manager.Forms
                 resetField();
                 
                 clsDatabase.CloseConnection();
-                MessageBox.Show("Thành Công");
+                //MessageBox.Show("Thành Công");
             }
             catch (System.Exception ex)
             {
@@ -387,7 +392,7 @@ namespace Restaurant_Manager.Forms
             try
             {
                 clsDatabase.OpenConnection();
-                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text + ", " + cboDiscount.SelectedItem, clsDatabase.conn);
+                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text + ", " + numUpDownDiscount.Value, clsDatabase.conn);
                 com.ExecuteNonQuery();
                 setTbale();
                 dataInvoice();
@@ -423,8 +428,9 @@ namespace Restaurant_Manager.Forms
                 }
 
                 clsDatabase.CloseConnection();
-                MessageBox.Show("Thành Công");
-                cboDiscount.SelectedIndex = 0;
+                MessageBox.Show("Paid successfully!");
+                //cboDiscount.SelectedIndex = 0;
+                numUpDownDiscount.Value = 0;
             }
             catch(System.Exception ex)
             {
@@ -466,7 +472,8 @@ namespace Restaurant_Manager.Forms
 
         private void changetable_Click(object sender, EventArgs e)
         {
-            cboDiscount.SelectedIndex = 0;
+            //cboDiscount.SelectedIndex = 0;
+            numUpDownDiscount.Value = 0;
             object newtab = cboTable.SelectedValue;
             try
             {
@@ -484,7 +491,7 @@ namespace Restaurant_Manager.Forms
                 loadDetail();
                 setTbale();
                 dataInvoice();
-                MessageBox.Show("Change table successfully");
+                //MessageBox.Show("Change table successfully");
                 clsDatabase.CloseConnection();
             }catch (Exception ex)
             {
@@ -537,7 +544,7 @@ namespace Restaurant_Manager.Forms
         {
 
         }
-
+        /*
         private void cboDiscount_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboDiscount.SelectedIndex == -1)
@@ -548,6 +555,11 @@ namespace Restaurant_Manager.Forms
             {
                 txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(cboDiscount.SelectedItem) / 100);
             }
+        }
+        */
+        private void numUpDownDiscount_ValueChanged(object sender, EventArgs e)
+        {
+            txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
         }
     }
 }

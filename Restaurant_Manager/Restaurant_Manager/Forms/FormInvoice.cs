@@ -37,8 +37,9 @@ namespace Restaurant_Manager.Forms
                 grvInvoiceDetail.DataSource = datatb;
 
                 SqlCommand com = new SqlCommand("SELECT invoice.invoice_id, tableName, staffName, invoiceDate, invoiceDateUpt, invoiceTotal, invoiceState from " +
-                                                "dish_menu INNER JOIN invoice_detail on dish_menu.dish_id = invoice_detail.dish_id " +
-                                                "INNER JOIN  invoice on invoice.invoice_id = invoice_detail.invoice_id " +
+                                                //"dish_menu INNER JOIN invoice_detail on dish_menu.dish_id = invoice_detail.dish_id " +
+                                                //"INNER JOIN  invoice on invoice.invoice_id = invoice_detail.invoice_id " +
+                                                "invoice " +
                                                 "INNER JOIN  staff on staff.staff_id = invoice.staff_id " +
                                                 "INNER JOIN  tables on tables.table_id = invoice.table_id " +
                                                 "WHERE invoice.invoice_id = "+maxInvoiceID, clsDatabase.conn);
@@ -56,12 +57,12 @@ namespace Restaurant_Manager.Forms
                     //txtInvoiceState.Text = (invoiceState == 0) ? "chua" : "ok";
                     if (invoiceState == 0)
                     {
-                        txtInvoiceState.Text = "chua";
+                        txtInvoiceState.Text = "Unpaid";
                         txtInvoiceState.BackColor = Color.Silver; // Đặt màu xám cho nền
                     }
                     else
                     {
-                        txtInvoiceState.Text = "ok";
+                        txtInvoiceState.Text = "Paid";
                         txtInvoiceState.BackColor = Color.Chartreuse; // Đặt màu xanh cho nền
                     }
                     clsDatabase.CloseConnection();
@@ -129,8 +130,9 @@ namespace Restaurant_Manager.Forms
                     grvInvoiceDetail.DataSource = datatb;
 
                     SqlCommand com = new SqlCommand("SELECT invoice.invoice_id, tableName, staffName, invoiceDate, invoiceDateUpt, invoiceTotal, invoiceState from " +
-                                                    "dish_menu INNER JOIN invoice_detail on dish_menu.dish_id = invoice_detail.dish_id " +
-                                                    "INNER JOIN  invoice on invoice.invoice_id = invoice_detail.invoice_id " +
+                                                    //"dish_menu INNER JOIN invoice_detail on dish_menu.dish_id = invoice_detail.dish_id " +
+                                                    //"INNER JOIN  invoice on invoice.invoice_id = invoice_detail.invoice_id " +
+                                                    "invoice " +
                                                     "INNER JOIN  staff on staff.staff_id = invoice.staff_id " +
                                                     "INNER JOIN  tables on tables.table_id = invoice.table_id " +
                                                     "WHERE invoice.invoice_id = " + row.Cells[0].Value, clsDatabase.conn);
@@ -148,12 +150,12 @@ namespace Restaurant_Manager.Forms
                         //txtInvoiceState.Text = (invoiceState == 0) ? "chua" : "ok";
                         if (invoiceState == 0)
                         {
-                            txtInvoiceState.Text = "chua";
+                            txtInvoiceState.Text = "Unpaid";
                             txtInvoiceState.BackColor = Color.Silver; // Đặt màu xám cho nền
                         }
                         else
                         {
-                            txtInvoiceState.Text = "ok";
+                            txtInvoiceState.Text = "Paid";
                             txtInvoiceState.BackColor = Color.Chartreuse; // Đặt màu xanh cho nền
                         }
                         clsDatabase.CloseConnection();
