@@ -13,6 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Forms;
 using System.Windows.Media;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Documents;
 
 namespace Restaurant_Manager.Forms
 {
@@ -23,9 +24,11 @@ namespace Restaurant_Manager.Forms
         {
             InitializeComponent();
             LoadCombobox();
+            LoadComboboxPosition();
             dtInfoStaff();
             txtGetAccType.Visible = false;
             btSaveStaff.Enabled= false;
+            //dtStaffInfo.SelectIn
             //dtStaffInfo.ClearSelection();
         }
 
@@ -54,6 +57,18 @@ namespace Restaurant_Manager.Forms
             cbAccType.SelectedIndex = 0;
         }
 
+        private void LoadComboboxPosition()
+        {
+            clsDatabase.OpenConnection();
+            SqlCommand cmd = new SqlCommand("Select * from StaffPos", clsDatabase.conn);
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            DataTable tables = new DataTable();
+            da.Fill(tables);
+            cbEditPos.DataSource = tables;
+            cbEditPos.DisplayMember = "posName";
+            cbEditPos.ValueMember = "id_pos";
+        }
         private void LoadCombobox()
         {
             try
@@ -312,6 +327,107 @@ namespace Restaurant_Manager.Forms
                 //ResetField(); 
                 //dtInfoStaff();
             } catch (Exception ex) { }
+        }
+
+        private void btEditBonus_Click(object sender, EventArgs e)
+        {
+            clsDatabase.OpenConnection();
+            SqlCommand da = new SqlCommand("select staff_id, bonus from staff join accounts on staff.staff_id = accounts.accID " +
+                "where accounts.uname ='" + txtGetUname.Text + "'", clsDatabase.conn);
+            SqlDataReader dr = da.ExecuteReader();
+            while (dr.Read())
+            {
+                txtGetStaff.Text = dr["staff_id"].ToString();
+                nmBonus.Value = decimal.Parse(dr["bonus"].ToString());
+            }
+            clsDatabase.CloseConnection();
+        }
+
+        private void btClearBonus_Click(object sender, EventArgs e)
+        {
+            txtGetUname.Clear();
+            nmBonus.Value = 0;
+        }
+
+        private void btUpdateBonus_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clsDatabase.OpenConnection();
+                SqlCommand com = new SqlCommand("update staff set bonus=@bonus where staff_id = " + txtGetStaff.Text , clsDatabase.conn);
+                SqlParameter p1 = new SqlParameter("@bonus", System.Data.SqlDbType.Int);
+                p1.Value = nmBonus.Value;
+                com.Parameters.Add(p1);
+                com.ExecuteNonQuery();
+                dtInfoStaff();
+                MessageBox.Show("Update bonus staff successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btEditSal_Click(object sender, EventArgs e)
+        {
+            clsDatabase.OpenConnection();
+            SqlCommand da = new SqlCommand("select * from StaffPos where id_pos =" + cbEditPos.SelectedValue , clsDatabase.conn);
+            SqlDataReader dr = da.ExecuteReader();
+            while (dr.Read())
+            {
+                txtCurSal.Text = dr["salary"].ToString();
+            }
+            clsDatabase.CloseConnection();
+        }
+
+        private void btUpdateSal_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clsDatabase.OpenConnection();
+                SqlCommand com = new SqlCommand("update StaffPos set salary=@salary where id_pos = " + cbEditPos.SelectedValue, clsDatabase.conn);
+                SqlParameter p1 = new SqlParameter("@salary", System.Data.SqlDbType.Int);
+                p1.Value = Convert.ToInt32(txtNewSal.Text);
+                com.Parameters.Add(p1);
+                com.ExecuteNonQuery();
+                dtInfoStaff();
+                txtNewSal.Clear();
+                txtCurSal.Clear();
+                cbEditPos.Items.Clear();
+                MessageBox.Show("Update salary of position staff successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btClearSal_Click(object sender, EventArgs e)
+        {
+            txtNewSal.Clear();
+            txtCurSal.Clear();
+        }
+
+        private void btAddPos_Click(object sender, EventArgs e)
+        {
+            string strAddPos = "insert into StaffPos(posName, salary) values(@posName, @salary);";
+            clsDatabase.OpenConnection();
+            SqlCommand conn = new SqlCommand(strAddPos, clsDatabase.conn);
+            SqlParameter p1 = new SqlParameter("@posName", System.Data.SqlDbType.NVarChar);
+            p1.Value = txtNewPosition.Text;
+            SqlParameter p2 = new SqlParameter("@salary", System.Data.SqlDbType.VarChar);
+            p2.Value = Convert.ToInt32(txtSalPosition.Text);
+           
+            conn.Parameters.Add(p1);
+            conn.Parameters.Add(p2);
+            conn.ExecuteNonQuery();
+
+            MessageBox.Show("Add position staff successfully!");
+            clsDatabase.CloseConnection();
+            LoadCombobox();
+            LoadComboboxPosition();
+            txtNewPosition.Clear();
+            txtSalPosition.Clear();
         }
     }
 }

@@ -74,20 +74,43 @@
             this.stState = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stposName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btClearSal = new System.Windows.Forms.Button();
+            this.btUpdateSal = new System.Windows.Forms.Button();
+            this.btEditSal = new System.Windows.Forms.Button();
+            this.txtNewSal = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtCurSal = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cbEditPos = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.btClearPos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btUpdatePos = new System.Windows.Forms.Button();
-            this.btEditPos = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.btUpdateBonus = new System.Windows.Forms.Button();
+            this.txtGetStaff = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.nmBonus = new System.Windows.Forms.NumericUpDown();
+            this.btClearBonus = new System.Windows.Forms.Button();
+            this.btEditBonus = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtGetUname = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btAddPos = new System.Windows.Forms.Button();
+            this.txtSalPosition = new System.Windows.Forms.TextBox();
+            this.txtNewPosition = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btShowAllStaff = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmBonus)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -547,12 +570,23 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btClearSal);
+            this.panel2.Controls.Add(this.btUpdateSal);
+            this.panel2.Controls.Add(this.btEditSal);
+            this.panel2.Controls.Add(this.txtNewSal);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.txtCurSal);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.cbEditPos);
+            this.panel2.Controls.Add(this.label21);
             this.panel2.Controls.Add(this.btClearPos);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btUpdatePos);
-            this.panel2.Controls.Add(this.btEditPos);
-            this.panel2.Controls.Add(this.textBox9);
-            this.panel2.Controls.Add(this.textBox8);
+            this.panel2.Controls.Add(this.btAddPos);
+            this.panel2.Controls.Add(this.txtSalPosition);
+            this.panel2.Controls.Add(this.txtNewPosition);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label3);
@@ -563,11 +597,110 @@
             this.panel2.Size = new System.Drawing.Size(1120, 307);
             this.panel2.TabIndex = 2;
             // 
+            // btClearSal
+            // 
+            this.btClearSal.BackColor = System.Drawing.Color.Chartreuse;
+            this.btClearSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btClearSal.Location = new System.Drawing.Point(931, 254);
+            this.btClearSal.Name = "btClearSal";
+            this.btClearSal.Size = new System.Drawing.Size(94, 29);
+            this.btClearSal.TabIndex = 19;
+            this.btClearSal.Text = "Clear";
+            this.btClearSal.UseVisualStyleBackColor = false;
+            this.btClearSal.Click += new System.EventHandler(this.btClearSal_Click);
+            // 
+            // btUpdateSal
+            // 
+            this.btUpdateSal.BackColor = System.Drawing.Color.DarkGray;
+            this.btUpdateSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btUpdateSal.Location = new System.Drawing.Point(811, 254);
+            this.btUpdateSal.Name = "btUpdateSal";
+            this.btUpdateSal.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateSal.TabIndex = 18;
+            this.btUpdateSal.Text = "Update";
+            this.btUpdateSal.UseVisualStyleBackColor = false;
+            this.btUpdateSal.Click += new System.EventHandler(this.btUpdateSal_Click);
+            // 
+            // btEditSal
+            // 
+            this.btEditSal.BackColor = System.Drawing.Color.DarkGray;
+            this.btEditSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btEditSal.Location = new System.Drawing.Point(696, 254);
+            this.btEditSal.Name = "btEditSal";
+            this.btEditSal.Size = new System.Drawing.Size(94, 29);
+            this.btEditSal.TabIndex = 17;
+            this.btEditSal.Text = "Edit";
+            this.btEditSal.UseVisualStyleBackColor = false;
+            this.btEditSal.Click += new System.EventHandler(this.btEditSal_Click);
+            // 
+            // txtNewSal
+            // 
+            this.txtNewSal.Location = new System.Drawing.Point(811, 204);
+            this.txtNewSal.Name = "txtNewSal";
+            this.txtNewSal.Size = new System.Drawing.Size(214, 27);
+            this.txtNewSal.TabIndex = 16;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(696, 204);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(88, 20);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "New Salary";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label23.Location = new System.Drawing.Point(696, 157);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(109, 20);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Current Salary";
+            // 
+            // txtCurSal
+            // 
+            this.txtCurSal.Location = new System.Drawing.Point(811, 157);
+            this.txtCurSal.Name = "txtCurSal";
+            this.txtCurSal.ReadOnly = true;
+            this.txtCurSal.Size = new System.Drawing.Size(214, 27);
+            this.txtCurSal.TabIndex = 13;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label22.Location = new System.Drawing.Point(696, 64);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(66, 20);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Position";
+            // 
+            // cbEditPos
+            // 
+            this.cbEditPos.FormattingEnabled = true;
+            this.cbEditPos.Location = new System.Drawing.Point(811, 61);
+            this.cbEditPos.Name = "cbEditPos";
+            this.cbEditPos.Size = new System.Drawing.Size(151, 28);
+            this.cbEditPos.TabIndex = 11;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(806, 8);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(182, 38);
+            this.label21.TabIndex = 10;
+            this.label21.Text = "Edit Position";
+            // 
             // btClearPos
             // 
             this.btClearPos.BackColor = System.Drawing.Color.Chartreuse;
             this.btClearPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearPos.Location = new System.Drawing.Point(279, 225);
+            this.btClearPos.Location = new System.Drawing.Point(214, 225);
             this.btClearPos.Name = "btClearPos";
             this.btClearPos.Size = new System.Drawing.Size(94, 29);
             this.btClearPos.TabIndex = 9;
@@ -576,66 +709,165 @@
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(422, -1);
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.btUpdateBonus);
+            this.panel4.Controls.Add(this.txtGetStaff);
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.nmBonus);
+            this.panel4.Controls.Add(this.btClearBonus);
+            this.panel4.Controls.Add(this.btEditBonus);
+            this.panel4.Controls.Add(this.label19);
+            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.txtGetUname);
+            this.panel4.Controls.Add(this.label17);
+            this.panel4.Location = new System.Drawing.Point(337, -1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(349, 307);
+            this.panel4.Size = new System.Drawing.Size(350, 307);
             this.panel4.TabIndex = 8;
             // 
-            // btUpdatePos
+            // btUpdateBonus
             // 
-            this.btUpdatePos.BackColor = System.Drawing.Color.Chartreuse;
-            this.btUpdatePos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdatePos.Location = new System.Drawing.Point(149, 225);
-            this.btUpdatePos.Name = "btUpdatePos";
-            this.btUpdatePos.Size = new System.Drawing.Size(94, 29);
-            this.btUpdatePos.TabIndex = 7;
-            this.btUpdatePos.Text = "Update";
-            this.btUpdatePos.UseVisualStyleBackColor = false;
+            this.btUpdateBonus.BackColor = System.Drawing.Color.DarkGray;
+            this.btUpdateBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btUpdateBonus.Location = new System.Drawing.Point(131, 225);
+            this.btUpdateBonus.Name = "btUpdateBonus";
+            this.btUpdateBonus.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateBonus.TabIndex = 14;
+            this.btUpdateBonus.Text = "Update";
+            this.btUpdateBonus.UseVisualStyleBackColor = false;
+            this.btUpdateBonus.Click += new System.EventHandler(this.btUpdateBonus_Click);
             // 
-            // btEditPos
+            // txtGetStaff
             // 
-            this.btEditPos.BackColor = System.Drawing.Color.DarkGray;
-            this.btEditPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditPos.Location = new System.Drawing.Point(30, 225);
-            this.btEditPos.Name = "btEditPos";
-            this.btEditPos.Size = new System.Drawing.Size(94, 29);
-            this.btEditPos.TabIndex = 6;
-            this.btEditPos.Text = "Edit";
-            this.btEditPos.UseVisualStyleBackColor = false;
+            this.txtGetStaff.Location = new System.Drawing.Point(109, 114);
+            this.txtGetStaff.Name = "txtGetStaff";
+            this.txtGetStaff.ReadOnly = true;
+            this.txtGetStaff.Size = new System.Drawing.Size(171, 27);
+            this.txtGetStaff.TabIndex = 13;
             // 
-            // textBox9
+            // label20
             // 
-            this.textBox9.Location = new System.Drawing.Point(131, 151);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(268, 27);
-            this.textBox9.TabIndex = 5;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(23, 160);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(53, 20);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Bonus";
             // 
-            // textBox8
+            // nmBonus
             // 
-            this.textBox8.Location = new System.Drawing.Point(131, 94);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(98, 27);
-            this.textBox8.TabIndex = 4;
+            this.nmBonus.Location = new System.Drawing.Point(109, 158);
+            this.nmBonus.Name = "nmBonus";
+            this.nmBonus.Size = new System.Drawing.Size(171, 27);
+            this.nmBonus.TabIndex = 11;
+            // 
+            // btClearBonus
+            // 
+            this.btClearBonus.BackColor = System.Drawing.Color.Chartreuse;
+            this.btClearBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btClearBonus.Location = new System.Drawing.Point(238, 225);
+            this.btClearBonus.Name = "btClearBonus";
+            this.btClearBonus.Size = new System.Drawing.Size(94, 29);
+            this.btClearBonus.TabIndex = 10;
+            this.btClearBonus.Text = "Clear";
+            this.btClearBonus.UseVisualStyleBackColor = false;
+            this.btClearBonus.Click += new System.EventHandler(this.btClearBonus_Click);
+            // 
+            // btEditBonus
+            // 
+            this.btEditBonus.BackColor = System.Drawing.Color.DarkGray;
+            this.btEditBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btEditBonus.Location = new System.Drawing.Point(23, 225);
+            this.btEditBonus.Name = "btEditBonus";
+            this.btEditBonus.Size = new System.Drawing.Size(94, 29);
+            this.btEditBonus.TabIndex = 9;
+            this.btEditBonus.Text = "Edit";
+            this.btEditBonus.UseVisualStyleBackColor = false;
+            this.btEditBonus.Click += new System.EventHandler(this.btEditBonus_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label19.Location = new System.Drawing.Point(23, 114);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 20);
+            this.label19.TabIndex = 8;
+            this.label19.Text = "Staff ID";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(23, 64);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(80, 20);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Username";
+            // 
+            // txtGetUname
+            // 
+            this.txtGetUname.Location = new System.Drawing.Point(109, 64);
+            this.txtGetUname.Name = "txtGetUname";
+            this.txtGetUname.Size = new System.Drawing.Size(171, 27);
+            this.txtGetUname.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label17.Location = new System.Drawing.Point(134, 11);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(98, 38);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Bonus";
+            // 
+            // btAddPos
+            // 
+            this.btAddPos.BackColor = System.Drawing.Color.DarkGray;
+            this.btAddPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btAddPos.Location = new System.Drawing.Point(42, 225);
+            this.btAddPos.Name = "btAddPos";
+            this.btAddPos.Size = new System.Drawing.Size(94, 29);
+            this.btAddPos.TabIndex = 6;
+            this.btAddPos.Text = "Add";
+            this.btAddPos.UseVisualStyleBackColor = false;
+            this.btAddPos.Click += new System.EventHandler(this.btAddPos_Click);
+            // 
+            // txtSalPosition
+            // 
+            this.txtSalPosition.Location = new System.Drawing.Point(121, 157);
+            this.txtSalPosition.Name = "txtSalPosition";
+            this.txtSalPosition.Size = new System.Drawing.Size(210, 27);
+            this.txtSalPosition.TabIndex = 5;
+            // 
+            // txtNewPosition
+            // 
+            this.txtNewPosition.Location = new System.Drawing.Point(121, 94);
+            this.txtNewPosition.Name = "txtNewPosition";
+            this.txtNewPosition.Size = new System.Drawing.Size(210, 27);
+            this.txtNewPosition.TabIndex = 4;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(22, 94);
+            this.label13.Location = new System.Drawing.Point(3, 94);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 20);
+            this.label13.Size = new System.Drawing.Size(112, 20);
             this.label13.TabIndex = 2;
-            this.label13.Text = "New Positon:";
+            this.label13.Text = "Name Position";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(22, 158);
+            this.label1.Location = new System.Drawing.Point(3, 160);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Basic:";
+            this.label1.Text = "Salary";
             // 
             // label3
             // 
@@ -672,6 +904,23 @@
             this.btShowAllStaff.UseVisualStyleBackColor = true;
             this.btShowAllStaff.Click += new System.EventHandler(this.btShowAllStaff_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(811, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(214, 27);
+            this.textBox1.TabIndex = 20;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(696, 110);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(87, 20);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "New Name";
+            // 
             // FormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -690,6 +939,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmBonus)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -726,12 +978,11 @@
         private Label label2;
         private Panel panel2;
         private Label label3;
-        private TextBox textBox8;
+        private TextBox txtNewPosition;
         private Label label13;
         private Label label1;
-        private TextBox textBox9;
-        private Button btUpdatePos;
-        private Button btEditPos;
+        private TextBox txtSalPosition;
+        private Button btAddPos;
         private Button btSaveStaff;
         private Panel panel3;
         private Label label4;
@@ -752,5 +1003,27 @@
         private DataGridViewTextBoxColumn stposName;
         private Button btClearPos;
         private Panel panel4;
+        private NumericUpDown nmBonus;
+        private Button btClearBonus;
+        private Button btEditBonus;
+        private Label label19;
+        private Label label18;
+        private TextBox txtGetUname;
+        private Label label17;
+        private TextBox txtGetStaff;
+        private Label label20;
+        private Button btUpdateBonus;
+        private Label label21;
+        private Label label22;
+        private ComboBox cbEditPos;
+        private Button btClearSal;
+        private Button btUpdateSal;
+        private Button btEditSal;
+        private TextBox txtNewSal;
+        private Label label24;
+        private Label label23;
+        private TextBox txtCurSal;
+        private Label label25;
+        private TextBox textBox1;
     }
 }
