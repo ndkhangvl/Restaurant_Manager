@@ -32,6 +32,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.numUpDownDiscount = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceState = new System.Windows.Forms.TextBox();
             this.txtInvoiceTable = new System.Windows.Forms.TextBox();
@@ -59,6 +61,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoice)).BeginInit();
@@ -107,6 +110,8 @@
             this.panelDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetail.AutoSize = true;
+            this.panelDetail.Controls.Add(this.label20);
+            this.panelDetail.Controls.Add(this.numUpDownDiscount);
             this.panelDetail.Controls.Add(this.label2);
             this.panelDetail.Controls.Add(this.txtInvoiceState);
             this.panelDetail.Controls.Add(this.txtInvoiceTable);
@@ -126,6 +131,24 @@
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(886, 323);
             this.panelDetail.TabIndex = 16;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(407, 250);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(104, 20);
+            this.label20.TabIndex = 61;
+            this.label20.Text = "Discount (%):";
+            // 
+            // numUpDownDiscount
+            // 
+            this.numUpDownDiscount.Location = new System.Drawing.Point(517, 248);
+            this.numUpDownDiscount.Name = "numUpDownDiscount";
+            this.numUpDownDiscount.Size = new System.Drawing.Size(71, 27);
+            this.numUpDownDiscount.TabIndex = 60;
+            this.numUpDownDiscount.ValueChanged += new System.EventHandler(this.numUpDownDiscount_ValueChanged);
             // 
             // label2
             // 
@@ -385,12 +408,12 @@
             this.Controls.Add(this.button2);
             this.Name = "FormInvoice";
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.FormInvoice_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -431,5 +454,7 @@
         private Label label5;
         private Label label4;
         private Label label3;
+        private NumericUpDown numUpDownDiscount;
+        private Label label20;
     }
 }
