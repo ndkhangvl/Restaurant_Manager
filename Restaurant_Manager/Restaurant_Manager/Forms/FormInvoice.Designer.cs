@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelDetail = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.numUpDownDiscount = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtInvoiceState = new System.Windows.Forms.TextBox();
             this.txtInvoiceTable = new System.Windows.Forms.TextBox();
@@ -61,7 +64,6 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoice)).BeginInit();
@@ -110,8 +112,6 @@
             this.panelDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetail.AutoSize = true;
-            this.panelDetail.Controls.Add(this.label20);
-            this.panelDetail.Controls.Add(this.numUpDownDiscount);
             this.panelDetail.Controls.Add(this.label2);
             this.panelDetail.Controls.Add(this.txtInvoiceState);
             this.panelDetail.Controls.Add(this.txtInvoiceTable);
@@ -131,24 +131,6 @@
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(886, 323);
             this.panelDetail.TabIndex = 16;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(407, 250);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(104, 20);
-            this.label20.TabIndex = 61;
-            this.label20.Text = "Discount (%):";
-            // 
-            // numUpDownDiscount
-            // 
-            this.numUpDownDiscount.Location = new System.Drawing.Point(517, 248);
-            this.numUpDownDiscount.Name = "numUpDownDiscount";
-            this.numUpDownDiscount.Size = new System.Drawing.Size(71, 27);
-            this.numUpDownDiscount.TabIndex = 60;
-            this.numUpDownDiscount.ValueChanged += new System.EventHandler(this.numUpDownDiscount_ValueChanged);
             // 
             // label2
             // 
@@ -296,15 +278,34 @@
             // grvInvoiceDetail
             // 
             this.grvInvoiceDetail.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grvInvoiceDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grvInvoiceDetail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grvInvoiceDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvInvoiceDetail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(18)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvInvoiceDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grvInvoiceDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvInvoiceDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
             this.Column4,
             this.Column5});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grvInvoiceDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.grvInvoiceDetail.Location = new System.Drawing.Point(2, 337);
             this.grvInvoiceDetail.Name = "grvInvoiceDetail";
             this.grvInvoiceDetail.ReadOnly = true;
@@ -366,10 +367,21 @@
             // 
             // grvInvoice
             // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grvInvoice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grvInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.grvInvoice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grvInvoice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(18)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grvInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvInvoice.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDfrmInvoice,
@@ -413,7 +425,6 @@
             this.panel2.PerformLayout();
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvInvoiceDetail)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -454,7 +465,5 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private NumericUpDown numUpDownDiscount;
-        private Label label20;
     }
 }

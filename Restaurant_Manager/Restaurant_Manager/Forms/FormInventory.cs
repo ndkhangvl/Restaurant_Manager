@@ -14,12 +14,16 @@ namespace Restaurant_Manager.Forms
 {
     public partial class FormInventory : Form
     {
+        int invTotal = 0;
         public FormInventory()
         {
             InitializeComponent();
             txtTableID.Visible = false;
             txtTableName.Visible = false;
             txtNameTable2.Visible = false;
+            numUpDownDiscount.Value = 0;
+            //flowTableList.Visible = true;
+
             //TestFunction();
         }
 
@@ -75,6 +79,7 @@ namespace Restaurant_Manager.Forms
                         txtState_Detail.BackColor = Color.Silver;
                         // Đặt màu xanh cho nền
                     }
+                    invTotal = Convert.ToInt32(dr["invoiceTotal"]);
                 };
 
             }
@@ -132,7 +137,7 @@ namespace Restaurant_Manager.Forms
         private void FormInventory_Load(object sender, EventArgs e)
         {
 
-            flowTableList.Visible = false;
+            flowTableList.Visible = true;
             try
             {
                 clsDatabase.OpenConnection();
@@ -198,7 +203,7 @@ namespace Restaurant_Manager.Forms
             TestFunction();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+/*        private void button1_Click(object sender, EventArgs e)
         {
             if (flowTableList.Visible == true)
             {
@@ -207,17 +212,15 @@ namespace Restaurant_Manager.Forms
             else
                 //TestFunction();
                 flowTableList.Visible = true;
-        }
+        }*/
 
         private void btnPaidOrder_Click(object sender, EventArgs e)
         {
             try
             {
                 clsDatabase.OpenConnection();
-                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text, clsDatabase.conn);
+                SqlCommand com = new SqlCommand("execute btnPaid " + txtID_Detail.Text + ", " + numUpDownDiscount.Value, clsDatabase.conn);
                 com.ExecuteNonQuery();
-                /*                setTbale();
-                                dataInvoice();*/
                 clsDatabase.CloseConnection();
 
                 clsDatabase.OpenConnection();
@@ -250,13 +253,20 @@ namespace Restaurant_Manager.Forms
                 }
 
                 clsDatabase.CloseConnection();
+                MessageBox.Show("Paid successfully!");
                 LoadTable();
-                MessageBox.Show("Thành Công");
+                //cboDiscount.SelectedIndex = 0;
+                numUpDownDiscount.Value = 0;
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error: ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void numUpDownDiscount_ValueChanged(object sender, EventArgs e)
+        {
+                txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
         }
     }
 }

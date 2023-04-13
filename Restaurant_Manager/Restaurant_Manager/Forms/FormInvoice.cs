@@ -15,12 +15,10 @@ namespace Restaurant_Manager.Forms
     public partial class FormInvoice : Form
     {
         int maxInvoiceID;
-        int invTotal = 0;
         public FormInvoice()
         {
 
             InitializeComponent();
-            numUpDownDiscount.Value = 0;
             dtIvoice();
             //dtInvoiceDetail();
             this.grvInvoiceDetail.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.grvInvoiceDetail_CellFormatting);
@@ -67,7 +65,6 @@ namespace Restaurant_Manager.Forms
                         txtInvoiceState.Text = "Paid";
                         txtInvoiceState.BackColor = Color.Chartreuse; // Đặt màu xanh cho nền
                     }
-                    invTotal = Convert.ToInt32(dr["invoiceTotal"]);
                     clsDatabase.CloseConnection();
                 }
             }
@@ -121,7 +118,6 @@ namespace Restaurant_Manager.Forms
             foreach (DataGridViewRow row in this.grvInvoice.SelectedRows)
             {
 
-                numUpDownDiscount.Value = 0;
                 try
                 {
                     clsDatabase.OpenConnection();
@@ -161,7 +157,6 @@ namespace Restaurant_Manager.Forms
                             txtInvoiceState.Text = "Paid";
                             txtInvoiceState.BackColor = Color.Chartreuse; // Đặt màu xanh cho nền
                         }
-                        invTotal = Convert.ToInt32(dr["invoiceTotal"]);
                         clsDatabase.CloseConnection();
                     }
                 }
@@ -171,11 +166,6 @@ namespace Restaurant_Manager.Forms
                 }
             }
 
-        }
-
-        private void numUpDownDiscount_ValueChanged(object sender, EventArgs e)
-        {
-            txtInvoiceTotal.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
         }
     }
 }

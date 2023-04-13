@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridviewTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,6 +39,8 @@
             this.txtTableName = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.numUpDownDiscount = new System.Windows.Forms.NumericUpDown();
             this.txtTotal_Detail = new System.Windows.Forms.TextBox();
             this.txtState_Detail = new System.Windows.Forms.TextBox();
             this.txtTable_Detail = new System.Windows.Forms.TextBox();
@@ -61,6 +66,7 @@
             this.txtNameTable2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDetail)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,10 +136,11 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.numUpDownDiscount);
             this.panel3.Controls.Add(this.txtTotal_Detail);
             this.panel3.Controls.Add(this.txtState_Detail);
             this.panel3.Controls.Add(this.txtTable_Detail);
@@ -155,6 +162,24 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(618, 720);
             this.panel3.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(369, 214);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(104, 20);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "Discount (%):";
+            // 
+            // numUpDownDiscount
+            // 
+            this.numUpDownDiscount.Location = new System.Drawing.Point(479, 211);
+            this.numUpDownDiscount.Name = "numUpDownDiscount";
+            this.numUpDownDiscount.Size = new System.Drawing.Size(71, 27);
+            this.numUpDownDiscount.TabIndex = 36;
+            this.numUpDownDiscount.ValueChanged += new System.EventHandler(this.numUpDownDiscount_ValueChanged);
             // 
             // txtTotal_Detail
             // 
@@ -216,10 +241,21 @@
             // 
             this.grdDetail.AllowUserToAddRows = false;
             this.grdDetail.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grdDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(18)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column6,
@@ -227,11 +263,21 @@
             this.Column5,
             this.Column7,
             this.Column8});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDetail.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdDetail.Location = new System.Drawing.Point(3, 298);
+            this.grdDetail.MultiSelect = false;
             this.grdDetail.Name = "grdDetail";
             this.grdDetail.ReadOnly = true;
             this.grdDetail.RowHeadersWidth = 51;
             this.grdDetail.RowTemplate.Height = 29;
+            this.grdDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdDetail.Size = new System.Drawing.Size(612, 419);
             this.grdDetail.TabIndex = 24;
             // 
@@ -392,6 +438,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDownDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -432,5 +479,7 @@
         private Label label12;
         private Label label3;
         private TextBox txtNameTable2;
+        private NumericUpDown numUpDownDiscount;
+        private Label label20;
     }
 }

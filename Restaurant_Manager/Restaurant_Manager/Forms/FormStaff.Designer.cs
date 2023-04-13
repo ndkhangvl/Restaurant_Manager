@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtGetAccType = new System.Windows.Forms.TextBox();
             this.cbAccType = new System.Windows.Forms.ComboBox();
@@ -74,6 +74,8 @@
             this.stState = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stposName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.txtNewNamePos = new System.Windows.Forms.TextBox();
             this.btClearSal = new System.Windows.Forms.Button();
             this.btUpdateSal = new System.Windows.Forms.Button();
             this.btEditSal = new System.Windows.Forms.Button();
@@ -84,7 +86,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.cbEditPos = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.btClearPos = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btUpdateBonus = new System.Windows.Forms.Button();
             this.txtGetStaff = new System.Windows.Forms.TextBox();
@@ -96,16 +97,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtGetUname = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.btAddPos = new System.Windows.Forms.Button();
-            this.txtSalPosition = new System.Windows.Forms.TextBox();
-            this.txtNewPosition = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btShowAllStaff = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).BeginInit();
             this.panel2.SuspendLayout();
@@ -478,18 +471,19 @@
             // 
             this.dtStaffInfo.AllowUserToAddRows = false;
             this.dtStaffInfo.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtStaffInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtStaffInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtStaffInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtStaffInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(122)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtStaffInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(18)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtStaffInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtStaffInfo.ColumnHeadersHeight = 50;
             this.dtStaffInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.staffid,
@@ -498,14 +492,14 @@
             this.stPhone,
             this.stState,
             this.stposName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(226)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtStaffInfo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(28)))), ((int)(((byte)(191)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtStaffInfo.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtStaffInfo.Location = new System.Drawing.Point(3, 42);
             this.dtStaffInfo.Name = "dtStaffInfo";
             this.dtStaffInfo.ReadOnly = true;
@@ -571,7 +565,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtNewNamePos);
             this.panel2.Controls.Add(this.btClearSal);
             this.panel2.Controls.Add(this.btUpdateSal);
             this.panel2.Controls.Add(this.btEditSal);
@@ -582,14 +576,7 @@
             this.panel2.Controls.Add(this.label22);
             this.panel2.Controls.Add(this.cbEditPos);
             this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.btClearPos);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btAddPos);
-            this.panel2.Controls.Add(this.txtSalPosition);
-            this.panel2.Controls.Add(this.txtNewPosition);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(608, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -597,11 +584,28 @@
             this.panel2.Size = new System.Drawing.Size(1120, 307);
             this.panel2.TabIndex = 2;
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.Location = new System.Drawing.Point(603, 110);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(87, 20);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "New Name";
+            // 
+            // txtNewNamePos
+            // 
+            this.txtNewNamePos.Location = new System.Drawing.Point(745, 110);
+            this.txtNewNamePos.Name = "txtNewNamePos";
+            this.txtNewNamePos.Size = new System.Drawing.Size(280, 27);
+            this.txtNewNamePos.TabIndex = 20;
+            // 
             // btClearSal
             // 
             this.btClearSal.BackColor = System.Drawing.Color.Chartreuse;
             this.btClearSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearSal.Location = new System.Drawing.Point(931, 254);
+            this.btClearSal.Location = new System.Drawing.Point(964, 254);
             this.btClearSal.Name = "btClearSal";
             this.btClearSal.Size = new System.Drawing.Size(94, 29);
             this.btClearSal.TabIndex = 19;
@@ -613,7 +617,7 @@
             // 
             this.btUpdateSal.BackColor = System.Drawing.Color.DarkGray;
             this.btUpdateSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateSal.Location = new System.Drawing.Point(811, 254);
+            this.btUpdateSal.Location = new System.Drawing.Point(825, 254);
             this.btUpdateSal.Name = "btUpdateSal";
             this.btUpdateSal.Size = new System.Drawing.Size(94, 29);
             this.btUpdateSal.TabIndex = 18;
@@ -625,7 +629,7 @@
             // 
             this.btEditSal.BackColor = System.Drawing.Color.DarkGray;
             this.btEditSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditSal.Location = new System.Drawing.Point(696, 254);
+            this.btEditSal.Location = new System.Drawing.Point(669, 254);
             this.btEditSal.Name = "btEditSal";
             this.btEditSal.Size = new System.Drawing.Size(94, 29);
             this.btEditSal.TabIndex = 17;
@@ -635,16 +639,16 @@
             // 
             // txtNewSal
             // 
-            this.txtNewSal.Location = new System.Drawing.Point(811, 204);
+            this.txtNewSal.Location = new System.Drawing.Point(745, 204);
             this.txtNewSal.Name = "txtNewSal";
-            this.txtNewSal.Size = new System.Drawing.Size(214, 27);
+            this.txtNewSal.Size = new System.Drawing.Size(280, 27);
             this.txtNewSal.TabIndex = 16;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(696, 204);
+            this.label24.Location = new System.Drawing.Point(603, 204);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(88, 20);
             this.label24.TabIndex = 15;
@@ -654,7 +658,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(696, 157);
+            this.label23.Location = new System.Drawing.Point(603, 157);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(109, 20);
             this.label23.TabIndex = 14;
@@ -662,17 +666,17 @@
             // 
             // txtCurSal
             // 
-            this.txtCurSal.Location = new System.Drawing.Point(811, 157);
+            this.txtCurSal.Location = new System.Drawing.Point(745, 162);
             this.txtCurSal.Name = "txtCurSal";
             this.txtCurSal.ReadOnly = true;
-            this.txtCurSal.Size = new System.Drawing.Size(214, 27);
+            this.txtCurSal.Size = new System.Drawing.Size(280, 27);
             this.txtCurSal.TabIndex = 13;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label22.Location = new System.Drawing.Point(696, 64);
+            this.label22.Location = new System.Drawing.Point(603, 64);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(66, 20);
             this.label22.TabIndex = 12;
@@ -681,9 +685,9 @@
             // cbEditPos
             // 
             this.cbEditPos.FormattingEnabled = true;
-            this.cbEditPos.Location = new System.Drawing.Point(811, 61);
+            this.cbEditPos.Location = new System.Drawing.Point(745, 61);
             this.cbEditPos.Name = "cbEditPos";
-            this.cbEditPos.Size = new System.Drawing.Size(151, 28);
+            this.cbEditPos.Size = new System.Drawing.Size(280, 28);
             this.cbEditPos.TabIndex = 11;
             // 
             // label21
@@ -695,17 +699,6 @@
             this.label21.Size = new System.Drawing.Size(182, 38);
             this.label21.TabIndex = 10;
             this.label21.Text = "Edit Position";
-            // 
-            // btClearPos
-            // 
-            this.btClearPos.BackColor = System.Drawing.Color.Chartreuse;
-            this.btClearPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearPos.Location = new System.Drawing.Point(214, 225);
-            this.btClearPos.Name = "btClearPos";
-            this.btClearPos.Size = new System.Drawing.Size(94, 29);
-            this.btClearPos.TabIndex = 9;
-            this.btClearPos.Text = "Clear";
-            this.btClearPos.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -720,16 +713,16 @@
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.txtGetUname);
             this.panel4.Controls.Add(this.label17);
-            this.panel4.Location = new System.Drawing.Point(337, -1);
+            this.panel4.Location = new System.Drawing.Point(2, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(350, 307);
+            this.panel4.Size = new System.Drawing.Size(575, 307);
             this.panel4.TabIndex = 8;
             // 
             // btUpdateBonus
             // 
             this.btUpdateBonus.BackColor = System.Drawing.Color.DarkGray;
             this.btUpdateBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateBonus.Location = new System.Drawing.Point(131, 225);
+            this.btUpdateBonus.Location = new System.Drawing.Point(258, 226);
             this.btUpdateBonus.Name = "btUpdateBonus";
             this.btUpdateBonus.Size = new System.Drawing.Size(94, 29);
             this.btUpdateBonus.TabIndex = 14;
@@ -742,7 +735,7 @@
             this.txtGetStaff.Location = new System.Drawing.Point(109, 114);
             this.txtGetStaff.Name = "txtGetStaff";
             this.txtGetStaff.ReadOnly = true;
-            this.txtGetStaff.Size = new System.Drawing.Size(171, 27);
+            this.txtGetStaff.Size = new System.Drawing.Size(264, 27);
             this.txtGetStaff.TabIndex = 13;
             // 
             // label20
@@ -759,14 +752,14 @@
             // 
             this.nmBonus.Location = new System.Drawing.Point(109, 158);
             this.nmBonus.Name = "nmBonus";
-            this.nmBonus.Size = new System.Drawing.Size(171, 27);
+            this.nmBonus.Size = new System.Drawing.Size(264, 27);
             this.nmBonus.TabIndex = 11;
             // 
             // btClearBonus
             // 
             this.btClearBonus.BackColor = System.Drawing.Color.Chartreuse;
             this.btClearBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearBonus.Location = new System.Drawing.Point(238, 225);
+            this.btClearBonus.Location = new System.Drawing.Point(417, 227);
             this.btClearBonus.Name = "btClearBonus";
             this.btClearBonus.Size = new System.Drawing.Size(94, 29);
             this.btClearBonus.TabIndex = 10;
@@ -778,7 +771,7 @@
             // 
             this.btEditBonus.BackColor = System.Drawing.Color.DarkGray;
             this.btEditBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditBonus.Location = new System.Drawing.Point(23, 225);
+            this.btEditBonus.Location = new System.Drawing.Point(98, 225);
             this.btEditBonus.Name = "btEditBonus";
             this.btEditBonus.Size = new System.Drawing.Size(94, 29);
             this.btEditBonus.TabIndex = 9;
@@ -810,74 +803,18 @@
             // 
             this.txtGetUname.Location = new System.Drawing.Point(109, 64);
             this.txtGetUname.Name = "txtGetUname";
-            this.txtGetUname.Size = new System.Drawing.Size(171, 27);
+            this.txtGetUname.Size = new System.Drawing.Size(264, 27);
             this.txtGetUname.TabIndex = 5;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(134, 11);
+            this.label17.Location = new System.Drawing.Point(258, 9);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(98, 38);
             this.label17.TabIndex = 1;
             this.label17.Text = "Bonus";
-            // 
-            // btAddPos
-            // 
-            this.btAddPos.BackColor = System.Drawing.Color.DarkGray;
-            this.btAddPos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btAddPos.Location = new System.Drawing.Point(42, 225);
-            this.btAddPos.Name = "btAddPos";
-            this.btAddPos.Size = new System.Drawing.Size(94, 29);
-            this.btAddPos.TabIndex = 6;
-            this.btAddPos.Text = "Add";
-            this.btAddPos.UseVisualStyleBackColor = false;
-            this.btAddPos.Click += new System.EventHandler(this.btAddPos_Click);
-            // 
-            // txtSalPosition
-            // 
-            this.txtSalPosition.Location = new System.Drawing.Point(121, 157);
-            this.txtSalPosition.Name = "txtSalPosition";
-            this.txtSalPosition.Size = new System.Drawing.Size(210, 27);
-            this.txtSalPosition.TabIndex = 5;
-            // 
-            // txtNewPosition
-            // 
-            this.txtNewPosition.Location = new System.Drawing.Point(121, 94);
-            this.txtNewPosition.Name = "txtNewPosition";
-            this.txtNewPosition.Size = new System.Drawing.Size(210, 27);
-            this.txtNewPosition.TabIndex = 4;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 94);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(112, 20);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Name Position";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Salary";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(149, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 38);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Position";
             // 
             // panel3
             // 
@@ -903,23 +840,6 @@
             this.btShowAllStaff.Text = "Show All Staff";
             this.btShowAllStaff.UseVisualStyleBackColor = true;
             this.btShowAllStaff.Click += new System.EventHandler(this.btShowAllStaff_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(811, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 27);
-            this.textBox1.TabIndex = 20;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(696, 110);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(87, 20);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "New Name";
             // 
             // FormStaff
             // 
@@ -977,12 +897,6 @@
         private Label label5;
         private Label label2;
         private Panel panel2;
-        private Label label3;
-        private TextBox txtNewPosition;
-        private Label label13;
-        private Label label1;
-        private TextBox txtSalPosition;
-        private Button btAddPos;
         private Button btSaveStaff;
         private Panel panel3;
         private Label label4;
@@ -1001,7 +915,6 @@
         private DataGridViewTextBoxColumn stPhone;
         private DataGridViewTextBoxColumn stState;
         private DataGridViewTextBoxColumn stposName;
-        private Button btClearPos;
         private Panel panel4;
         private NumericUpDown nmBonus;
         private Button btClearBonus;
@@ -1024,6 +937,6 @@
         private Label label23;
         private TextBox txtCurSal;
         private Label label25;
-        private TextBox textBox1;
+        private TextBox txtNewNamePos;
     }
 }

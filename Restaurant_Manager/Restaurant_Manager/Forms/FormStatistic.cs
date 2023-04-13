@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +12,32 @@ using System.Windows.Forms;
 
 namespace Restaurant_Manager.Forms
 {
+
     public partial class FormStatistic : Form
     {
         public FormStatistic()
         {
             InitializeComponent();
+            SetDefaultRegionFormatToEnglishUS();
+        }
+
+        private void SetDefaultRegionFormatToEnglishUS()
+        {
+            // Create and configure CultureInfo for English (United States)
+            CultureInfo cultureInfo = new CultureInfo("en-US");
+
+            // Set the default thread culture to the desired culture
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+            Thread.CurrentThread.CurrentUICulture = cultureInfo;
+
+            // Set the default application-wide culture to the desired culture
+            Application.CurrentCulture = cultureInfo;
         }
 
         private void FormStatistic_Load(object sender, EventArgs e)
         {
-
+            dataGridView2.Visible = true;
+            dataGridView1.Visible = true;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -38,7 +55,7 @@ namespace Restaurant_Manager.Forms
                     ttPrice = ttPrice + Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value?.ToString());
                 }
                 textBox1.Text = ttPrice.ToString();
-                dataGridView1.Visible = true;
+                //dataGridView1.Visible = true;
 
                 SqlCommand conn = new SqlCommand("select sum (invoiceTotal) from invoice where cast (invoiceDateUpt as date) = '" + dateTimePicker1.Value + "' ", clsDatabase.conn);
                 int CodeNo = Convert.ToInt32(conn.ExecuteScalar());
@@ -70,7 +87,9 @@ namespace Restaurant_Manager.Forms
                 //MessageBox.Show("The date you selected has no data");
                 if (textBox1.Text == "0")
                 {
-                    dataGridView1.Visible = false;
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Columns.Clear();
                 }
                 textBox2.Text = "0";
                 textBox3.Text = "0";
@@ -78,8 +97,9 @@ namespace Restaurant_Manager.Forms
                 textBox5.Text = "0";
                 if (textBox5.Text == "0")
                 {
-                    button1.Enabled = false;
-                    dataGridView2.Visible = false;
+                    dataGridView2.DataSource = null;
+                    dataGridView2.Rows.Clear();
+                    dataGridView2.Columns.Clear();
                 }
             }
         }
@@ -113,13 +133,13 @@ namespace Restaurant_Manager.Forms
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+/*        private void button1_Click(object sender, EventArgs e)
         {
             dataGridView2.Visible = true;
             if (dataGridView2.Visible == true)
             {
                 button1.Enabled = false;
             }
-        }
+        }*/
     }
 }
