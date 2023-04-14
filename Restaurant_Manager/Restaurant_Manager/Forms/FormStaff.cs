@@ -524,6 +524,11 @@ namespace Restaurant_Manager.Forms
                 dtStaffInfo.ClearSelection();
             }
         }
+
+        private void FormStaff_Load(object sender, EventArgs e)
+        {
+            ResetField();
+        }
     }
 }
 

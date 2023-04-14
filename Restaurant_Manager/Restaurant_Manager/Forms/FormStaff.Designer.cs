@@ -183,6 +183,7 @@
             // 
             this.txtConfirm.Location = new System.Drawing.Point(146, 285);
             this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.PasswordChar = '*';
             this.txtConfirm.Size = new System.Drawing.Size(146, 27);
             this.txtConfirm.TabIndex = 36;
             // 
@@ -190,6 +191,7 @@
             // 
             this.txtPasswd.Location = new System.Drawing.Point(146, 240);
             this.txtPasswd.Name = "txtPasswd";
+            this.txtPasswd.PasswordChar = '*';
             this.txtPasswd.Size = new System.Drawing.Size(146, 27);
             this.txtPasswd.TabIndex = 35;
             // 
@@ -234,9 +236,9 @@
             // 
             this.btSaveStaff.BackColor = System.Drawing.Color.Chartreuse;
             this.btSaveStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btSaveStaff.Location = new System.Drawing.Point(253, 520);
+            this.btSaveStaff.Location = new System.Drawing.Point(251, 464);
             this.btSaveStaff.Name = "btSaveStaff";
-            this.btSaveStaff.Size = new System.Drawing.Size(94, 29);
+            this.btSaveStaff.Size = new System.Drawing.Size(100, 50);
             this.btSaveStaff.TabIndex = 29;
             this.btSaveStaff.Text = "Save";
             this.btSaveStaff.UseVisualStyleBackColor = false;
@@ -246,9 +248,9 @@
             // 
             this.btDelStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btDelStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btDelStaff.Location = new System.Drawing.Point(483, 520);
+            this.btDelStaff.Location = new System.Drawing.Point(492, 464);
             this.btDelStaff.Name = "btDelStaff";
-            this.btDelStaff.Size = new System.Drawing.Size(94, 29);
+            this.btDelStaff.Size = new System.Drawing.Size(100, 50);
             this.btDelStaff.TabIndex = 23;
             this.btDelStaff.Text = "Delete";
             this.btDelStaff.UseVisualStyleBackColor = false;
@@ -256,11 +258,11 @@
             // 
             // btUpdateStaff
             // 
-            this.btUpdateStaff.BackColor = System.Drawing.Color.Chartreuse;
+            this.btUpdateStaff.BackColor = System.Drawing.Color.PapayaWhip;
             this.btUpdateStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateStaff.Location = new System.Drawing.Point(369, 520);
+            this.btUpdateStaff.Location = new System.Drawing.Point(376, 464);
             this.btUpdateStaff.Name = "btUpdateStaff";
-            this.btUpdateStaff.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateStaff.Size = new System.Drawing.Size(100, 50);
             this.btUpdateStaff.TabIndex = 22;
             this.btUpdateStaff.Text = "Update";
             this.btUpdateStaff.UseVisualStyleBackColor = false;
@@ -270,9 +272,9 @@
             // 
             this.btAddStaff.BackColor = System.Drawing.Color.Chartreuse;
             this.btAddStaff.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btAddStaff.Location = new System.Drawing.Point(141, 520);
+            this.btAddStaff.Location = new System.Drawing.Point(130, 464);
             this.btAddStaff.Name = "btAddStaff";
-            this.btAddStaff.Size = new System.Drawing.Size(94, 29);
+            this.btAddStaff.Size = new System.Drawing.Size(100, 50);
             this.btAddStaff.TabIndex = 21;
             this.btAddStaff.Text = "Add";
             this.btAddStaff.UseVisualStyleBackColor = false;
@@ -282,9 +284,9 @@
             // 
             this.btRefresh.BackColor = System.Drawing.Color.Chartreuse;
             this.btRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btRefresh.Location = new System.Drawing.Point(29, 520);
+            this.btRefresh.Location = new System.Drawing.Point(11, 464);
             this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(94, 29);
+            this.btRefresh.Size = new System.Drawing.Size(100, 50);
             this.btRefresh.TabIndex = 20;
             this.btRefresh.Text = "Refresh";
             this.btRefresh.UseVisualStyleBackColor = false;
@@ -606,9 +608,9 @@
             // 
             this.btClearSal.BackColor = System.Drawing.Color.Chartreuse;
             this.btClearSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearSal.Location = new System.Drawing.Point(964, 254);
+            this.btClearSal.Location = new System.Drawing.Point(945, 240);
             this.btClearSal.Name = "btClearSal";
-            this.btClearSal.Size = new System.Drawing.Size(94, 29);
+            this.btClearSal.Size = new System.Drawing.Size(100, 50);
             this.btClearSal.TabIndex = 19;
             this.btClearSal.Text = "Clear";
             this.btClearSal.UseVisualStyleBackColor = false;
@@ -616,11 +618,11 @@
             // 
             // btUpdateSal
             // 
-            this.btUpdateSal.BackColor = System.Drawing.Color.DarkGray;
+            this.btUpdateSal.BackColor = System.Drawing.Color.PapayaWhip;
             this.btUpdateSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateSal.Location = new System.Drawing.Point(825, 254);
+            this.btUpdateSal.Location = new System.Drawing.Point(788, 240);
             this.btUpdateSal.Name = "btUpdateSal";
-            this.btUpdateSal.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateSal.Size = new System.Drawing.Size(100, 50);
             this.btUpdateSal.TabIndex = 18;
             this.btUpdateSal.Text = "Update";
             this.btUpdateSal.UseVisualStyleBackColor = false;
@@ -630,9 +632,9 @@
             // 
             this.btEditSal.BackColor = System.Drawing.Color.DarkGray;
             this.btEditSal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditSal.Location = new System.Drawing.Point(669, 254);
+            this.btEditSal.Location = new System.Drawing.Point(641, 243);
             this.btEditSal.Name = "btEditSal";
-            this.btEditSal.Size = new System.Drawing.Size(94, 29);
+            this.btEditSal.Size = new System.Drawing.Size(100, 50);
             this.btEditSal.TabIndex = 17;
             this.btEditSal.Text = "Edit";
             this.btEditSal.UseVisualStyleBackColor = false;
@@ -721,11 +723,11 @@
             // 
             // btUpdateBonus
             // 
-            this.btUpdateBonus.BackColor = System.Drawing.Color.DarkGray;
+            this.btUpdateBonus.BackColor = System.Drawing.Color.PapayaWhip;
             this.btUpdateBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btUpdateBonus.Location = new System.Drawing.Point(258, 226);
+            this.btUpdateBonus.Location = new System.Drawing.Point(252, 226);
             this.btUpdateBonus.Name = "btUpdateBonus";
-            this.btUpdateBonus.Size = new System.Drawing.Size(94, 29);
+            this.btUpdateBonus.Size = new System.Drawing.Size(100, 50);
             this.btUpdateBonus.TabIndex = 14;
             this.btUpdateBonus.Text = "Update";
             this.btUpdateBonus.UseVisualStyleBackColor = false;
@@ -760,9 +762,9 @@
             // 
             this.btClearBonus.BackColor = System.Drawing.Color.Chartreuse;
             this.btClearBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btClearBonus.Location = new System.Drawing.Point(417, 227);
+            this.btClearBonus.Location = new System.Drawing.Point(424, 226);
             this.btClearBonus.Name = "btClearBonus";
-            this.btClearBonus.Size = new System.Drawing.Size(94, 29);
+            this.btClearBonus.Size = new System.Drawing.Size(100, 50);
             this.btClearBonus.TabIndex = 10;
             this.btClearBonus.Text = "Clear";
             this.btClearBonus.UseVisualStyleBackColor = false;
@@ -772,9 +774,9 @@
             // 
             this.btEditBonus.BackColor = System.Drawing.Color.DarkGray;
             this.btEditBonus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditBonus.Location = new System.Drawing.Point(98, 225);
+            this.btEditBonus.Location = new System.Drawing.Point(68, 226);
             this.btEditBonus.Name = "btEditBonus";
-            this.btEditBonus.Size = new System.Drawing.Size(94, 29);
+            this.btEditBonus.Size = new System.Drawing.Size(100, 50);
             this.btEditBonus.TabIndex = 9;
             this.btEditBonus.Text = "Edit";
             this.btEditBonus.UseVisualStyleBackColor = false;
@@ -855,6 +857,7 @@
             this.Name = "FormStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Staff";
+            this.Load += new System.EventHandler(this.FormStaff_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtStaffInfo)).EndInit();

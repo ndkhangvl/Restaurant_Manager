@@ -121,7 +121,7 @@
             this.btnDishDeleted.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDishDeleted.Location = new System.Drawing.Point(19, 436);
             this.btnDishDeleted.Name = "btnDishDeleted";
-            this.btnDishDeleted.Size = new System.Drawing.Size(918, 55);
+            this.btnDishDeleted.Size = new System.Drawing.Size(886, 55);
             this.btnDishDeleted.TabIndex = 5;
             this.btnDishDeleted.Text = "List Delete";
             this.btnDishDeleted.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@
             this.grdViewDishMenu.ReadOnly = true;
             this.grdViewDishMenu.RowHeadersWidth = 51;
             this.grdViewDishMenu.RowTemplate.Height = 29;
-            this.grdViewDishMenu.Size = new System.Drawing.Size(918, 261);
+            this.grdViewDishMenu.Size = new System.Drawing.Size(886, 261);
             this.grdViewDishMenu.TabIndex = 4;
             this.grdViewDishMenu.SelectionChanged += new System.EventHandler(this.grdViewDishMenu_SelectionChanged);
             // 

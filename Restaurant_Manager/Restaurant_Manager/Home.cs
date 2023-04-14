@@ -39,7 +39,6 @@ namespace Restaurant_Manager
             {
                 btnStaff.Visible = false;
                 btnStatistic.Visible = false;
-                btnInventory.Visible = false;
             }
             //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }

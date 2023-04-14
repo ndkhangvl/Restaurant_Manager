@@ -294,6 +294,7 @@ namespace Restaurant_Manager.Forms
             name_menu.Clear();
             price_menu.Clear();
             unit_menu.Clear();
+            txtTotal_Detail.Clear();
             quan_menu.Value = 0;
             grdMenu.DataSource = null;
             cboCategory.SelectedIndex = -1;
@@ -559,7 +560,11 @@ namespace Restaurant_Manager.Forms
         */
         private void numUpDownDiscount_ValueChanged(object sender, EventArgs e)
         {
-            txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
+            try
+            {
+                txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
         }
     }
-}

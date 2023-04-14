@@ -27,6 +27,18 @@ namespace Restaurant_Manager.Forms
             //TestFunction();
         }
 
+        void ResetField()
+        {
+            txtID_Detail.ResetText();
+            txtStaff_Detail.ResetText();
+            txtDate_Detail.ResetText();
+            txtDateUpdate_Detail.ResetText();
+            txtTotal_Detail.Clear();
+            txtTable_Detail.ResetText();
+            txtState_Detail.ResetText();
+            txtState_Detail.BackColor = Color.White;
+            grdDetail.DataSource = null;
+        }
         void TestFunction()
         {
             txtID_Detail.ResetText();
@@ -255,6 +267,7 @@ namespace Restaurant_Manager.Forms
                 clsDatabase.CloseConnection();
                 MessageBox.Show("Paid successfully!");
                 LoadTable();
+                ResetField();
                 //cboDiscount.SelectedIndex = 0;
                 numUpDownDiscount.Value = 0;
             }
