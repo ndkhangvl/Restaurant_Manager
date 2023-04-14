@@ -268,6 +268,20 @@ namespace Restaurant_Manager.Forms
         {
                 txtTotal_Detail.Text = Convert.ToString(invTotal - invTotal * Convert.ToInt32(numUpDownDiscount.Value) / 100);
         }
+
+        private void txtID_Detail_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtID_Detail.Text)) { grdDetail.DataSource = null; }
+            else
+            {
+                clsDatabase.OpenConnection();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT dn.dish_id, dn.dishName, dn.price, id.Quantity, dn.price*id.Quantity as total from dish_menu dn join invoice_detail id on dn.dish_id = id.dish_id WHERE invoice_id = " + Convert.ToInt32(txtID_Detail.Text), clsDatabase.conn); ;
+                DataTable datatb = new DataTable();
+                da.Fill(datatb);
+                grdDetail.DataSource = datatb;
+                clsDatabase.CloseConnection();
+            }
+        }
     }
 }
 

@@ -85,6 +85,7 @@
             this.gridviewTable.RowTemplate.Height = 29;
             this.gridviewTable.Size = new System.Drawing.Size(300, 77);
             this.gridviewTable.TabIndex = 0;
+            this.gridviewTable.Visible = false;
             // 
             // Column1
             // 
@@ -109,7 +110,7 @@
             this.flowTableList.AutoScroll = true;
             this.flowTableList.Location = new System.Drawing.Point(12, 130);
             this.flowTableList.Name = "flowTableList";
-            this.flowTableList.Size = new System.Drawing.Size(724, 512);
+            this.flowTableList.Size = new System.Drawing.Size(926, 608);
             this.flowTableList.TabIndex = 1;
             // 
             // txtTableID
@@ -136,6 +137,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // panel3
             // 
@@ -158,9 +160,9 @@
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(752, 21);
+            this.panel3.Location = new System.Drawing.Point(969, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(618, 720);
+            this.panel3.Size = new System.Drawing.Size(662, 720);
             this.panel3.TabIndex = 5;
             // 
             // label20
@@ -236,6 +238,7 @@
             this.txtID_Detail.ReadOnly = true;
             this.txtID_Detail.Size = new System.Drawing.Size(77, 27);
             this.txtID_Detail.TabIndex = 25;
+            this.txtID_Detail.TextChanged += new System.EventHandler(this.txtID_Detail_TextChanged);
             // 
             // grdDetail
             // 
@@ -278,7 +281,7 @@
             this.grdDetail.RowHeadersWidth = 51;
             this.grdDetail.RowTemplate.Height = 29;
             this.grdDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDetail.Size = new System.Drawing.Size(612, 419);
+            this.grdDetail.Size = new System.Drawing.Size(659, 419);
             this.grdDetail.TabIndex = 24;
             // 
             // Column6
@@ -424,7 +427,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 753);
+            this.ClientSize = new System.Drawing.Size(1728, 944);
             this.Controls.Add(this.txtNameTable2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button1);

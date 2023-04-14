@@ -51,7 +51,7 @@ namespace Restaurant_Manager.Forms
         {
             clsDatabase.OpenConnection();
             SqlDataAdapter da = new SqlDataAdapter("select staff.staff_id,staff.staffName,staff.DoB,staff.staffPhone,staff.staffState,StaffPos.posName from staff" +
-                                        " join StaffPos on staff.idPosition = StaffPos.id_pos;", clsDatabase.conn);
+                                        " join StaffPos on staff.idPosition = StaffPos.id_pos where staff.staffState= 1;", clsDatabase.conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dtStaffInfo.DataSource = dt;
@@ -292,13 +292,15 @@ namespace Restaurant_Manager.Forms
             ResetField();
             btAddStaff.Enabled = true;
             btSaveStaff.Enabled = false;
+            btUpdateStaff.Enabled = true;
+            btDelStaff.Enabled = true; 
         }
 
         private void btUpdateStaff_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cbAccType.GetItemText(cbAccType.SelectedItem) == "Full-Permision")
+                if (cbAccType.GetItemText(cbAccType.SelectedItem) == "Full-Permission")
                 {
                     txtGetAccType.Text = "1";
                 }
@@ -306,41 +308,54 @@ namespace Restaurant_Manager.Forms
                 {
                     txtGetAccType.Text = "2";
                 }
-                //string strInsert = "EXEC staff_new @staffName,@DoB,@staffPhone,@idPosition, @staffState,@uname,@passwd,@acctype";
-                string strUpdate = "EXEC update_staff @staff_id,@staffName, @DoB, @staffPhone,@idPosition ,@staffState,@acctype,@bonus";
-                clsDatabase.OpenConnection();
-                SqlCommand conn = new SqlCommand(strUpdate, clsDatabase.conn);
-                SqlParameter p1 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
-                p1.Value = Convert.ToInt32(txtID.Text);
-                SqlParameter p2 = new SqlParameter("@staffName", System.Data.SqlDbType.VarChar);
-                p2.Value = txtName.Text;
-                SqlParameter p3 = new SqlParameter("@DoB", System.Data.SqlDbType.DateTime);
-                p3.Value = dtBirthDay.Value;
-                SqlParameter p4 = new SqlParameter("@staffPhone", System.Data.SqlDbType.VarChar);
-                p4.Value = txtPhone.Text;
-                SqlParameter p5 = new SqlParameter("@idPosition", System.Data.SqlDbType.Int);
-                p5.Value = cbPosition.SelectedValue;
-                SqlParameter p6 = new SqlParameter("@staffState", System.Data.SqlDbType.Int);
-                p6.Value = Convert.ToInt32(txtState.Text);
-                SqlParameter p7 = new SqlParameter("@acctype", System.Data.SqlDbType.Int);
-                p7.Value = Convert.ToInt32(txtGetAccType.Text);
-                SqlParameter p8 = new SqlParameter("@bonus", System.Data.SqlDbType.Int);
-                p8.Value = Convert.ToInt32(txtBonus.Text);
+                Regex re = new Regex("^0[0-9]{9}");
+                if (txtName.Text.Length == 0 || txtUname.Text.Length == 0 || txtPasswd.Text.Length == 0
+                    || txtConfirm.Text.Length == 0 || txtState.Text.Length == 0 || txtPhone.Text.Length == 0)
+                {
+                    MessageBox.Show("Please Fill All Valid Data!!");
+                }
+                else if (re.IsMatch(txtPhone.Text.Trim()) == false || txtPhone.Text.Length > 10)
+                {
+                    MessageBox.Show("Invalid Vietnam Mobile Number!!");
+                }
+                else
+                {
+                    string strUpdate = "EXEC update_staff @staff_id,@staffName, @DoB, @staffPhone,@idPosition ,@staffState,@acctype,@bonus";
+                    clsDatabase.OpenConnection();
+                    SqlCommand conn = new SqlCommand(strUpdate, clsDatabase.conn);
+                    SqlParameter p1 = new SqlParameter("@staff_id", System.Data.SqlDbType.Int);
+                    p1.Value = Convert.ToInt32(txtID.Text);
+                    SqlParameter p2 = new SqlParameter("@staffName", System.Data.SqlDbType.VarChar);
+                    p2.Value = txtName.Text;
+                    SqlParameter p3 = new SqlParameter("@DoB", System.Data.SqlDbType.DateTime);
+                    p3.Value = dtBirthDay.Value;
+                    SqlParameter p4 = new SqlParameter("@staffPhone", System.Data.SqlDbType.VarChar);
+                    p4.Value = txtPhone.Text;
+                    SqlParameter p5 = new SqlParameter("@idPosition", System.Data.SqlDbType.Int);
+                    p5.Value = cbPosition.SelectedValue;
+                    SqlParameter p6 = new SqlParameter("@staffState", System.Data.SqlDbType.Int);
+                    p6.Value = Convert.ToInt32(txtState.Text);
+                    SqlParameter p7 = new SqlParameter("@acctype", System.Data.SqlDbType.Int);
+                    p7.Value = Convert.ToInt32(txtGetAccType.Text);
+                    SqlParameter p8 = new SqlParameter("@bonus", System.Data.SqlDbType.Int);
+                    p8.Value = Convert.ToInt32(txtBonus.Text);
 
-                conn.Parameters.Add(p1);
-                conn.Parameters.Add(p2);
-                conn.Parameters.Add(p3);
-                conn.Parameters.Add(p4);
-                conn.Parameters.Add(p5);
-                conn.Parameters.Add(p6);
-                conn.Parameters.Add(p7);
-                conn.Parameters.Add(p8);
-                conn.ExecuteNonQuery();
+                    conn.Parameters.Add(p1);
+                    conn.Parameters.Add(p2);
+                    conn.Parameters.Add(p3);
+                    conn.Parameters.Add(p4);
+                    conn.Parameters.Add(p5);
+                    conn.Parameters.Add(p6);
+                    conn.Parameters.Add(p7);
+                    conn.Parameters.Add(p8);
+                    conn.ExecuteNonQuery();
 
-                MessageBox.Show("Update information staff successfully!");
-                clsDatabase.CloseConnection();
-                dtInfoStaff();
-                //ResetField(false);
+                    MessageBox.Show("Update information staff successfully!");
+                    clsDatabase.CloseConnection();
+                    dtInfoStaff();
+                    //ResetField(false);}
+                    //string strInsert = "EXEC staff_new @staffName,@DoB,@staffPhone,@idPosition, @staffState,@uname,@passwd,@acctype";
+                }
             }
             catch (Exception ex)
             {
@@ -425,7 +440,7 @@ namespace Restaurant_Manager.Forms
             {
                 if(txtNewSal.Text.Length == 0 && txtNewNamePos.Text.Length == 0)
                 {
-                    MessageBox.Show("Fill the data");
+                    MessageBox.Show("Please fill in 1 of 2 data or both");
                 } else if (txtNewSal.Text.Length == 0 || txtNewNamePos.Text.Length == 0)
                 {
                     if(txtNewNamePos.Text.Length > 0 && txtNewSal.Text.Length == 0)
@@ -437,9 +452,12 @@ namespace Restaurant_Manager.Forms
                         com.Parameters.Add(p1);
                         com.ExecuteNonQuery();
                         dtInfoStaff();
+                        txtNewNamePos.Clear();
                         txtNewSal.Clear();
                         txtCurSal.Clear();
-                       // cbEditPos.Items.Clear();
+                        LoadComboboxPosition();
+                        LoadCombobox();
+                        // cbEditPos.Items.Clear();
                         MessageBox.Show("Update Name of position staff successfully!");
                     } else 
                     {
@@ -450,12 +468,15 @@ namespace Restaurant_Manager.Forms
                         com.Parameters.Add(p1);
                         com.ExecuteNonQuery();
                         dtInfoStaff();
+                        txtNewNamePos.Clear();
                         txtNewSal.Clear();
                         txtCurSal.Clear();
+                        LoadComboboxPosition();
+                        LoadCombobox();
                         //cbEditPos.Items.Clear();
                         MessageBox.Show("Update Salary of position staff successfully!");
                     }
-                } else 
+                } else if((txtNewSal.Text.Length > 0 && txtNewNamePos.Text.Length > 0))
                 {
                     clsDatabase.OpenConnection();
                     SqlCommand com = new SqlCommand("update StaffPos set salary=@salary,posName=@posName where id_pos = " + cbEditPos.SelectedValue, clsDatabase.conn);
@@ -464,12 +485,14 @@ namespace Restaurant_Manager.Forms
                     com.Parameters.Add(p1);
                     SqlParameter p2 = new SqlParameter("@posName", System.Data.SqlDbType.NVarChar);
                     p2.Value = txtNewNamePos.Text;
-                    com.Parameters.Add(p1);
                     com.Parameters.Add(p2);
                     com.ExecuteNonQuery();
                     dtInfoStaff();
+                    txtNewNamePos.Clear();
                     txtNewSal.Clear();
                     txtCurSal.Clear();
+                    LoadComboboxPosition();
+                    LoadCombobox();
                     //cbEditPos.Items.Clear();
                     MessageBox.Show("Update Salary and Name of position staff successfully!");
                 }
@@ -485,6 +508,21 @@ namespace Restaurant_Manager.Forms
         {
             txtNewSal.Clear();
             txtCurSal.Clear();
+            txtNewNamePos.Clear();
+        }
+
+/*        private void dtStaffInfo_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            dtStaffInfo.ClearSelection();
+        }*/
+
+        private void dtStaffInfo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Xóa bỏ việc chọn dòng
+                dtStaffInfo.ClearSelection();
+            }
         }
     }
 }

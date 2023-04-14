@@ -121,7 +121,7 @@ namespace Restaurant_Manager
             this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInventory.Size = new System.Drawing.Size(219, 60);
             this.btnInventory.TabIndex = 7;
-            this.btnInventory.Text = "Inventory";
+            this.btnInventory.Text = "Visual Order";
             this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventory.UseVisualStyleBackColor = true;

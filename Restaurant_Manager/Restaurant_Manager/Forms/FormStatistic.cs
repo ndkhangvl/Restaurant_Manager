@@ -38,6 +38,7 @@ namespace Restaurant_Manager.Forms
         {
             dataGridView2.Visible = true;
             dataGridView1.Visible = true;
+            dateTimePicker1_ValueChanged(sender, e);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -76,10 +77,7 @@ namespace Restaurant_Manager.Forms
                 DataSet di = new DataSet();
                 dst.Fill(di, "statistic");
                 dataGridView2.DataSource = di.Tables["statistic"];
-
-                button1.Enabled = true;
-
-
+                //button1.Enabled = true;
                 clsDatabase.CloseConnection();
             }
             catch
@@ -103,43 +101,5 @@ namespace Restaurant_Manager.Forms
                 }
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-/*        private void button1_Click(object sender, EventArgs e)
-        {
-            dataGridView2.Visible = true;
-            if (dataGridView2.Visible == true)
-            {
-                button1.Enabled = false;
-            }
-        }*/
     }
 }
