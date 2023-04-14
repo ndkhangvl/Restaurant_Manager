@@ -80,12 +80,13 @@ namespace Restaurant_Manager
             // btChangePass
             // 
             this.btChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btChangePass.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btChangePass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btChangePass.ForeColor = System.Drawing.Color.White;
-            this.btChangePass.Location = new System.Drawing.Point(0, 641);
+            this.btChangePass.Location = new System.Drawing.Point(0, 631);
             this.btChangePass.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
             this.btChangePass.Name = "btChangePass";
-            this.btChangePass.Size = new System.Drawing.Size(219, 29);
+            this.btChangePass.Size = new System.Drawing.Size(219, 43);
             this.btChangePass.TabIndex = 8;
             this.btChangePass.Text = "Change Password";
             this.btChangePass.UseVisualStyleBackColor = false;
@@ -97,9 +98,9 @@ namespace Restaurant_Manager
             this.btnlogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnlogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.Location = new System.Drawing.Point(0, 688);
+            this.btnlogout.Location = new System.Drawing.Point(0, 674);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(219, 29);
+            this.btnlogout.Size = new System.Drawing.Size(219, 43);
             this.btnlogout.TabIndex = 0;
             this.btnlogout.Text = "Log out";
             this.btnlogout.UseVisualStyleBackColor = false;
